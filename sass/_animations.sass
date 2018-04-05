@@ -1,0 +1,142 @@
+@keyframes glitch-anim-1-horizontal 
+	0% 
+		clip-path: polygon(0 2%, 100% 2%, 100% 5%, 0 5%)
+	
+	10% 
+		clip-path: polygon(0 15%, 100% 15%, 100% 15%, 0 15%)
+	
+	20% 
+		clip-path: polygon(0 10%, 100% 10%, 100% 20%, 0 20%)
+	
+	30% 
+		clip-path: polygon(0 1%, 100% 1%, 100% 2%, 0 2%)
+	
+	40% 
+		clip-path: polygon(0 33%, 100% 33%, 100% 33%, 0 33%)
+	
+	50% 
+		clip-path: polygon(0 44%, 100% 44%, 100% 44%, 0 44%)
+	
+	60% 
+		clip-path: polygon(0 50%, 100% 50%, 100% 20%, 0 20%)
+	
+	70% 
+		clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%)
+	
+	80% 
+		clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%)
+	
+	90% 
+		clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%)
+	
+	100% 
+		clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%)
+	
+@keyframes glitch-anim-2-horizontal 
+	0% 
+		clip-path: polygon(0 25%, 100% 25%, 100% 30%, 0 30%)
+	
+	15% 
+		clip-path: polygon(0 3%, 100% 3%, 100% 3%, 0 3%)
+	
+	22% 
+		clip-path: polygon(0 5%, 100% 5%, 100% 20%, 0 20%)
+	
+	31% 
+		clip-path: polygon(0 20%, 100% 20%, 100% 20%, 0 20%)
+	
+	45% 
+		clip-path: polygon(0 40%, 100% 40%, 100% 40%, 0 40%)
+	51% 
+		clip-path: polygon(0 52%, 100% 52%, 100% 59%, 0 59%)
+	
+	63% 
+		clip-path: polygon(0 60%, 100% 60%, 100% 60%, 0 60%)
+	
+	76% 
+		clip-path: polygon(0 75%, 100% 75%, 100% 75%, 0 75%)
+	
+	81% 
+		clip-path: polygon(0 65%, 100% 65%, 100% 40%, 0 40%)
+	
+	94% 
+		clip-path: polygon(0 45%, 100% 45%, 100% 50%, 0 50%)
+	
+	100% 
+		clip-path: polygon(0 14%, 100% 14%, 100% 33%, 0 33%)
+	
+
+
+@keyframes glitch-anim-3-horizontal 
+	0% 
+		clip-path: polygon(0 1%, 100% 1%, 100% 3%, 0 3%)
+	
+	5% 
+		clip-path: polygon(0 10%, 100% 10%, 100% 9%, 0 9%)
+	
+	10% 
+		clip-path: polygon(0 5%, 100% 5%, 100% 6%, 0 6%)
+	
+	70% 
+		clip-path: polygon(0 90%, 100% 90%, 100% 90%, 0 90%)
+	
+	
+	100% 
+		clip-path: polygon(0 100%, 100% 100%, 100% 99%, 0 99%)
+	
+	
+@keyframes glitch-anim-flash 
+	0% 
+		opacity: 0.1
+		transform: translate3d($gap-horizontal, $gap-vertical, 0)
+	
+	33%, 100% 
+		opacity: 0
+		transform: translate3d(0,0,0)
+
+@keyframes glitch-anim-text 
+	0% 
+		opacity: 1
+		transform: translate3d(-10px,0,0) scale3d(-1,-1,1)
+		clip-path: polygon(0 20%, 100% 20%, 100% 21%, 0 21%)
+	
+	10% 
+		clip-path: polygon(0 33%, 100% 33%, 100% 33%, 0 33%)
+	
+	20% 
+		clip-path: polygon(0 44%, 100% 44%, 100% 44%, 0 44%)
+	
+	35% 
+		clip-path: polygon(0 50%, 100% 50%, 100% 20%, 0 20%)
+	
+	50% 
+		clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%)
+	
+	60% 
+		clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%)
+	
+	70% 
+		clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%)
+	
+	80% 
+		clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%)
+	
+	90% 
+		transform: translate3d(-10px,0,0) scale3d(-1,-1,1)
+	
+	100% 
+		opacity: 1
+		transform: translate3d(0,0,0) scale3d(1,1,1)
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)
+
+
+@keyframes fadeInLeft
+	from 
+  		opacity: 0
+  		transform: translate3d(-20%, 0, 0)
+
+	to 
+  		opacity: 1
+  		transform: translate3d(0, 0, 0)
+
+
