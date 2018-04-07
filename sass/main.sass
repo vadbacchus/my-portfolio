@@ -12,6 +12,8 @@
 	background-color: $accent
 	color: #fff
 
+
+
 html, body
 	height: 100%
 
@@ -35,6 +37,38 @@ body
 			&:required:valid
 				border-color: green
 
+/* .animated 
+	animation-duration: 1s
+	animation-fill-mode: both */
+
+.preloader
+	display: flex
+	justify-content: center
+	align-items: center
+	position: fixed
+	background: #000
+	width: 100vw
+	height: 100vh
+	z-index: 9999
+	top: 0
+	left: 0
+	transition: 1s all
+	opacity: 1
+	visibility: visible
+
+	&.done
+		opacity: 0
+		visibility: hidden
+
+	&__icon
+		+col()
+		+size(2)
+		
+		.cls-1
+			animation: colors 1s alternate infinite
+
+
+
 .header
 	min-height: 100vh
 
@@ -47,16 +81,23 @@ body
 	&__btn
 		+col()
 		+size(1)
+		+size-md(2)
 		
 		margin-top: 10px
 		margin-left: auto
 		border: none
 		background-color: transparent
 		cursor: pointer
+		outline: none
+		transition: .2s
 
-		&:hover .cls-1
+		&:hover .cls-1, &:focus .cls-1
 			fill: $red
+			outline: none
+		&:hover
+			transform: scale(1.1)	
 	
+		
 
 	&__icons
 		+col()
@@ -148,7 +189,10 @@ body
 		position: relative
 		color: #FFF
 		text-decoration: none
-		transition: background .5s
+		transition: background 1s
+		font-size: 24px
+		font-family: $title-font
+		font-weight: 400	
 
 		
 
@@ -169,7 +213,7 @@ body
 			height: var(--size)
 			background: radial-gradient(circle closest-side, #fc00ff, transparent) //
 			transform: translate(-50%, -50%)
-			transition: width .2s ease, height .2s ease
+			transition: width .5s ease, height .5s ease
 
 		&:hover::before
 			--size: 1000px
@@ -189,33 +233,47 @@ button.nav__closebtn
 	right: 100px
 	transition: color .5s
 
-	&:hover
+	&:hover, &:focus
 		color: #00dbde
+		outline: none
 
 
 
 
 .intro
 	+row-flex()
-	min-height: 75vh
+	+lg(justify-content, center)
 
-	display: flex
+	justify-content: center
+	min-height: 75vh
+	
 	
 	&__greeting
 		+col()
 		+size(6)
+		+size-lg(10)
+		
 
-		animation-name: fadeInLeft 
-		animation-duration: 2s
 		display: flex
 		flex-direction: column
 
+		&.anim
+			animation-name: fadeInLeft 
+			animation-duration: 3s
+
 	&__title
+
+		+lg(text-align, center)
+
+
 		font-family: $title-font
 		font-size: 40px
 		margin-top: 10vh
 		color:  $accent
 		text-align: right
+
+		@media screen and (max-width: 1166px)
+			font-size: 35px
 		
 	
 		.part
@@ -225,6 +283,8 @@ button.nav__closebtn
 			color: $red */
 
 	&__btn
+		+lg(display, none)
+
 		border: none
 		box-shadow: 0 0 0 1px $accent
 		font-family: $title-font
@@ -270,15 +330,22 @@ button.nav__closebtn
 	&__service
 		+col()
 		+size(6)
+		+size-lg(8)
+		+lg(text-align, center)
 		font-family: $title-font
 		font-size: 35px
 		color: $red
 		align-self: center
-		animation: glitch-anim-text 2s linear 
-		margin-top: 80px
-		
-		
+		margin-top: 40px
 
+		@media screen and (max-width: 1166px)
+			font-size: 30px
+
+		.intro__btn--lg
+			display: none
+			margin: 40px auto
+			+lg(display, block)
+		
 		p
 			background-color: $accent
 			color: #FFFFFF
@@ -291,10 +358,19 @@ button.nav__closebtn
 
 		p:nth-of-type(even)
 			margin: 10px 0
+	&__text
+
+		&.anim
+			animation: glitch-anim-text 2s linear
+
+
+
+
 
 
 .next-section
 	+row-flex()
+	+lg(margin-top, 40px)
 
 	align-items: center
 	flex-direction: column
@@ -303,7 +379,7 @@ button.nav__closebtn
 
 	&__text
 		+col()
-		+size(3)
+		+size(4)
 
 		text-align: center
 		color: $accent
