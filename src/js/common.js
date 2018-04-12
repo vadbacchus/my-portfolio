@@ -1,5 +1,24 @@
 $(function() {
 
+AOS.init({
+      offset: 100,
+      duration: 600,
+    });
+
+document.body.onload = () => {
+	setTimeout(function(){
+		let preloader = document.querySelector('.preloader');
+		let intro     = document.querySelector('.intro__greeting');
+		let service   = document.querySelector('.intro__text');
+
+		if( !preloader.classList.contains('done') ){
+			preloader.classList.add('done');
+			intro.classList.add('anim');
+			service.classList.add('anim');
+		}
+	}, 1000);
+}
+
 const HOVER = document.querySelectorAll('.superhover');
 
 for ( i=0; i < HOVER.length; i++ ) {
@@ -45,5 +64,15 @@ for (i=0; i < CLOSE_BTN.length ; i++) {
 		fade(MENU);
 
 		}	
-	}	
+	}
+
+$('.scrollto').click(function() {
+    var elementClick = $(this).attr("href")
+    var destination = $(elementClick).offset().top;
+    jQuery("html, body").animate({
+        scrollTop: destination
+    }, 500);
+    return false;
+ });
+
 });
