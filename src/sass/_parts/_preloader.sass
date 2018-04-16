@@ -1,0 +1,25 @@
+.preloader
+	display: flex
+	justify-content: center
+	align-items: center
+	position: fixed
+	background: #fff
+	width: 100vw
+	height: 100vh
+	z-index: 9999
+	top: 0
+	left: 0
+	transition: 1s all
+	opacity: 1
+	visibility: visible
+
+	&.done
+		opacity: 0
+		visibility: hidden
+
+	&__icon
+		+col()
+		+size(2)
+		
+		.cls-1
+			animation: colors 1s alternate infinite

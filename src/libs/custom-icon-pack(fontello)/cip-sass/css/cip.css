@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'cip';
-  src: url('../font/cip.eot?75725988');
-  src: url('../font/cip.eot?75725988#iefix') format('embedded-opentype'),
-       url('../font/cip.woff2?75725988') format('woff2'),
-       url('../font/cip.woff?75725988') format('woff'),
-       url('../font/cip.ttf?75725988') format('truetype'),
-       url('../font/cip.svg?75725988#cip') format('svg');
+  src: url('../font/cip.eot?56224812');
+  src: url('../font/cip.eot?56224812#iefix') format('embedded-opentype'),
+       url('../font/cip.woff2?56224812') format('woff2'),
+       url('../font/cip.woff?56224812') format('woff'),
+       url('../font/cip.ttf?56224812') format('truetype'),
+       url('../font/cip.svg?56224812#cip') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'cip';
-    src: url('../font/cip.svg?75725988#cip') format('svg');
+    src: url('../font/cip.svg?56224812#cip') format('svg');
   }
 }
 */
@@ -95,6 +95,7 @@
 .cip-left-open-mini:before { content: '\e825'; } /* '' */
 .cip-right-open-mini:before { content: '\e826'; } /* '' */
 .cip-up-open-mini:before { content: '\e827'; } /* '' */
+.cip-javascript:before { content: '\e828'; } /* '' */
 .cip-spin3:before { content: '\e832'; } /* '' */
 .cip-spin6:before { content: '\e839'; } /* '' */
 .cip-twitter:before { content: '\f099'; } /* '' */

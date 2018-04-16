@@ -1,0 +1,260 @@
+.header
+	min-height: 100vh
+
+	.wrapper
+		+wrapper()
+
+.menu
+	+row-flex()
+
+	&__btn
+		+col()
+		+size(1)
+		+size-md(2)
+		+size-xs(3)
+
+
+		
+		margin-top: 10px
+		margin-left: auto
+		border: none
+		background-color: transparent
+		cursor: pointer
+		outline: none
+		transition: .2s
+
+		&:hover .cls-1, &:focus .cls-1
+			fill: $red
+			outline: none
+		&:hover
+			transform: scale(1.1)	
+	
+		
+
+	&__icons
+		+col()
+		+size(2)
+
+		margin-top: 10px
+		margin-right: auto
+		display: flex
+		align-items: center
+
+	&__lang-ru
+		
+
+		text-decoration: none
+		background-color: $accent
+		font-family: $title-font
+		text-align: center
+		font-size: 20px
+		padding: 0 6px
+		color: #FFFFFF
+		transition: .5s all
+
+
+		&:hover
+			background-color: #000
+
+
+	&__github
+		font-size: 40px
+		margin-right: 20px
+		color: #000000
+		transition: .5s all
+
+		&:hover
+			color: $accent
+
+	&__svg
+		+xs(width, 55px)
+		+xs(height, 55px)
+		
+
+
+
+/* class of grape svg btn */
+.cls-1
+	transition: .5s all
+
+
+
+
+@import "header__nav"
+
+.intro
+	+row-flex()
+	+lg(justify-content, center)
+
+	justify-content: center
+	min-height: 75vh
+	
+	
+	&__greeting
+		+col()
+		+size(6)
+		+size-lg(10)
+		+size-md(12)
+		
+
+		display: flex
+		flex-direction: column
+
+		&.anim
+			animation-name: fadeInLeft 
+			animation-duration: 3s
+
+	&__title
+
+		+lg(text-align, center)
+		+xs(font-size, 20px)
+
+
+		font-family: $title-font
+		font-size: 40px
+		margin-top: 10vh
+		color:  $accent
+		text-align: right
+
+		@media screen and (max-width: 1166px)
+			font-size: 35px
+		
+	
+		.part
+			display: block
+
+		/* .accent
+			color: $red */
+
+	&__btn
+		+lg(display, none)
+
+		border: none
+		box-shadow: 0 0 0 1px $accent
+		font-family: $title-font
+		font-size: 25px
+		color: $accent
+		background: transparent
+		cursor: pointer
+		padding: 15px 40px
+		border-radius: 4px	
+		overflow: hidden
+		position: relative
+		align-self: center
+		margin: 80px
+		transition: box-shadow 1s ease, background 1s ease, color .5s ease
+
+		&:hover
+			background: #6e8efb
+			color: #fff
+			box-shadow: none
+
+		
+		
+
+		span
+			position: relative
+			pointer-events: none
+
+		&::before
+			--size: 0
+			content: ''
+			position: absolute
+			left: var(--x)
+			top: var(--y)
+			width: var(--size)
+			height: var(--size)
+			background: radial-gradient(circle closest-side, #30efbf, transparent) //#30efbf #6e8efb 
+			transform: translate(-50%, -50%)
+			transition: width .2s ease, height .2s ease
+
+		&:hover::before
+			--size: 400px
+
+	&__service
+		+col()
+		+size(6)
+		+size-lg(8)
+		+size-md(9)
+		+size-sm(12)
+
+		+xs(font-size, 18px)
+		+lg(text-align, center)
+		font-family: $title-font
+		font-size: 35px
+		color: $red
+		align-self: center
+		margin-top: 40px
+
+		@media screen and (max-width: 1166px)
+			font-size: 30px
+
+		.intro__btn--lg
+			display: none
+			margin: 40px auto
+			+lg(display, block)
+		
+		p
+			background-color: $accent
+			color: #FFFFFF
+			padding: 0 5px
+			transition: .5s all
+			cursor: pointer
+			
+			&:hover
+				transform: scale(1.1)
+
+		p:nth-of-type(even)
+			margin: 10px 0
+	&__text
+
+		&.anim
+			animation: glitch-anim-text 2s linear
+
+
+
+
+
+
+.next-item
+	+row-flex()
+	+lg(margin-top, 40px)
+
+	align-items: center
+	flex-direction: column
+
+
+
+	&__text
+		+col()
+		+size(4)
+		+size-sm(9)
+
+		text-align: center
+		color: $accent
+		text-decoration: none
+		font-family: $title-font
+		font-weight: 300
+		opacity: .8
+		transition: .5s all
+
+		&:hover
+			opacity: 1
+
+		&:hover > .next-section__arrow
+			transform: scale(1.1)
+
+
+
+
+
+	
+	&__arrow
+		+col()
+		display: block
+		margin: 0 auto
+		border-radius: $radius
+		color: $accent
+		font-size: 20px
+		cursor: pointer
+		transition: .5s all

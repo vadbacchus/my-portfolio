@@ -104,10 +104,46 @@
 	"buffers":
 	[
 		{
+			"file": "gulpfile.js",
+			"settings":
+			{
+				"buffer_size": 3819,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/js/common.js",
+			"settings":
+			{
+				"buffer_size": 1596,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/D/_PROGRAMMING/_web/draft/Switch/app/js/main.js",
+			"settings":
+			{
+				"buffer_size": 1534,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/sass/main.sass",
+			"settings":
+			{
+				"buffer_size": 10636,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "src/index.html",
 			"settings":
 			{
-				"buffer_size": 1428,
+				"buffer_size": 16950,
+				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		}
@@ -176,11 +212,16 @@
 	},
 	"expanded_folders":
 	[
-		"/D/archive/_PROGRAMMING/WEB_DEVELOPMENT/fast coding/Starting_HTML-Template(Smart Grid)",
-		"/D/archive/_PROGRAMMING/WEB_DEVELOPMENT/fast coding/Starting_HTML-Template(Smart Grid)/src"
+		"/D/_PROGRAMMING/_web/_portfolio/my-portfolio",
+		"/D/_PROGRAMMING/_web/_portfolio/my-portfolio/src",
+		"/D/_PROGRAMMING/_web/_portfolio/my-portfolio/src/js",
+		"/D/_PROGRAMMING/_web/_portfolio/my-portfolio/src/sass"
 	],
 	"file_history":
 	[
+		"/D/_PROGRAMMING/_web/draft/Landing v2.0 - edit/js/mainscripts.js",
+		"/D/_PROGRAMMING/_web/_portfolio/my-portfolio/src/js/common.js",
+		"/D/_PROGRAMMING/_web/_portfolio/my-portfolio/src/js/scripts.min.js",
 		"/D/archive/_PROGRAMMING/WEB_DEVELOPMENT/fast coding/Starting_HTML-Template (Bootstrap 4)/src/index.html",
 		"/D/archive/_PROGRAMMING/WEB_DEVELOPMENT/fast coding/Starting_HTML-Template(Smart Grid)/src/sass/_vars.sass",
 		"/D/archive/_PROGRAMMING/WEB_DEVELOPMENT/fast coding/Starting_HTML-Template(Smart Grid)/src/sass/main.sass",
@@ -305,10 +346,7 @@
 		"/D/OpenServer/domains/fashion.loc/wp-content/themes/fashion/template-parts/content-archive.php",
 		"/D/archive/_PROGRAMMING/WEB_DEVELOPMENT/Інструменти/OptimizedHTML-4-master/OptimizedHTML-4-master/app/libs/bootstrap/scss/_grid.scss",
 		"/D/archive/_PROGRAMMING/WEB_DEVELOPMENT/Інструменти/OptimizedHTML-4-master/OptimizedHTML-4-master/app/libs/bootstrap/scss/bootstrap-grid.scss",
-		"/D/archive/_PROGRAMMING/WEB_DEVELOPMENT/Інструменти/OptimizedHTML-4-master/OptimizedHTML-4-master/app/ht.access",
-		"/D/archive/_PROGRAMMING/WEB_DEVELOPMENT/draft/Switch/app/css/main.css",
-		"/D/archive/_PROGRAMMING/WEB_DEVELOPMENT/draft/Switch/app/index.html",
-		"/D/archive/_PROGRAMMING/WEB_DEVELOPMENT/Інструменти/OptimizedHTML-4-master/OptimizedHTML-4-master/package.json"
+		"/D/archive/_PROGRAMMING/WEB_DEVELOPMENT/Інструменти/OptimizedHTML-4-master/OptimizedHTML-4-master/app/ht.access"
 	],
 	"find":
 	{
@@ -348,34 +386,157 @@
 			[
 				{
 					"buffer": 0,
-					"file": "src/index.html",
-					"semi_transient": true,
+					"file": "gulpfile.js",
+					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1428,
+						"buffer_size": 3819,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								668,
-								668
+								2508,
+								2508
 							]
 						],
 						"settings":
 						{
-							"bs_sintax": "html",
-							"buffer_scroll_name": "5c445af3",
+							"bs_sintax": "javascript",
+							"buffer_scroll_name": "6b16d4ab",
 							"spell_check": false,
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/js/common.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1596,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1563,
+								1563
+							]
+						],
+						"settings":
+						{
+							"bs_sintax": "javascript",
+							"buffer_scroll_name": "53313a24",
+							"spell_check": false,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1169.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/D/_PROGRAMMING/_web/draft/Switch/app/js/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1534,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1071,
+								796
+							]
+						],
+						"settings":
+						{
+							"bs_sintax": "javascript",
+							"buffer_scroll_name": "5acd43a4",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 792.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/sass/main.sass",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10636,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8190,
+								8190
+							]
+						],
+						"settings":
+						{
+							"bs_sintax": "sass",
+							"buffer_scroll_name": "ec8fa374",
+							"color_scheme": "Packages/User/Color Highlighter/themes/OneDark.tmTheme",
+							"syntax": "Packages/Sass/Syntaxes/Sass.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 11212.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 16950,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10056,
+								10064
+							]
+						],
+						"settings":
+						{
+							"bs_sintax": "html",
+							"buffer_scroll_name": "9c6387db",
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1265.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -458,7 +619,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 354.0,
+	"side_bar_width": 266.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

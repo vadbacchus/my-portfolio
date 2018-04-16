@@ -1,8 +1,9 @@
-$(function() {
+
 
 AOS.init({
-      offset: 100,
+      offset: 200,
       duration: 600,
+      disable: window.innerWidth < 960,
     });
 
 document.body.onload = () => {
@@ -66,13 +67,16 @@ for (i=0; i < CLOSE_BTN.length ; i++) {
 		}	
 	}
 
-$('.scrollto').click(function() {
-    var elementClick = $(this).attr("href")
-    var destination = $(elementClick).offset().top;
-    jQuery("html, body").animate({
-        scrollTop: destination
-    }, 500);
-    return false;
- });
+  
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
 
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+        });
+    });
 });
+
+

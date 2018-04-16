@@ -84,7 +84,7 @@ gulp.task('sass', function() {
 
 gulp.task('js', function() {
 	return gulp.src([
-		'src/libs/jquery/dist/jquery.slim.min.js',
+		/*'src/libs/jquery/dist/jquery.slim.min.js',*/
 		'src/libs/aos-master/dist/aos.js',
 		'src/js/common.js', // Always at the end 
 		])

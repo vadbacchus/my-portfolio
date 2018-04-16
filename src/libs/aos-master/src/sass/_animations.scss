@@ -38,7 +38,7 @@ $aos-distance: 100px !default;
   transform: translate($aos-distance, 0);
 }
 
-[data-aos='fade-up-right'] {
+/* [data-aos='fade-up-right'] {
   transform: translate(-$aos-distance, $aos-distance);
 }
 
@@ -53,7 +53,7 @@ $aos-distance: 100px !default;
 [data-aos='fade-down-left'] {
   transform: translate($aos-distance, -$aos-distance);
 }
-
+ */
 
 
 
@@ -63,7 +63,7 @@ $aos-distance: 100px !default;
  * zoom-out, zoom-out-up, zoom-out-down, zoom-out-left, zoom-out-right
  */
 
-[data-aos^='zoom'][data-aos^='zoom'] {
+/* [data-aos^='zoom'][data-aos^='zoom'] {
   opacity: 0;
   transition-property: opacity, transform;
 
@@ -116,9 +116,8 @@ $aos-distance: 100px !default;
 
 
 
-/**
+*
  * Slide animations
- */
 
 [data-aos^='slide'][data-aos^='slide'] {
   transition-property: transform;
@@ -147,10 +146,9 @@ $aos-distance: 100px !default;
 
 
 
-/**
+*
  * Flip animations:
  * flip-left, flip-right, flip-up, flip-down
- */
 
 [data-aos^='flip'][data-aos^='flip'] {
   backface-visibility: hidden;
@@ -176,3 +174,4 @@ $aos-distance: 100px !default;
   transform: perspective(2500px) rotateX(100deg);
   &.aos-animate {transform: perspective(2500px) rotateX(0);}
 }
+ */

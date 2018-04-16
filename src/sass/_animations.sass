@@ -175,3 +175,12 @@
 		fill: $red
 	100% 
 		fill: $accent
+
+
+[data-aos="glitch-text"]
+	opacity: 0
+	transition-property: animation, opacity
+	
+	&.aos-animate 
+		animation: glitch-anim-text 0.5s linear
+		opacity: 1
