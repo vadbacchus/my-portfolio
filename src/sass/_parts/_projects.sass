@@ -1,3 +1,7 @@
+.section-title--2 span
+	background: linear-gradient(to right, #8C58DA, #55229F)
+
+
 .wrapper
 	+wrapper()
 
@@ -10,35 +14,48 @@
 		+size(6)
 		
 		margin-bottom: 20vh
-		background: $accent
+		
 		border-radius: 5px
+
+	&__item:first-child
+		background: linear-gradient(to right, #8C58DA, #55229F )
+
+	&__item:last-child
+		background: linear-gradient(to right, #55229F, #8C58DA)
 		
 
 	&__title
 		text-align: center
 		font-family: $title-font
+		font-weight: bold
 		font-size: 40px
 		color: #fff
 		margin-top: 20px 
-		margin-bottom: 20px 
+		margin-bottom: 80px 
 
 		span
 			display: block
+		span:last-child
+			font-weight: 400
+
 
 .tech
 	+row-flex()
 	justify-content: center
+	cursor: pointer
 	
 
-	&__smartgrid
+	&__main
 		+col()
 		+size(8)
 
-		margin: 0 0 20px 0
-		background-color: #fff
+		margin-bottom: 20px
+		
 		display: flex
 		flex-direction: column
 		justify-content: center
+		border: 15px solid #fff
+		border-radius: 50px
 		
 
 		span
@@ -47,8 +64,22 @@
 			text-align: center
 			font-family: $title-font
 			font-weight: 700
-			color: $accent
-			font-size: 60px
+			color: #fff
+			font-size: 70px
+
+	&__main--2
+		
+		order: 2
+		background: none
+		
+
+
+		span
+			font-family: $title-font
+			font-weight: 400
+			color: #fff
+			font-size: 200px
+
 
 	&__webtech
 		+col()
@@ -57,23 +88,76 @@
 		display: flex
 		justify-content: space-between
 		flex-direction: column
+		align-items: center
 		
 
 		span
 			border: 2px solid #FFF
-			padding: 22px 10px
-			margin: 0 auto 20px
+			padding: 25px 0
+			width: 100%
+			margin-bottom: 20px
 			font-size: 60px
-			color: #fff
+			border-radius: 10px
+			filter: blur(10px)
+			
+			background-color: #fff
 			display: flex
-			align-items: center
-		
+			justify-content: center
 
-	&__webtech--horizontal
-		+col()
-		+size(8)
-		display: flex
-		flex-direction: row
+	&__webtech--2
+		order: 1
+
+		span
+			border-radius: 10px
+
+	&__horizontal
+		+row-flex()
+		+size(12)
+		justify-content: center
+
+
+		span
+			
+			+size(4)
+			
+			filter: blur(10px)
+			border-radius: 10px
+			background: #fff
+			font-size: 70px
+			text-align: center
+			margin-bottom: 20px
+
+		span:nth-child(1)
+			margin-left: auto
+		span:nth-child(2)
+			margin: 0 auto 20px
+		span:nth-child(3)
+			margin-right: auto
+
+	&__horizontal
+		order: 3
+
+
+
+			
+[class*=" cip-"]:before, [class^=cip-]:before
+	margin: 0 auto
+	width: auto
+
+.cip-gulp
+	color: #EB4A4B
+
+.cip-sass
+	color: #c69
+
+		
+.cip-html5
+	color: #E44D26
+
+.cip-css3
+	color: #006EBB
+.cip-javascript
+	color: #F7DF1E
 
 		
 
