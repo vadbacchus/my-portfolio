@@ -11,7 +11,8 @@ var gulp          = require('gulp'),
 		rsync         = require('gulp-rsync'),
 		imagemin      = require('gulp-imagemin'),
 		smartgrid     = require('smart-grid'),
-		gcmq          = require('gulp-group-css-media-queries');
+		gcmq          = require('gulp-group-css-media-queries'),
+		wait          = require('gulp-wait');
 
 gulp.task('browser-sync', function() {
 	browsersync({
@@ -73,11 +74,12 @@ var settings = {
 
 gulp.task('sass', function() {
 	return gulp.src('src/sass/**/*.sass')
-	.pipe(sass({ outputStyle: 'expand' }).on("error", notify.onError()))
+	.pipe(wait(500))
+	.pipe(sass({ outputStyle: 'expanded' }).on("error", notify.onError()))
 	.pipe(rename({ suffix: '.min', prefix : '' }))
 	.pipe(gcmq())
 	.pipe(autoprefixer(['last 15 versions']))
-	.pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Opt., comment out when debugging
+	/*.pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Opt., comment out when debugging*/
 	.pipe(gulp.dest('src/css'))
 	.pipe(browsersync.reload( {stream: true} ))
 });

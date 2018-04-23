@@ -22,12 +22,19 @@
 		cursor: pointer
 		outline: none
 		transition: .2s
+		
 
-		&:hover .cls-1, &:focus .cls-1
-			fill: $red
-			outline: none
+		.cip-bacchus-grape
+			font-size: 70px
+			color: $accent
+			
+			&:hover , &:focus
+				color: $red
+				outline: none
 		&:hover
-			transform: scale(1.1)	
+			transform: scale(1.1)
+
+
 	
 		
 
@@ -220,6 +227,8 @@
 	+row-flex()
 	+lg(margin-top, 40px)
 
+
+
 	align-items: center
 	flex-direction: column
 
@@ -230,6 +239,7 @@
 		+size(4)
 		+size-sm(9)
 
+		
 		text-align: center
 		color: $accent
 		text-decoration: none

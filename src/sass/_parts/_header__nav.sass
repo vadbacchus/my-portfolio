@@ -15,7 +15,7 @@
 	overflow-x: hidden
 	overflow-y: hidden
 	transition: .6s
-	background: #fff
+	background: #000
 	z-index: 10
 	animation: fadeIn 1s
 
@@ -73,7 +73,7 @@
 			pointer-events: none
 
 		&:hover
-			background: #6e8efb
+			background: #7F00FF
 			color: #fff
 
 		&::before
@@ -84,12 +84,12 @@
 			top: var(--y)
 			width: var(--size)
 			height: var(--size)
-			background: radial-gradient(circle closest-side, #30efbf, transparent) //
+			background: radial-gradient(circle closest-side, #E100FF, transparent) //
 			transform: translate(-50%, -50%)
 			transition: width .5s ease, height .5s ease
 
 		&:hover::before
-			--size: 1000px
+			--size: 600px
 
 			
 
@@ -112,7 +112,7 @@ button.nav__closebtn
 	transition: color .5s
 
 	&:hover, &:focus
-		color: #00dbde
+		color: #7F00FF
 		outline: none
 
 

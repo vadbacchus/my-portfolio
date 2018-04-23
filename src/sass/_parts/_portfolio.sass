@@ -8,7 +8,9 @@
 	span
 		margin: 0 auto
 		padding: 10px
-		background-color: $accent
+		/* background-color: $accent */
+		border: 3px solid $accent
+		color: $accent
 
 .portfolio
 
@@ -71,6 +73,8 @@
 	&__item:nth-child(even) &__text 
 		margin-left: auto
 		margin-top: 265px
+
+
 
 		+lg(margin-top, 250px)
 		+md(margin, 20px auto)
@@ -215,13 +219,13 @@
 
 	&__title
 		font-family: $title-font
-		font-weight: 800
+		font-weight: 700
 		position: absolute
 		font-size: 70px
 		background-color: #FFFFFF
 		padding: 0 20px
 		text-align: center
-		box-shadow: 0 0 0 10px $red
+		box-shadow: 0 0 0 8px $red
 		color: $red
 		transition: .5s all
 		
@@ -232,18 +236,22 @@
 
 	&__text
 		color: $color-text
+		font-family: $title-font
 		opacity: 0
 		font-size: 20px
 		margin: 265px 0 0 50px
-		text-align: justify
-		transition: .5s all
-		width: 70%
 		
+		transition: .5s all
+		width: 80%		
 		
 		+lg(margin-top, 250px)
 		+md(margin, 20px auto)
 		+md(opacity, 1)
 		+xs(width, 95%)
+
+		p::selection
+			color: #fff
+			background: $red
 		
 
 		p:nth-of-type(2)

@@ -1,5 +1,3 @@
-.section-title--2 span
-	background: linear-gradient(to right, #8C58DA, #55229F)
 
 
 .wrapper
@@ -13,15 +11,37 @@
 		+col()
 		+size(6)
 		
-		margin-bottom: 20vh
+		margin-bottom: 5vh
 		
-		border-radius: 5px
+		/* border-radius: 5px */
+		/* border: 4px solid $red */
+		/* background-image: linear-gradient(to bottom, #272B33 30%, #1D4246 100%) */
+
 
 	&__item:first-child
-		background: linear-gradient(to right, #8C58DA, #55229F )
+		/* background: linear-gradient(to right, #8C58DA, #55229F ) */
+
+
+	&__item:nth-child(2)
+		/* background: linear-gradient(to right, #55229F, #8C58DA) */
+
+		
+
 
 	&__item:last-child
-		background: linear-gradient(to right, #55229F, #8C58DA)
+		+col()
+		+size(12)
+		+row-flex()
+		margin: 50px auto
+		justify-content: center
+		background-image: linear-gradient(to bottom, #272B33 50%, #1D4246 100%)
+
+		
+
+		
+
+
+
 		
 
 	&__title
@@ -29,7 +49,7 @@
 		font-family: $title-font
 		font-weight: bold
 		font-size: 40px
-		color: #fff
+		color: $accent //#fff
 		margin-top: 20px 
 		margin-bottom: 80px 
 
@@ -38,11 +58,137 @@
 		span:last-child
 			font-weight: 400
 
+	
+		
+
+	&__title--art
+		+col()
+		+size(7)
+		margin-bottom: 120px
+		font-family: 'Fontdiner Swanky', sans-serif //'Fontdiner Swanky', cursive
+		font-weight: 900
+		font-size: 90px
+		text-align: center
+		transition: all .5s 
+
+
+		&:hover
+			color: #fff
+			cursor: pointer
+			text-shadow: 0 0 10px #fff
+	&__artbox
+		+col()
+		+size(5)
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		position: relative
+
+		&:hover .moon
+			transform: rotate(20deg)
+
+		&:hover .cloud--1
+			transform: translate(40px, 0)
+		&:hover .cloud--2
+			transform: translate(-40px, 0)
+
+
+		
+
+	&__text
+		+col()
+		+size(6)
+
+		color: #fff
+		font-size: 20px
+		font-weight: 300
+
+
+
+		p
+			margin: 20px 0
+
+			&::selection
+				color: #fff
+				background: #FF802A
+
+
+	
+
+.moon
+
+	width: 50%
+	height: 0
+	padding-bottom: 50%
+	/* margin: 20px auto */
+	border-radius: 50%
+	background-image: linear-gradient(to bottom, #FFAB19 50%, #FF6C32 100%)
+	transition: all .5s 
+	
+
+.empty
+	width: 80%
+	height: 0
+	padding-bottom: 80%
+	background-color: #272B33
+	border-radius: 50%
+	overflow: hidden
+
+.cloud
+	width: 60%
+	height: 0
+	padding-bottom: 35%
+	transition: all .5s 
+	
+	position: absolute
+	
+
+.cloud--1 
+	top: 240px
+	right: 65%
+
+
+.cloud--2 
+
+	top: 180px
+	right: 0
+
+	.circle
+		background: #5A757D
+
+.circle
+	width: 35%
+	height: 0
+	padding-bottom: 35%
+	border-radius: 50%
+	background-color: #3D5860
+	position: absolute
+
+.c-1
+	left: 0
+	top: 30%
+
+.c-2 
+	top: -10%
+	left: 25%
+
+.c-3
+	top: 0%
+	left: 50%
+
+.c-4
+	top: 40%
+	left: 25%
+
+.c-5 
+	top: 30%
+	left: 50%
 
 .tech
 	+row-flex()
 	justify-content: center
-	cursor: pointer
+	
+
 	
 
 	&__main
@@ -50,35 +196,79 @@
 		+size(8)
 
 		margin-bottom: 20px
-		
 		display: flex
 		flex-direction: column
 		justify-content: center
-		border: 15px solid #fff
+		border: 15px solid $accent
 		border-radius: 50px
+		position: relative
+		overflow: hidden
+		transition: all .5s
+		cursor: pointer
+		
+		
 		
 
-		span
+		.tech__title
 			display: block
 			margin: 0 auto
 			text-align: center
 			font-family: $title-font
 			font-weight: 700
-			color: #fff
+			color: $accent
 			font-size: 70px
 
+	&__overlay
+		position: absolute
+
+		
+
+		z-index: 100
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 100%
+		height: 100%
+		background: #fff
+		font-size: 60px
+		opacity: 0
+		transition: all .7s
+		transform: translateX(-50px)
+
+		&:hover
+			opacity: 1
+			transform: translateX(0)
+
+	
+			
+
+		a
+			color: $accent
+			border: 3px solid $accent
+			width: 100px
+			height: 100px
+			text-align: center
+			border-radius: 50%
+			display: flex
+			justify-content: center
+			align-items: center
+
+	&__overlay--2
+		transform: translateX(50px)
+			
+	
 	&__main--2
 		
 		order: 2
-		background: none
+		
 		
 
 
-		span
+		.tech__title
 			font-family: $title-font
 			font-weight: 400
-			color: #fff
-			font-size: 200px
+			color: $accent
+			font-size: 160px
 
 
 	&__webtech
@@ -92,17 +282,24 @@
 		
 
 		span
-			border: 2px solid #FFF
+			/* border: 2px solid $accent */
 			padding: 25px 0
 			width: 100%
 			margin-bottom: 20px
 			font-size: 60px
 			border-radius: 10px
-			filter: blur(10px)
+			/* filter: blur(10px) */
+			/* transition: filter .2s */
+			cursor: pointer
+			border: 1px solid $accent
+			color: $accent
 			
 			background-color: #fff
 			display: flex
 			justify-content: center
+
+			&:hover
+				filter: none
 
 	&__webtech--2
 		order: 1
@@ -120,12 +317,20 @@
 			
 			+size(4)
 			
-			filter: blur(10px)
+			cursor: pointer
+			/* filter: blur(10px) */
 			border-radius: 10px
 			background: #fff
 			font-size: 70px
 			text-align: center
 			margin-bottom: 20px
+			overflow: hidden
+			border: 1px solid $accent
+			
+
+			
+
+			
 
 		span:nth-child(1)
 			margin-left: auto
@@ -137,6 +342,53 @@
 	&__horizontal
 		order: 3
 
+	&__text
+		+col()
+		+size(11)
+
+		order: 4
+		color: $color-text
+		font-family: $title-font
+
+		ul, li
+			+col()
+
+			list-style-type: circle
+			margin-top: 20px
+			margin-bottom: 20px
+			font-size: 19px
+
+		p
+			+col()
+			
+			font-size: 20px
+			margin-top: 40px
+			margin-bottom: 40px
+			
+
+		strong
+			background: $accent //#fff 
+			color: #fff//#8753D4
+			padding: 5px
+			border-radius: 5px
+
+		a
+			background: none
+			text-decoration: none
+			border: 1px solid $accent
+			padding: 5px
+			border-radius: 5px
+			color: inherit
+			transition: .2s all
+
+			&:hover
+				background: $accent
+				color: #fff
+
+	
+		
+
+
 
 
 			
@@ -144,20 +396,37 @@
 	margin: 0 auto
 	width: auto
 
-.cip-gulp
-	color: #EB4A4B
+.cip-gulp,
+.cip-sass,
+.cip-html5,
+.cip-css3,
+.cip-javascript,
+.cip-fontello
+	transition: all .5s
+	color: $accent
 
-.cip-sass
+.cip-gulp:hover
+	color: #EB4A4B
+	transform: scale(1.1)
+
+.cip-sass:hover
 	color: #c69
+	transform: scale(1.1)
 
 		
-.cip-html5
+.cip-html5:hover
 	color: #E44D26
+	transform: scale(1.1)
 
-.cip-css3
+.cip-css3:hover
 	color: #006EBB
-.cip-javascript
+	transform: scale(1.1)
+.cip-javascript:hover
 	color: #F7DF1E
+	transform: scale(1.1)
+.cip-fontello:hover
+	color: #000
+	transform: scale(1.1)
 
 		
 

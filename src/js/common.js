@@ -1,7 +1,7 @@
 
 
 AOS.init({
-      offset: 200,
+      offset: 300,
       duration: 600,
       disable: window.innerWidth < 960,
     });
@@ -78,5 +78,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         });
     });
 });
+
+
+
 
 
