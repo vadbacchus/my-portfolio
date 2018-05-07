@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'cip';
-  src: url('../font/cip.eot?41332376');
-  src: url('../font/cip.eot?41332376#iefix') format('embedded-opentype'),
-       url('../font/cip.woff2?41332376') format('woff2'),
-       url('../font/cip.woff?41332376') format('woff'),
-       url('../font/cip.ttf?41332376') format('truetype'),
-       url('../font/cip.svg?41332376#cip') format('svg');
+  src: url('../font/cip.eot?69957152');
+  src: url('../font/cip.eot?69957152#iefix') format('embedded-opentype'),
+       url('../font/cip.woff2?69957152') format('woff2'),
+       url('../font/cip.woff?69957152') format('woff'),
+       url('../font/cip.ttf?69957152') format('truetype'),
+       url('../font/cip.svg?69957152#cip') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'cip';
-    src: url('../font/cip.svg?41332376#cip') format('svg');
+    src: url('../font/cip.svg?69957152#cip') format('svg');
   }
 }
 */
@@ -95,7 +95,7 @@
 .cip-left-open-mini:before { content: '\e825'; } /* '' */
 .cip-right-open-mini:before { content: '\e826'; } /* '' */
 .cip-up-open-mini:before { content: '\e827'; } /* '' */
-.cip-javascript-(1):before { content: '\e828'; } /* '' */
+.cip-javascript:before { content: '\e828'; } /* '' */
 .cip-fontello:before { content: '\e829'; } /* '' */
 .cip-bacchus-grape:before { content: '\e82a'; } /* '' */
 .cip-gulp:before { content: '\e82b'; } /* '' */
@@ -162,3 +162,6 @@
 .cip-facebook-squared:before { content: '\f308'; } /* '' */
 .cip-skype:before { content: '\f30b'; } /* '' */
 .cip-linkedin-squared:before { content: '\f30c'; } /* '' */
+.cip-instagram-1:before { content: '\f31e'; } /* '' */
+.cip-instagram-filled:before { content: '\f31f'; } /* '' */
+.cip-codepen:before { content: '\f32c'; } /* '' */

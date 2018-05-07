@@ -130,6 +130,16 @@
 		clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%)
 
 
+@keyframes slide-down
+	from
+		opacity: 0
+		transform: translateY(-100%)
+
+	to
+		opacity: 1
+		transform: translateY(0)
+
+
 @keyframes fadeInLeft
 	from 
 		opacity: 0
@@ -184,6 +194,35 @@
 	&.aos-animate 
 		animation: glitch-anim-text 0.5s linear
 		opacity: 1
+
+[data-aos="glitch-1"]
+	opacity: 0
+	transition-property: animation, opacity, transform
+	
+	&.aos-animate 
+		transform: translate3d($gap-vertical, 0, 0 )
+		animation: glitch-anim-1-horizontal 1.5s ease-in alternate
+		opacity: 1
+
+
+
+[data-aos="glitch-3"]
+	opacity: 0
+	transition-property: animation, opacity, transform
+	
+	&.aos-animate 
+		transform: translate3d(0, calc( -1 * #{$gap-vertical} ), 0 ) scale3d(-1, -1, 1)
+		animation: glitch-anim-3-horizontal 1.5s ease-out alternate
+		opacity: 1
+
+[data-aos="glitch-4"]
+	opacity: 0
+	transition-property: animation, opacity
+	
+	&.aos-animate 
+		animation: glitch-anim-flash 1.5s steps(1,end) 
+		opacity: 1
+
 
 
 

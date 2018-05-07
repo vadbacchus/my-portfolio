@@ -614,7 +614,7 @@
     },
     {
       "uid": "1299772bf0c78099886225fc8650d0e0",
-      "css": "javascript-(1)",
+      "css": "javascript",
       "code": 59432,
       "src": "custom_icons",
       "selected": true,
@@ -623,7 +623,7 @@
         "width": 1000
       },
       "search": [
-        "javascript-(1)"
+        "javascript"
       ]
     },
     {
@@ -695,6 +695,24 @@
       "search": [
         "jquery"
       ]
+    },
+    {
+      "uid": "155970c9f52b23f31026bab7163caa63",
+      "css": "codepen",
+      "code": 62252,
+      "src": "brandico"
+    },
+    {
+      "uid": "cc20f2a7fa05a475130c406740bbbd26",
+      "css": "instagram-filled",
+      "code": 62239,
+      "src": "brandico"
+    },
+    {
+      "uid": "dad4e7f8dc2e57c92cffc0231202d9a0",
+      "css": "instagram-1",
+      "code": 62238,
+      "src": "brandico"
     }
   ]
 }

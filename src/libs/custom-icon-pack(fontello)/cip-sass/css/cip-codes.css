@@ -39,7 +39,7 @@
 .cip-left-open-mini:before { content: '\e825'; } /* '' */
 .cip-right-open-mini:before { content: '\e826'; } /* '' */
 .cip-up-open-mini:before { content: '\e827'; } /* '' */
-.cip-javascript-(1):before { content: '\e828'; } /* '' */
+.cip-javascript:before { content: '\e828'; } /* '' */
 .cip-fontello:before { content: '\e829'; } /* '' */
 .cip-bacchus-grape:before { content: '\e82a'; } /* '' */
 .cip-gulp:before { content: '\e82b'; } /* '' */
@@ -106,3 +106,6 @@
 .cip-facebook-squared:before { content: '\f308'; } /* '' */
 .cip-skype:before { content: '\f30b'; } /* '' */
 .cip-linkedin-squared:before { content: '\f30c'; } /* '' */
+.cip-instagram-1:before { content: '\f31e'; } /* '' */
+.cip-instagram-filled:before { content: '\f31f'; } /* '' */
+.cip-codepen:before { content: '\f32c'; } /* '' */

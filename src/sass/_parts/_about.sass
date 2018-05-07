@@ -1,0 +1,167 @@
+.person
+	background: $red
+	+row-flex()
+	
+	justify-content: center
+	
+
+	&__description
+		+col()
+		+size(7)
+		
+
+		h3
+			color: #fff
+			font-size: 26px
+			margin: 50px 50px 20px
+
+		p
+			color: #fff
+			background: rgba(0,0,0,.1)
+			padding: 20px
+			margin: 20px 50px
+			
+			font-size: 20px
+
+	&__line
+		
+		border: 1px solid #fff
+		width: 50%
+		margin: 30px 0 30px -20%			
+		
+
+	&__line--v
+		+col()
+		+size(2)
+		border: none
+		border-left: 1px solid #fff
+		width: 1%
+		margin: 0
+		padding-bottom: 45%
+		align-self: center
+
+	&__photo
+		+col()
+		+size(5)
+		display: flex
+		align-items: center
+
+		img
+			
+			margin: 50px auto 0
+
+
+	&__features
+		+col()
+		+size(12)
+		display: flex
+		justify-content: center
+		margin: 50px 0 0 0
+
+	&__tech, &__skills
+		+col()
+		+size(5)
+		text-align: center
+		color: #fff
+
+		h3
+			margin: 50px 0
+
+			
+
+		span
+			font-size: 24px
+			padding: 15px
+			color: #fff
+			background: rgba(0,0,0,.3)
+
+
+			
+		li
+			margin: 10px 0 
+			font-size: 18px
+			cursor: pointer
+			padding: 10px 0
+			overflow: hidden
+
+			
+			&:hover
+				background: rgba(0,0,0,.2)
+
+
+
+.pro:hover::before
+	opacity: 1
+
+.pro::before
+	content: 'PRO'
+	margin-left: -100px
+	margin-right: 20px
+	background: #000
+	color: #fff
+	font-weight: 700
+	padding: 10% 10px
+	opacity: 0
+	transition: opacity 1s
+
+.perspective
+	+row-flex()
+	justify-content: center
+
+	h3
+		+col()
+		+size(12)
+		margin: 50px 0
+		text-align: center
+
+	span
+		font-size: 24px
+		padding: 15px
+		color: #fff
+		background: rgba(0,0,0,.3)
+
+	&__img
+		+col()
+		+size(3)
+
+		background: #fff
+		border-radius: 5px
+		padding: 50px
+
+		img
+			width: 100%
+
+		img:nth-child(3)
+			align-self: center
+
+	&__img:nth-child(3)
+		display: flex
+
+
+
+
+.cooperation
+	+size(3)
+
+	box-shadow: 0 0 0 1px #fff
+	border-radius: 4px
+	color: #fff
+	margin: 100px auto
+	
+	text-align: center
+	text-decoration: none
+	padding: 10px
+	font-size: 20px
+	font-weight: 300
+	transition: all .5s
+
+	&:hover
+		background: rgba(0,0,0,.3)
+
+.section-title--3
+	+col()
+	+size(12)
+
+	span
+		border-color: #fff
+		color: #fff

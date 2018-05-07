@@ -1,8 +1,7 @@
 .header
 	min-height: 100vh
 
-	.wrapper
-		+wrapper()
+	
 
 .menu
 	+row-flex()
@@ -21,18 +20,25 @@
 		background-color: transparent
 		cursor: pointer
 		outline: none
-		transition: .2s
+		
 		
 
 		.cip-bacchus-grape
 			font-size: 70px
 			color: $accent
 			
-			&:hover , &:focus
+
+			&::before
+				transition: all .2s
+
+			&:hover::before
 				color: $red
 				outline: none
-		&:hover
-			transform: scale(1.1)
+				transform: scale(1.1)
+			
+				
+		
+			
 
 
 	
@@ -152,7 +158,7 @@
 		transition: box-shadow 1s ease, background 1s ease, color .5s ease
 
 		&:hover
-			background: #6e8efb
+			background: #3494E6 //#6e8efb
 			color: #fff
 			box-shadow: none
 
@@ -171,12 +177,12 @@
 			top: var(--y)
 			width: var(--size)
 			height: var(--size)
-			background: radial-gradient(circle closest-side, #30efbf, transparent) //#30efbf #6e8efb 
+			background: radial-gradient(circle closest-side, #EC6EAD, transparent) //#30efbf #6e8efb 
 			transform: translate(-50%, -50%)
 			transition: width .2s ease, height .2s ease
 
 		&:hover::before
-			--size: 400px
+			--size: 600px
 
 	&__service
 		+col()
@@ -244,15 +250,15 @@
 		color: $accent
 		text-decoration: none
 		font-family: $title-font
-		font-weight: 300
+		
 		opacity: .8
 		transition: .5s all
 
 		&:hover
 			opacity: 1
 
-		&:hover > .next-section__arrow
-			transform: scale(1.1)
+		&:hover > .next-item__arrow
+			transform: scale(1.3)
 
 
 
