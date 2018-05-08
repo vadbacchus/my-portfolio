@@ -1,6 +1,6 @@
 .contacts
+	margin: 0 0 20vh 0
 	
-	border-bottom: 2px solid $accent
 
 	& .section-title
 		margin: 10vh 0 15vh 0
@@ -22,7 +22,7 @@
 	input, textarea
 		padding: 15px 0 15px 10px
 		font-size: 18px
-		border: 1px solid $accent
+		border: 2px solid $accent
 		border-radius: 5px
 		
 
@@ -39,10 +39,9 @@
 	justify-content: center
 
 	&__name,
-	&__email,
-	&__company
+	&__email
 		+col()
-		+size(3)
+		+size(4)
 		display: flex
 		flex-flow: column nowrap
 
@@ -55,20 +54,34 @@
 	
 	label
 		+col()
-		+size(9)
+		+size(8)
 		
 
 .message
 	+col()
-	+size(9)
+	+size(8)
 	
 	
 	resize: none
 
+.required
+	+size(12)
+	margin: 20px 0
+
+
+	span
+		text-align: center
+		display: block
+		color: $color-text
+
 .send
 	+size(3)
 
-	margin: 50px 0
+	margin: 0 0 50px 0
 	color: #fff
 	background: $accent
 	cursor: pointer
+	transition: background .5s ease
+
+	&:hover
+		background: #9733EE	

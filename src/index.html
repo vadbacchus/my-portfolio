@@ -34,6 +34,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,900" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Henny+Penny" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Griffy" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900" rel="stylesheet">
 
 		<link rel="stylesheet" href="css/main.min.css">
 	</head>
@@ -47,19 +48,20 @@
 				<div class="wrapper">
 					<div class="menu">
 						<div class="menu__icons">
-							<a href="" class="menu__github"><span class="cip-github-circled"></span></a>
+							<a href="" class="menu__github"><span class="cip-github-circled no-anim"></span></a>
 							<a href="" class="menu__lang-ru">РУССКИЙ</a>
 						</div>
 						<button class="menu__btn"><span class="cip-bacchus-grape"></span></button>
 						<nav class="nav"> <!-- hidden -->
 							<button class="nav__closebtn" >
-								<span class="cip-cancel"></span>
+								<span></span>
+								<span></span>
 							</button>
 							<ul class="nav__list">
-								<li class="nav__item "><a href="#" class="nav__link nav__closebtn superhover"><span>Lorem ipsum dolor sit amet.</span></a></li>
-								<li class="nav__item "><a href="#" class="nav__link nav__closebtn superhover"><span>Lorem ipsum dolor sit amet.</span></a></li>
-								<li class="nav__item "><a href="#" class="nav__link nav__closebtn superhover"><span>Lorem ipsum dolor sit amet.</span></a></li>
-								<li class="nav__item "><a href="#" class="nav__link nav__closebtn superhover"><span>Lorem ipsum dolor sit amet.</span></a></li>
+								<li class="nav__item "><a href="#" class="nav__link nav__closebtn superhover"><span>Мої роботи</span></a></li>
+								<li class="nav__item "><a href="#" class="nav__link nav__closebtn superhover"><span>Інші проекти</span></a></li>
+								<li class="nav__item "><a href="#" class="nav__link nav__closebtn superhover"><span>Про мене</span></a></li>
+								<li class="nav__item "><a href="#" class="nav__link nav__closebtn superhover"><span>Контакти</span></a></li>
 							</ul>
 						</nav>
 					</div>
@@ -419,7 +421,7 @@
 									<li>Wordpress</li>
 									<li class="pro">БЕМ</li>
 									<li>Photoshop</li>
-									<li>Illustrator</li>
+									<li>Inkscape</li>
 								</ul>
 							</div>
 							<div class="person__line person__line--v" data-aos="fade-down"></div>
@@ -436,12 +438,27 @@
 						</div>
 						<div class="perspective">
 							<h3><span>В перспективі</span></h3>
+							<p><span>Для реалізації крутих задумок мені необхідно освоїти наступні технології. І почну я з Vue.js!</span></p>
 							<div class="perspective__img"><img src="img/react.svg" alt=""></div>
 							<div class="perspective__img"><img src="img/vue.svg" alt=""></div>	
 							<div class="perspective__img"><img src="img/webgl.svg" alt=""></div>		
 						</div>
-						<a href="#contacts" class="cooperation">Почати співпрацю</a>
+						<div class="offer">
+							<h3 class="offer__title"><span>Зацікавлені у спільній роботі?</span></h3>
+							<p class="offer__text">	
+							<span>
+								На даний момент я відкритий до нових проектів 
+								і завжди готовий консультувати з приводу розробки веб-продуктів.
+							</span>
+							</p>
+							<a href="#contacts" class="offer__btn">Почати співпрацю</a>
+						</div>
+
 					</div>
+				</div>
+				<div class="triangle">
+					<div class="triangle--1"></div>
+					<div class="triangle--2"></div>
 				</div>
 			</section>
 			<section class="contacts" >
@@ -458,22 +475,35 @@
 								<label for="email"><span>EMAIL *</span></label>
 								<input type="email" class="email" id="email" placeholder="Напишіть Ваш email" required>
 							</div>
-							<div class="inputbox__company">
-								<label for="company"><span>КОМПАНІЯ</span></label>
-								<input type="text" class="company" id="company" placeholder="Напишіть Вашу компанію">
-							</div>
+							
 						</div>
 						<div class="textbox">
 							<label for="message"><span>ПОВІДОМЛЕННЯ *</span></label>
-							<textarea name="message" class="message" rows="10" id="message" placeholder="Напишіть повідомлення" required></textarea>
+							<textarea name="message" class="message" rows="10" id="message" placeholder="Розкажіть про Ваш проект, яким Ви його бачите, які задачі він має виконувати. Опишіть основні моменти, які мають бути присутні в проекті. А з деталями я обов'язково Вам допоможу розібратися в ході нашої роботи." required></textarea>
 						</div>
+						<p class="required"><span>* — необхідно написати</span></p>
 						<input type="submit" class="send" value="Надіслати повідомлення">
 					</form>
 				</div>
 			</section>
 				<!-- FOOTER START -->
 			<footer  id="footer" class="footer">
-			
+				
+					<div class="logo">
+						<img src="img/logo-main.svg" alt="">
+					</div>
+					<h2 class="motto"><span>Пристрасть, жага до навчання та щоденний розвиток.</span></h2>
+					<div class="author">
+						<div class="social">
+							<span class="cip-facebook"></span>
+							<span class="cip-twitter"></span>
+							<span class="cip-linkedin"></span>
+							<span class="cip-gplus"></span>
+							<span class="cip-github-circled"></span>
+						</div>
+						<div class="copyright"><h3>© 2018 Вадим Галайко. Зроблено з любов'ю.</h3></div>
+					</div>
+				
 			</footer>
 				<!-- FOOTER END -->
 		</main>
@@ -534,15 +564,7 @@
 		background: linear-gradient(135deg, transparent 95%, #fff 100% ) */
 
 
-- поправити "подивитися мої роботи"
-- додати паралакс
-- зробити svg sprite
-- завантажити на гітхаб всі роботи
-- додати посилання
-- додати соц іконки
-- зарєгатися в linked in, codepen, jsfiddle
-- переписати id червоних стрілок
-- переробити логотип винограду, його корінець має дивні чорні контури
+
 - 
 
 3891
@@ -566,5 +588,32 @@
 
 <!-- 
 
-$blend-color-1: #607D8F blue
+Таски:
+
+- переписати меню --
+- додати айтемам портфоліо унікальні кольорові схеми
+- змінити прелоадер
+- додати паралакс в деяких пунктах
+- додати обработчік для форми або використати спец. сервіс
+- спробувати сховати форму
+- видалити анімації на айтемах портфоліо
+- pure css зробити секцію на весь екран
+- додати в секція about якісь інші кольори, трохи розділити її
+- додати фіксовану кнопку менюшки
+- оптимізувати айкон пак
+- наповнити контентом всі пункти
+- очистити html
+- оптимізувати css
+- вставити силки
+- зробити код валідним
+- вставити перевірку підтримки технологій support + modernizr
+- зробити заглушки для тупих браузерів 
+- перевірити кроссбраузерність
+- завантажити на гітхаб всі робо
+- зарєгатися в linked in  jsfiddle
+- переписати id червоних стрілок
+- мініфікація картинок, стилів, скріптів
+
+
+- відверстати 3 макети
  -->

@@ -1,5 +1,18 @@
-.person
+.section-title--3
+	+col()
+	+size(12)
+
+	span
+		border-color: #fff
+		color: #fff
+
+.about
 	background: $red
+
+
+
+.person
+	
 	+row-flex()
 	
 	justify-content: center
@@ -108,17 +121,39 @@
 	+row-flex()
 	justify-content: center
 
+
+
 	h3
 		+col()
 		+size(12)
-		margin: 50px 0
+		margin: 100px 0 0 0
 		text-align: center
 
-	span
-		font-size: 24px
-		padding: 15px
-		color: #fff
-		background: rgba(0,0,0,.3)
+
+		span
+			font-size: 24px
+			padding: 15px
+			color: #fff
+			background: rgba(0,0,0,.3)
+
+	p
+		+col()
+		+size(12)
+		margin: 50px 0
+		
+		
+		span
+			text-align: center
+			display: block
+			max-width: 550px
+			margin: 0 auto
+			color: #fff
+			font-size: 20px
+
+
+
+
+	
 
 	&__img
 		+col()
@@ -126,42 +161,91 @@
 
 		background: #fff
 		border-radius: 5px
-		padding: 50px
+		display: flex
+		align-items: center
+		justify-content: center
+		padding: 50px 10px
+		overflow: hidden
+		cursor: pointer
+
 
 		img
-			width: 100%
+			width: 50%
+			transition: transform .5s ease-in-out
 
-		img:nth-child(3)
-			align-self: center
+			&:hover
+				transform: scale(1.2)
 
-	&__img:nth-child(3)
-		display: flex
+		
+
+	&__img:nth-child(5) img
+		width: 100%
 
 
-
-
-.cooperation
-	+size(3)
-
-	box-shadow: 0 0 0 1px #fff
-	border-radius: 4px
-	color: #fff
-	margin: 100px auto
-	
-	text-align: center
-	text-decoration: none
-	padding: 10px
-	font-size: 20px
-	font-weight: 300
-	transition: all .5s
-
-	&:hover
-		background: rgba(0,0,0,.3)
-
-.section-title--3
-	+col()
+.offer
+	+row-flex()
 	+size(12)
-
-	span
-		border-color: #fff
+	
+	
+	&__title
 		color: #fff
+		font-size: 24px
+		margin: 100px auto 50px
+		background: rgba(0,0,0,.3)
+		font-size: 24px
+		padding: 15px
+		color: #fff
+
+		
+			
+
+	&__text
+		+size(12)
+		text-align: center
+		margin: 50px 0
+
+		span
+			text-align: center
+			display: block
+			max-width: 550px
+			margin: 0 auto
+			color: #fff
+			font-size: 20px
+
+	&__btn
+		+size(3)
+
+		border: 1px solid #fff
+		border-radius: 4px
+		color: #fff
+		margin: 50px auto 50px
+	
+		text-align: center
+		text-decoration: none
+		padding: 10px
+		font-size: 20px
+		font-weight: 300
+		transition: all .5s
+
+		&:hover
+			background: rgba(0,0,0,.3)
+
+
+.triangle
+	
+	position: relative
+	display: flex
+	
+	width: 100%
+
+	&--1, &--2
+		flex: 1
+		height: 0
+
+		padding-bottom: 10%
+
+	&--1
+		background: linear-gradient(to top right, #fff 50%, $red 50.3%)
+
+	&--2
+		background: linear-gradient(to top left, #fff 50%, $red 50.3%)

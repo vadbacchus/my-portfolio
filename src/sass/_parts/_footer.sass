@@ -1,0 +1,88 @@
+.footer
+	background: linear-gradient(to bo, #fff 85%, $accent 85.3%, #9D50BB)
+
+
+.logo
+	+row-flex()
+	justify-content: center
+	margin: 50px 0 0 0
+	
+
+	img
+		cursor: pointer
+		+size(3)
+
+.motto
+	display: flex
+	justify-content: center
+	margin: 20px 0
+
+	span
+		width: 40%
+		text-align: center
+		color: $red
+		font-weight: 700
+		font-size: 26px
+
+.author
+	
+
+.social
+	display: flex
+	justify-content: center
+	
+	
+	padding: 50px 0
+
+	span
+		display: flex
+		align-items: center
+		justify-content: center
+		padding: 12px 
+		margin: 0 20px
+		color: #fff
+		cursor: pointer
+		border-radius: 50%
+		background: $accent
+		box-shadow: 0 0 10px $accent
+		overflow: hidden
+
+		&::before
+			width: 34px
+			font-size: 34px
+
+		&:hover
+			color: #fff
+			
+
+		&:hover:nth-child(1)
+			background: #4867AA
+		&:hover:nth-child(2)
+			background: #5DA9DD
+		&:hover:nth-child(3)
+			background: #0077B5
+		&:hover:nth-child(4)
+			background: #D43F34
+		&:hover:nth-child(5)
+			background: #323131
+
+.copyright
+	
+	background: $accent
+	
+	h3
+		text-align: center
+		color: #fff
+		padding: 15px 0
+		font-size: 18px
+
+
+.cip-facebook:hover::before,
+.cip-twitter:hover::before,
+.cip-linkedin:hover::before,
+.cip-gplus:hover::before,
+.cip-github-circled:not(.no-anim):hover::before,
+
+	animation: slide-down .5s
+
+

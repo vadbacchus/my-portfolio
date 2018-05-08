@@ -12,20 +12,21 @@
 	color: #666
 	transition: opacity .5s
 	font-size: 16px
+	word-spacing: 2px
 
 ::selection
 	background-color: $accent
 	color: #fff
 
 ::-webkit-scrollbar
-	width: 11px
+	width: 10px
 
 ::-webkit-scrollbar-track
 	background: #fff
 
 ::-webkit-scrollbar-thumb
 	background: $accent
-	border-radius: 2px
+	
 
 ::-webkit-scrollbar-thumb:hover
 	background: $red
@@ -47,6 +48,7 @@ body
 	overflow-x: hidden
 	-webkit-font-smoothing: antialiased
 	-moz-osx-font-smoothing: grayscale
+	
 	input, textarea
 			border: #666 1px solid
 			outline: none
@@ -66,5 +68,6 @@ body
 @import "_parts/projects"
 @import "_parts/about"
 @import "_parts/contacts"
+@import "_parts/footer"
 
 @import "animations"
