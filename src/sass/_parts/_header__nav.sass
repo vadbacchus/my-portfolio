@@ -28,6 +28,7 @@
 
 
 
+	.rhombus
 		
 
 		
@@ -67,6 +68,7 @@
 		&:hover
 			background: #7F00FF
 			color: #fff
+			text-shadow: 0 0 3px #fff
 
 		&::before
 			--size: 0
@@ -81,7 +83,9 @@
 			transition: width .5s ease, height .5s ease
 
 		&:hover::before
-			--size: 1500px
+			--size: 1000px
+
+		
 
 			
 
@@ -101,6 +105,7 @@ button.nav__closebtn
 	height: 60px
 	cursor: pointer
 	position: absolute
+	z-index: 201
 	top: 30px
 	right: 150px
 	outline: none

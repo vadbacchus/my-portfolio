@@ -1,7 +1,7 @@
 
 
 AOS.init({
-      offset: 300,
+      offset: 200,
       duration: 600,
       disable: window.innerWidth < 960,
     });
@@ -123,17 +123,57 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-var parallax= document.querySelector(".parallax");
-window.addEventListener("scroll", function() {
-    var scrolledHeight= window.pageYOffset,
-    limit= parallax.offsetTop + parallax.offsetHeight;
-    if(scrolledHeight > parallax.offsetTop && scrolledHeight <= limit) {
-        parallax.style.backgroundPositionY = (scrolledHeight - parallax.offsetTop) / 1.5 + "px";
-    } 
-    else {
-        parallax.style.backgroundPositionY= "0";
-    }
+const elements 		 =	[
+							document.querySelector( '.works-title' ),
+							document.querySelector( '.another-works-title' ),
+							document.querySelector( '.about-title' ),
+							document.querySelector( '.contacts-title' )
+				 		],
+	  sections 	 	 =  [
+	  						document.querySelector( '.works' ),
+	  						document.querySelector( '.another-works' ),
+	  						document.querySelector( '.about' ),
+	  						document.querySelector( '.contacts' ),
+	  				   		document.querySelector( '.footer' )
+	   			 	   	],
+
+	  elementsOffset = 	[
+	  						elements[0].offsetTop,
+	  						elements[1].offsetTop,
+	  						elements[2].offsetTop,
+	  						elements[3].offsetTop
+	  				   	],
+	  sectionsOffset =  [
+	  						sections[0].offsetTop,
+	  						sections[1].offsetTop,
+	  						sections[2].offsetTop,
+	  						sections[3].offsetTop,
+	  						sections[4].offsetTop
+	  					];
+
+function sticking (element, startStick, endStick, header) {
+	if (window.pageYOffset >= startStick - 50  && window.pageYOffset <= endStick - 50) {
+		element.classList.add( 'fixed' );
+		element.classList.remove( 'hide' );
+	}
+
+	if (window.pageYOffset >= endStick - 50  || window.pageYOffset < startStick - 50) {
+		element.classList.remove( 'fixed' );
+		element.classList.add( 'hide' );
+		
+	}
+
+	if (window.pageYOffset <= header){
+		element.classList.remove( 'hide' );
+	}
+
+	
+
+}
+
+window.addEventListener('scroll', function(){
+	sticking( elements[0], elementsOffset[0], sectionsOffset[1], sectionsOffset[0]);
+	sticking( elements[1], elementsOffset[1], sectionsOffset[2]);
+	sticking( elements[2], elementsOffset[2], sectionsOffset[3]);
+	sticking( elements[3], elementsOffset[3], sectionsOffset[4]);
 });
-
-
-

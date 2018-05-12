@@ -2116,19 +2116,13 @@ body textarea:required:valid {
   background-color: transparent;
   cursor: pointer;
   outline: none;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
 }
 
-.menu__btn.show {
-  position: fixed;
-  z-index: 9;
-  top: 0;
-  right: 58px;
-  -webkit-animation: slide-down .5s;
-          animation: slide-down .5s;
-}
-
-.menu__btn.hide {
-  position: static;
+.menu__btn .cip-bacchus-grape {
+  font-size: 60px;
 }
 
 .menu__btn .cip-bacchus-grape {
@@ -2137,16 +2131,22 @@ body textarea:required:valid {
 }
 
 .menu__btn .cip-bacchus-grape::before {
-  -webkit-transition: all .2s;
-  -o-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
 }
 
-.menu__btn .cip-bacchus-grape:hover::before {
-  color: #A9111C;
+.menu__btn:hover {
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
   outline: none;
-  -webkit-animation: glitch-anim-text .4s linear;
-          animation: glitch-anim-text .4s linear;
+}
+
+.menu__btn:focus {
+  -webkit-transform: scale(0.1);
+      -ms-transform: scale(0.1);
+          transform: scale(0.1);
 }
 
 .menu__icons {
@@ -2266,6 +2266,7 @@ body textarea:required:valid {
 .nav__link:hover {
   background: #7F00FF;
   color: #fff;
+  text-shadow: 0 0 3px #fff;
 }
 
 .nav__link::before {
@@ -2288,7 +2289,7 @@ body textarea:required:valid {
 }
 
 .nav__link:hover::before {
-  --size: 1500px;
+  --size: 1000px;
 }
 
 button.nav__closebtn {
@@ -2299,6 +2300,7 @@ button.nav__closebtn {
   height: 60px;
   cursor: pointer;
   position: absolute;
+  z-index: 201;
   top: 30px;
   right: 150px;
   outline: none;
@@ -2476,7 +2478,7 @@ button.nav__closebtn span:last-child {
 }
 
 .intro__background {
-  position: absolute;
+  position: fixed;
   z-index: -1;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2665,8 +2667,93 @@ button.nav__closebtn span:last-child {
   transition: .5s all;
 }
 
+.works-title,
+.another-works-title,
+.about-title,
+.contacts-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  text-align: center;
+  opacity: 0;
+  position: fixed;
+  font-weight: 700;
+  background: #000;
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.works-title.fixed,
+.another-works-title.fixed,
+.about-title.fixed,
+.contacts-title.fixed {
+  background: none;
+  position: fixed;
+  top: 0;
+  left: 10px;
+  opacity: 1;
+  -webkit-animation: slide-down .5s;
+          animation: slide-down .5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.works-title.hide,
+.another-works-title.hide,
+.about-title.hide,
+.contacts-title.hide {
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 10px;
+  -webkit-animation: slide-up-out .5s;
+          animation: slide-up-out .5s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+
+.works-title span,
+.another-works-title span,
+.about-title span,
+.contacts-title span {
+  position: relative;
+  color: #000;
+  cursor: vertical-text;
+  margin: 0;
+}
+
+.works-title span:nth-child(4),
+.another-works-title span:nth-child(4),
+.about-title span:nth-child(4),
+.contacts-title span:nth-child(4) {
+  margin-top: 20px;
+}
+
+.another-works-title span:nth-child(4),
+.contacts-title span:nth-child(4) {
+  margin-top: 0;
+}
+
 .section-title {
   margin: 10vh auto;
+  padding: 20px 0 0 0;
   font-family: "Montserrat", sans-serif;
   font-size: 40px;
   text-align: center;
@@ -2681,11 +2768,9 @@ button.nav__closebtn span:last-child {
   color: #7E5FA6;
 }
 
-.parallax {
+.works {
+  position: relative;
   background: #fff;
-  background-repeat: no-repeat;
-  -webkit-background-size: cover;
-          background-size: cover;
 }
 
 .portfolio {
@@ -2710,6 +2795,7 @@ button.nav__closebtn span:last-child {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
   margin-top: 20vh;
   margin-bottom: 20vh;
 }
@@ -2730,15 +2816,13 @@ button.nav__closebtn span:last-child {
 }
 
 .portfolio__item:nth-child(even) .portfolio__title {
-  right: -330px;
-  top: 100px;
-  background: white;
-  color: #A9111C;
+  right: -200px;
+  top: 50px;
 }
 
 .portfolio__item:nth-child(odd) .portfolio__title {
-  top: 100px;
-  left: -280px;
+  top: 50px;
+  left: -150px;
 }
 
 .portfolio__item:nth-child(3) .portfolio__title {
@@ -2827,7 +2911,6 @@ button.nav__closebtn span:last-child {
   transition: 1.5s all;
 }
 
-.portfolio__glitch:hover + .portfolio__info .portfolio__title,
 .portfolio__glitch:hover + .portfolio__info p:first-letter {
   color: #FFF;
   -webkit-box-shadow: none;
@@ -2920,12 +3003,9 @@ button.nav__closebtn span:last-child {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   position: absolute;
-  font-size: 70px;
-  background-color: #FFFFFF;
+  font-size: 100px;
   padding: 0 20px;
   text-align: center;
-  -webkit-box-shadow: 0 0 0 8px #A9111C;
-          box-shadow: 0 0 0 8px #A9111C;
   color: #A9111C;
   -webkit-transition: .5s all;
   -o-transition: .5s all;
@@ -3001,6 +3081,10 @@ button.nav__closebtn span:last-child {
 	&__img:nth-child(5)
 		@include md(background-color, $blend-color-5)
 		@include md(animation, glitch-anim-flash 0.5s steps(1,end) infinite) */
+
+.another-works {
+  background: #fff;
+}
 
 .projects {
   display: -webkit-box;
@@ -4798,12 +4882,12 @@ button.nav__closebtn span:last-child {
 @-webkit-keyframes slide-down {
   from {
     opacity: 0;
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
   }
 
   to {
-    opacity: 1;
+    opacity: .5;
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
@@ -4812,12 +4896,12 @@ button.nav__closebtn span:last-child {
 @keyframes slide-down {
   from {
     opacity: 0;
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
   }
 
   to {
-    opacity: 1;
+    opacity: .5;
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
@@ -4825,29 +4909,29 @@ button.nav__closebtn span:last-child {
 
 @-webkit-keyframes slide-up-out {
   from {
-    opacity: 1;
+    opacity: .5;
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
 
   to {
     opacity: 0;
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
   }
 }
 
 @keyframes slide-up-out {
   from {
-    opacity: 1;
+    opacity: .5;
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
 
   to {
     opacity: 0;
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
+    -webkit-transform: translateY(-100px);
+            transform: translateY(-100px);
   }
 }
 
@@ -5035,55 +5119,6 @@ button.nav__closebtn span:last-child {
 [data-aos="glitch-text"].aos-animate {
   -webkit-animation: glitch-anim-text 0.5s linear;
           animation: glitch-anim-text 0.5s linear;
-  opacity: 1;
-}
-
-[data-aos="glitch-1"] {
-  opacity: 0;
-  -webkit-transition-property: opacity, -webkit-animation, -webkit-transform;
-  transition-property: opacity, -webkit-animation, -webkit-transform;
-  -o-transition-property: animation, opacity, transform;
-  transition-property: animation, opacity, transform;
-  transition-property: animation, opacity, transform, -webkit-animation, -webkit-transform;
-}
-
-[data-aos="glitch-1"].aos-animate {
-  -webkit-transform: translate3d(2px, 0, 0);
-          transform: translate3d(2px, 0, 0);
-  -webkit-animation: glitch-anim-1-horizontal 1.5s ease-in alternate;
-          animation: glitch-anim-1-horizontal 1.5s ease-in alternate;
-  opacity: 1;
-}
-
-[data-aos="glitch-3"] {
-  opacity: 0;
-  -webkit-transition-property: opacity, -webkit-animation, -webkit-transform;
-  transition-property: opacity, -webkit-animation, -webkit-transform;
-  -o-transition-property: animation, opacity, transform;
-  transition-property: animation, opacity, transform;
-  transition-property: animation, opacity, transform, -webkit-animation, -webkit-transform;
-}
-
-[data-aos="glitch-3"].aos-animate {
-  -webkit-transform: translate3d(0, -webkit-calc( -1 * 2px), 0) scale3d(-1, -1, 1);
-          transform: translate3d(0, calc( -1 * 2px), 0) scale3d(-1, -1, 1);
-  -webkit-animation: glitch-anim-3-horizontal 1.5s ease-out alternate;
-          animation: glitch-anim-3-horizontal 1.5s ease-out alternate;
-  opacity: 1;
-}
-
-[data-aos="glitch-4"] {
-  opacity: 0;
-  -webkit-transition-property: opacity, -webkit-animation;
-  transition-property: opacity, -webkit-animation;
-  -o-transition-property: animation, opacity;
-  transition-property: animation, opacity;
-  transition-property: animation, opacity, -webkit-animation;
-}
-
-[data-aos="glitch-4"].aos-animate {
-  -webkit-animation: glitch-anim-flash 1.5s steps(1, end);
-          animation: glitch-anim-flash 1.5s steps(1, end);
   opacity: 1;
 }
 

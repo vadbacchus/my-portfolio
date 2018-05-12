@@ -1,5 +1,66 @@
+.works-title, 
+.another-works-title,
+.about-title,
+.contacts-title
+	font-family: $title-font
+	font-size: 40px
+	text-align: center	
+	opacity: 0
+	position: fixed
+	font-weight: 700
+	background: #000
+	transform: translateY(-100%)
+	transition: all .5s 
+	display: flex
+	flex-direction: column
+	height: 100%
+
+	justify-content: center
+	
+
+
+	
+	
+	&.fixed
+		background: none
+		position: fixed
+		top: 0
+		left: 10px
+		opacity: 1
+		animation: slide-down .5s 
+		animation-fill-mode: both
+
+	&.hide
+		opacity: 0
+		position: fixed
+		top: 0
+		left: 10px
+		animation: slide-up-out .5s
+		animation-fill-mode: both
+
+	span
+		position: relative
+		
+		
+		color: #000
+		cursor: vertical-text
+
+		margin: 0
+		
+		&:nth-child(4)
+			margin-top: 20px
+
+		
+.another-works-title, .contacts-title
+	span:nth-child(4)
+		margin-top: 0
+
+
+
+
 .section-title
 	margin: 10vh auto
+	padding: 20px 0 0 0
 	font-family: $title-font
 	font-size: 40px
 	text-align: center	
@@ -11,23 +72,24 @@
 		/* background-color: $accent */
 		border: 3px solid $accent
 		color: $accent
+		
 
-.parallax
+.works
+	position: relative
 	background: #fff
-	background-repeat: no-repeat
-	background-size: cover
+
 
 
 .portfolio
-
+	
 
 	&__item
 		+row-flex()
 		justify-content: center
-
+		position: relative
 		margin-top: 20vh
 		margin-bottom: 20vh
-
+		
 		+lg(margin-top, 10vh)
 		+lg(margin-bottom, 10vh)
 		+md(margin, 10vh 0 10vh)
@@ -46,11 +108,11 @@
 		+md(order, 2)
 
 	&__item:nth-child(even) &__title
-		right: -330px
-		top: 100px
-		background: white
+		right: -200px
+		top: 50px
 		
-		color: $red
+		
+		
 
 		+lg(font-size, 52px)
 		+lg(right, -210px)
@@ -62,8 +124,8 @@
 			right: -230px
 
 	&__item:nth-child(odd) &__title
-		top: 100px
-		left: -280px
+		top: 50px
+		left: -150px
 		
 		+lg(font-size, 52px)
 		+lg(left, -200px)
@@ -97,7 +159,7 @@
 		+size-lg(5)
 		+size-md(11)
 		+md(margin, 0 auto)
-
+		
 		margin: 0 0 0 50px
 		position: relative
 		overflow: hidden
@@ -151,7 +213,9 @@
 
 
 
-		&:hover + .portfolio__info .portfolio__title,
+		&:hover + .portfolio__info .portfolio__title
+			
+			
 		&:hover + .portfolio__info p:first-letter  
 			
 			color: #FFF
@@ -221,24 +285,26 @@
 		+size(6)
 		+size-md(12)
 		+md(margin, 10px auto)
-
+		
 		position: relative
 
 	&__title
 		font-family: $title-font
 		font-weight: 700
 		position: absolute
-		font-size: 70px
-		background-color: #FFFFFF
+		
+		font-size: 100px
+		
 		padding: 0 20px
 		text-align: center
-		box-shadow: 0 0 0 8px $red
+		
 		color: $red
 		transition: .5s all
 		
 		
 		+md(position, static)
 		+md(text-align, center)
+		
 		
 
 	&__text
@@ -298,8 +364,6 @@
 				opacity: 1
 
 
-
-			
 
 	/* media queries */
 
