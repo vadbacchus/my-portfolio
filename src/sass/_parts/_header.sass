@@ -2,10 +2,12 @@
 	min-height: 100vh
 	overflow: hidden
 
+
 	
 
 .menu
 	+row-flex()
+	position: relative
 
 	&__btn
 		+col()
@@ -15,7 +17,7 @@
 
 
 		
-		margin-top: 10px
+		
 		margin-left: auto
 		border: none
 		background-color: transparent
@@ -37,11 +39,14 @@
 
 			&::before
 				transition: all .5s 
+			&:hover::before
+				color: #BC0152
 
 		&:hover
-
+			
 			transform: scale(1.2)
 			outline: none
+
 
 		&:focus
 			transform: scale(.1)
@@ -59,7 +64,7 @@
 		+col()
 		+size(2)
 
-		margin-top: 10px
+		
 		margin-right: auto
 		display: flex
 		align-items: center
@@ -126,7 +131,7 @@
 
 		&.anim
 			animation-name: fadeInLeft 
-			animation-duration: 3s
+			animation-duration: 1s
 
 
 		
@@ -142,7 +147,7 @@
 		margin-top: 10vh
 		color:  $accent
 		text-align: right
-
+		margin-right: 10px
 		transition: opacity .5s 
 
 
@@ -177,12 +182,16 @@
 		align-self: center
 		margin: 80px
 		transition: box-shadow 1s ease, background 1s ease, color .5s ease
+		
 
 		&:hover
 			background: #3494E6 //#6e8efb
 			color: #fff
 			box-shadow: none
 
+		&:hover + .bg-text p
+			opacity: 1
+			transform: translateX(0)
 		
 		
 
@@ -198,7 +207,7 @@
 			top: var(--y)
 			width: var(--size)
 			height: var(--size)
-			background: radial-gradient(circle closest-side, #EC6EAD, transparent) //#30efbf #6e8efb 
+			background: radial-gradient(circle closest-side, #EC6EAD, transparent) // #30efbf #6e8efb 
 			transform: translate(-50%, -50%)
 			transition: width .2s ease, height .2s ease
 
@@ -206,21 +215,24 @@
 			--size: 600px
 	
 	&__background
-		position: fixed
-		z-index: -1
+		+col()
+		
 		display: flex
 		justify-content: center
 		
-		width: 100%
 		
-		background: linear-gradient(to right, #3494E6 10%, #EC6EAD 60%)
-		-webkit-background-clip: text
-		-webkit-text-fill-color: transparent
-		font-size: 250px
+		font-size: 60px
 		font-weight: 700
-		opacity: .5
-		transition: opacity .5s
+		opacity: .4
+		transition: all .5s
 
+		span
+			
+			background: linear-gradient(to right, #3494E6 10%, #EC6EAD 90%)
+			-webkit-background-clip: text
+			-webkit-text-fill-color: transparent
+			
+	
 		
 
 	&__service
@@ -232,11 +244,13 @@
 
 		+xs(font-size, 18px)
 		+lg(text-align, center)
+
+
 		font-family: $title-font
 		font-size: 35px
 		color: $red
-		align-self: center
-		margin-top: 40px
+		align-self: flex-end
+				
 
 		@media screen and (max-width: 1166px)
 			font-size: 30px
@@ -245,38 +259,66 @@
 			display: none
 			margin: 40px auto
 			+lg(display, block)
+
 		
-		p
-			background-color: rgba(126,95,166,.9)
-			color: #FFFFFF
-			padding: 0 5px
-			transition: .5s all
+		
+		
+			
+
+			
+			
+			
+
+	&__text
+
+		& > p
+			
+			
+			text-shadow: 0 0 10px #000
+			background-position: 30% 70%
+			
 			cursor: pointer
+			text-align: center
+			color: #fff
 			
-			
+			span
+				background: rgba(0,0,0,.5)
+				transition: all .5s 
+				padding: 5px
+				border-radius: 10px
+
+				&:hover
+					background: #FF008B
+					transform: scale(1.1)
+
+
+			&:nth-of-type(even)
+				margin: 10px 0
+
 			&:hover
-				transform: scale(1.1)
 				
+				
+
 
 			&:hover:nth-of-type(1) ~ .bg-text .interface,
 			&:hover:nth-of-type(2) ~ .bg-text .wordpress,
 			&:hover:nth-of-type(3) ~ .bg-text .corporative,
 			&:hover:nth-of-type(4) ~ .bg-text .landing
 				opacity: 1
-				transform: translateX(-700px)
+				transform: translateX(0)
 
 
-		p:nth-of-type(even)
-			margin: 10px 0
-	&__text
+		
+				
 
 		&.anim
 			animation: glitch-anim-text 2s linear
 
 
 .bg-text
-	position: absolute
+	position: fixed
 	top: 0
+	left: 0
 	z-index: -1
 	display: flex
 	align-items: flex-start
@@ -288,20 +330,28 @@
 
 	p
 		position: absolute
-		top: 0
-		background: linear-gradient(to right, #3494E6 10%, #EC6EAD 60%)
+		
+		background: linear-gradient(to right, #3494E6 20%, #EC6EAD 60%)
 		-webkit-background-clip: text
 		-webkit-text-fill-color: transparent
 		font-size: 200px
 		font-weight: 700
 		opacity: 0
-		transform: translateX(-800px)
+		transform: translateX(-100px)
 		transition: all .5s
+		
 
 
 
 
-
+.bg-img
+	width: 70%
+	position: absolute
+	
+	right: -100px
+	bottom: -230px
+	z-index: -2
+	transition: filter .5s
 
 	
 

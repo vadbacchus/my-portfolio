@@ -9,17 +9,35 @@
 	z-index: 9999
 	top: 0
 	left: 0
-	transition: 1s all
+	transition: all 1s 
 	opacity: 1
 	visibility: visible
 
 	&.done
+
 		opacity: 0
 		visibility: hidden
-
-	&__icon
-		+col()
-		+size(2)
 		
-		.cls-1
-			animation: colors 1s alternate infinite
+		
+
+
+	span
+
+		+size(6)
+		
+		font-size: 200px
+		
+		&:before
+			background: linear-gradient(to right, #ff00cc 10%, #333399 30%, #ff00cc 80%)
+			-webkit-background-clip: text
+			-webkit-text-fill-color: transparent
+			background-position: 0 0
+			opacity: 0
+			animation: colors 3s infinite alternate
+
+			
+		
+
+			
+		
+

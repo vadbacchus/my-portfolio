@@ -1,14 +1,10 @@
-.section-title--3
-	+col()
-	+size(12)
 
-	span
-		border-color: #fff
-		color: #fff
+
 
 .about
-	background: $red
-
+	
+	.wrapper
+		
 
 
 .person
@@ -24,33 +20,30 @@
 		
 
 		h3
-			color: #fff
+			color: $color-text
 			font-size: 26px
-			margin: 50px 50px 20px
+			margin: 100px 50px 20px
+			font-weight: 700
 
 		p
-			color: #fff
-			background: rgba(0,0,0,.1)
-			padding: 20px
-			margin: 20px 50px
-			
+			color: $color-text
+
+			padding: 0 20px
+			margin: 50px 50px
+			border-radius: 5px
 			font-size: 20px
 
-	&__line
 		
-		border: 1px solid #fff
-		width: 50%
-		margin: 30px 0 30px -20%			
 		
 
 	&__line--v
 		+col()
-		+size(2)
+		
 		border: none
-		border-left: 1px solid #fff
-		width: 1%
-		margin: 0
-		padding-bottom: 45%
+		background: $accent
+		width: 3px
+		border-radius: 5px
+		padding-bottom: 50%
 		align-self: center
 
 	&__photo
@@ -75,7 +68,8 @@
 		+col()
 		+size(5)
 		text-align: center
-		color: #fff
+		color: $color-text
+
 
 		h3
 			margin: 50px 0
@@ -86,9 +80,11 @@
 			font-size: 24px
 			padding: 15px
 			color: #fff
-			background: rgba(0,0,0,.3)
+			background: $accent
 
 
+
+		
 			
 		li
 			margin: 10px 0 
@@ -97,11 +93,14 @@
 			padding: 10px 0
 			overflow: hidden
 
+
 			
 			&:hover
-				background: rgba(0,0,0,.2)
+				background: $accent
+				color: #fff
 
 
+			
 
 .pro:hover::before
 	opacity: 1
@@ -110,12 +109,87 @@
 	content: 'PRO'
 	margin-left: -100px
 	margin-right: 20px
-	background: #000
-	color: #fff
+	background: #fff
+	color: #000
 	font-weight: 700
 	padding: 10% 10px
 	opacity: 0
 	transition: opacity 1s
+
+
+.offer
+	+row-flex()
+	+size(12)
+	justify-content: center
+
+	h3
+
+		+size(12)
+		margin: 100px 0 0 0
+		text-align: center
+
+		span
+			
+			font-size: 54px
+			color: $accent
+			
+			font-weight: 700	
+
+
+.myservices
+	+row-flex()
+	+size(12)
+	text-align: center
+	margin: 50px auto
+	color: #fff
+
+
+	&__item
+		+col()
+		+size(4)
+
+		background: $accent
+		border-radius: 5px
+		
+
+	&__icon
+		
+
+		span
+			
+			cursor: pointer
+			margin: 50px 0
+			display: flex
+			align-items: center
+			justify-content: center
+
+			&::before
+				width: 100px
+				font-size: 50px
+				padding: 25px 0
+				border: 5px solid #fff
+				border-radius: 50%
+				background: #fff
+				color: $accent
+				box-shadow: 0 0 0 10px rgba(255,255,255,.5)
+				transition: box-shadow .5s
+
+
+			&:hover::before
+				box-shadow: 0 0 0 15px rgba(255,255,255,.5)
+
+
+	h4
+		margin: 0 0 50px 0
+		text-transform: uppercase
+		font-size: 26px
+		font-weight: 700
+
+	&__text
+		text-align: left
+		padding: 0 30px 30px
+		font-size: 20px
+
 
 .perspective
 	+row-flex()
@@ -131,10 +205,12 @@
 
 
 		span
-			font-size: 24px
-			padding: 15px
-			color: #fff
-			background: rgba(0,0,0,.3)
+	
+		
+			font-size: 54px
+			color: $accent
+			
+			font-weight: 700	
 
 	p
 		+col()
@@ -147,7 +223,7 @@
 			display: block
 			max-width: 550px
 			margin: 0 auto
-			color: #fff
+			color: $color-text
 			font-size: 20px
 
 
@@ -159,8 +235,8 @@
 		+col()
 		+size(3)
 
-		background: #fff
-		border-radius: 5px
+		border: 9px solid rgba(0,0,0,.1)
+		border-radius: 30px
 		display: flex
 		align-items: center
 		justify-content: center
@@ -182,19 +258,35 @@
 		width: 100%
 
 
-.offer
-	+row-flex()
-	+size(12)
+
+.triangle-first
+
+	width: 100%
+	height: 0
+	padding-bottom: 10%
+	background: linear-gradient(to right bottom, #fff 50%, #6c33a3 50.4%)
+	
+
+.cooperation
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+
+	background-image: linear-gradient(to bottom, #6c33a3 0%, #8241b8 74%)
+
 	
 	
 	&__title
-		color: #fff
-		font-size: 24px
+		
+		
 		margin: 100px auto 50px
-		background: rgba(0,0,0,.3)
-		font-size: 24px
-		padding: 15px
-		color: #fff
+		
+	
+		color: rgba(255,255,255,.9)
+		font-size: 54px
+		
+			
+		font-weight: 700	
 
 		
 			
@@ -232,20 +324,13 @@
 
 
 .triangle
-	
-	position: relative
-	display: flex
-	
 	width: 100%
+	background: linear-gradient(to right bottom, #8241b8 50%, #fff 50.4%)
+	
+	height: 0
 
-	&--1, &--2
-		flex: 1
-		height: 0
+	padding-bottom: 10%
 
-		padding-bottom: 10%
+		
 
-	&--1
-		background: linear-gradient(to top right, #fff 50%, $red 50.3%)
 
-	&--2
-		background: linear-gradient(to top left, #fff 50%, $red 50.3%)

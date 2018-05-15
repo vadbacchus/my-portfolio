@@ -3,57 +3,58 @@
 .about-title,
 .contacts-title
 	font-family: $title-font
-	font-size: 40px
+	font-size: 35px
 	text-align: center	
 	opacity: 0
 	position: fixed
-	font-weight: 700
-	background: #000
+	font-weight: 300
+	
 	transform: translateY(-100%)
-	transition: all .5s 
+	transition: all 1s 
 	display: flex
 	flex-direction: column
 	height: 100%
-
+	z-index: -1
 	justify-content: center
+	color: #fff
+	background: #272B33
+
+
 	
+	span
+		
+		cursor: vertical-text
+		margin: 0
+		padding: 0 10px
+		
+		
 
 
 	
 	
 	&.fixed
-		background: none
+		
 		position: fixed
 		top: 0
-		left: 10px
+		left: 0
 		opacity: 1
-		animation: slide-down .5s 
+		animation: slide-down 1.5s 
 		animation-fill-mode: both
-
-	&.hide
-		opacity: 0
-		position: fixed
-		top: 0
-		left: 10px
-		animation: slide-up-out .5s
-		animation-fill-mode: both
-
-	span
-		position: relative
+		z-index: 9
 		
 		
-		color: #000
-		cursor: vertical-text
+.works-title
+	
+/* 	background: $red
+ */
+	
+.another-works-title
+/* 	background: $accent
+ */	
 
-		margin: 0
-		
-		&:nth-child(4)
-			margin-top: 20px
-
-		
-.another-works-title, .contacts-title
-	span:nth-child(4)
-		margin-top: 0
+.about-title
+	
+	
 
 
 
@@ -136,8 +137,7 @@
 			font-size: 60px
 			left: -220px
 
-	&__item:nth-child(3) &__title
-		left: -350px
+	
 
 	&__item:nth-child(even) &__text 
 		margin-left: auto
@@ -177,32 +177,32 @@
 			cursor: pointer
 		
 		&:hover > .portfolio__img:nth-child(1)
-			background-color: $blend-color-1
+			background-color: $blend-color-img-1-1
 			transition: .5s all
 
 		&:hover > .portfolio__img:nth-child(2)
 			transform: translate3d($gap-vertical, 0, 0 )
 			animation: glitch-anim-1-horizontal $time-anim infinite ease-in alternate
-			background-color: $blend-color-2
+			background-color: $blend-color-img-1-2
 			transition: .5s all
 
 		&:hover > .portfolio__img:nth-child(3)
 			transform: translate3d( calc(-1 * #{$gap-vertical}), 0, 0 )
 			animation: glitch-anim-2-horizontal $time-anim infinite ease-in alternate
-			background-color: $blend-color-3
+			background-color: $blend-color-img-1-3
 			transition: .5s all
 
 		&:hover > .portfolio__img:nth-child(4)
 			transform: translate3d(0, calc( -1 * #{$gap-vertical} ), 0 ) scale3d(-1, -1, 1)
 			animation: glitch-anim-3-horizontal $time-anim infinite ease-out alternate
-			background-color: $blend-color-4
+			background-color: $blend-color-img-1-4
 			transition: .5s all
 
 		/* Hover flash animation on last image */
 
 		&:hover > .portfolio__img:nth-child(5)
 			animation: glitch-anim-flash 1s steps(1,end) infinite
-			background-color: $blend-color-5
+			background-color: $blend-color-img-1-5
 			transition: 1.5s all
 
 		/* hover animation of text */
@@ -213,19 +213,7 @@
 
 
 
-		&:hover + .portfolio__info .portfolio__title
-			
-			
-		&:hover + .portfolio__info p:first-letter  
-			
-			color: #FFF
-			box-shadow: none
-			background-color: #482573
 
-		&:hover + .portfolio__info .next-item__arrow
-
-			color: #482573
-			opacity: 1
 
 
 	&__img

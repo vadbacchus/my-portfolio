@@ -136,12 +136,21 @@
 		transform: translateY(-100px)
 
 	to
-		opacity: .5
+		opacity: 1
 		transform: translateY(0)
+
+@keyframes fading
+	from
+		opacity: .1
+	
+
+	to
+		opacity: .5
+		
 
 @keyframes slide-up-out
 	from
-		opacity: .5
+		opacity: 1
 		transform: translateY(0)
 
 	to
@@ -199,11 +208,12 @@
 		opacity: .5
 
 @keyframes colors
-
 	0%
-		fill: $red
-	100% 
-		fill: $accent
+		opacity: 0
+		
+	100%
+		opacity: 1
+		background-position: 500px 0 
 
 
 [data-aos="glitch-text"]
