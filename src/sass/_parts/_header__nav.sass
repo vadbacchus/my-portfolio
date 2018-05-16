@@ -22,13 +22,9 @@
 	&__list
 		
 		width: 100%
-		+size-lg(8)
-		+size-sm(10)
-		+size-xs(12)
+		
 
 
-
-	.rhombus
 		
 
 		
@@ -36,8 +32,8 @@
 
 	&__link
 		+md(padding, 20px)
-		+md(font-size, 20px)
-		+xs(font-size, 17px)
+		+md(font-size, 30px)
+		+xs(font-size, 25px)
 		+xs(padding, 20px 10px)
 
 
@@ -89,7 +85,7 @@
 
 			
 
-button.nav__closebtn
+.closebtn
 
 	
 	+lg(font-size, 54px)
@@ -114,18 +110,26 @@ button.nav__closebtn
 
 	&:hover span:first-child
 		transform: rotate(-45deg) 
+
+		+lg(transform, none)
 		
 
 	&:hover span:last-child
 		transform: rotate(45deg) 
+		
+		+lg(transform, none)
 	
 	&:focus span:first-child
 		transform: rotate(-45deg) scale(20)
+
+		+lg(transform, none)
 		
 		
 	&:focus span:last-child
 		
 		transform: rotate(45deg) scale(20)
+
+		+lg(transform, none)
 		
 
 	span

@@ -133,6 +133,11 @@
 			animation-name: fadeInLeft 
 			animation-duration: 1s
 
+			+lg(animation, none)
+
+		
+
+
 
 		
 
@@ -149,6 +154,11 @@
 		text-align: right
 		margin-right: 10px
 		transition: opacity .5s 
+
+		&.invisible
+			opacity: 0
+
+			+lg(opacity, 1)
 
 
 		
@@ -242,62 +252,57 @@
 		+size-md(9)
 		+size-sm(12)
 
-		+xs(font-size, 18px)
-		+lg(text-align, center)
+		
+		+lg(margin, 50px 0 0 0)
 
 
-		font-family: $title-font
-		font-size: 35px
-		color: $red
+		
+		
 		align-self: flex-end
 				
 
-		@media screen and (max-width: 1166px)
-			font-size: 30px
+		
 
 		.intro__btn--lg
 			display: none
-			margin: 40px auto
+			margin: 50px auto
 			+lg(display, block)
 
 		
-		
-		
-			
 
-			
-			
-			
 
 	&__text
 
 		& > p
 			
-			
+			font-family: $title-font
+			font-size: 35px
 			text-shadow: 0 0 10px #000
-			background-position: 30% 70%
-			
+			background: rgba(0,0,0,.2)
+			transition: all .5s 
+			padding: 0
+			border-radius: 10px
 			cursor: pointer
 			text-align: center
 			color: #fff
-			
-			span
-				background: rgba(0,0,0,.5)
-				transition: all .5s 
-				padding: 5px
-				border-radius: 10px
 
-				&:hover
-					background: #FF008B
-					transform: scale(1.1)
+			@media screen and (max-width: 1166px)
+				font-size: 30px
+
+			+lg(background, $accent)
+			+lg(text-shadow, none)
+			+xs(font-size, 18px)
+			
+			
+		
+			&:hover
+				background: #FF008B
+				transform: scale(1.1)
 
 
 			&:nth-of-type(even)
 				margin: 10px 0
 
-			&:hover
-				
-				
 
 
 			&:hover:nth-of-type(1) ~ .bg-text .interface,
@@ -312,7 +317,9 @@
 				
 
 		&.anim
-			animation: glitch-anim-text 2s linear
+			animation: glitch-anim-text 2s ease-in-out
+
+			+lg(animation, none)
 
 
 .bg-text
@@ -327,6 +334,8 @@
 	
 	width: 100%
 	height: 100%
+
+	+lg(display, none)
 
 	p
 		position: absolute
@@ -352,6 +361,8 @@
 	bottom: -230px
 	z-index: -2
 	transition: filter .5s
+
+	+lg(display, none)
 
 	
 
@@ -409,4 +420,27 @@
 		font-size: 20px
 		cursor: pointer
 		transition: .5s all
+
+
+.header-feedback
+	display: none
+	justify-content: center
+	align-items: center
+	
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	min-height: 100vh
+	background: #fff
+	margin: 0
+	overflow: hidden
+	transition: .6s
+	z-index: 11
+	opacity: 1
+	animation: fadeIn 1s
+
+	.feedback
+		margin: 0
+
 

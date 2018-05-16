@@ -57,17 +57,44 @@
 						
 						<button class="menu__btn"><span class="cip-bacchus-grape"></span></button>
 						<nav class="nav"> <!-- hidden -->
-							<button class="nav__closebtn" >
+							<button class="closebtn" >
 								<span></span>
 								<span></span>
 							</button>
 							<ul class="nav__list">
 								<li class="nav__item "><a href="#" class="nav__link nav__closebtn superhover"><span>Портфоліо</span></a></li>
 								<li class="nav__item "><a href="#" class="nav__link nav__closebtn superhover"><span>Різне</span></a></li>
-								<li class="nav__item "><a href="#" class="nav__link nav__closebtn superhover"><span>Про мене</span></a></li>
+								<li class="nav__item "><a href="#" class="nav__link nav__closebtn superhover"><span>Профайл</span></a></li>
 								<li class="nav__item "><a href="#" class="nav__link nav__closebtn superhover"><span>Контакти</span></a></li>
 							</ul>
 						</nav>
+					</div>
+					<div class="header-feedback">
+						<button class="closebtn" >
+								<span></span>
+								<span></span>
+							</button>
+					<form action="https://formspree.io/vadgalaiko@gmail.com" method="POST" class="feedback ">
+						
+						<div class="inputbox">
+							<div class="inputbox__name">
+								<label for="name"><span>ІМЯ *</span></label>
+								<input type="text" name="Ім'я" class="name" id="name" placeholder="Напишіть Ваше ім'я" required>
+							</div>
+							<div class="inputbox__email">
+								<label for="email"><span>EMAIL *</span></label>
+								<input type="email" name="Email" class="email" id="email" placeholder="Напишіть Ваш email" required>
+							</div>
+							
+						</div>
+						<div class="textbox">
+							<label for="message"><span>ПОВІДОМЛЕННЯ *</span></label>
+							<textarea name="Повідомлення" class="message" rows="8" id="message" placeholder="Розкажіть про Ваш проект, яким Ви його бачите, які задачі він має виконувати. Опишіть основні моменти, які мають бути присутні в проекті. А з деталями я обов'язково Вам допоможу розібратися в ході нашої роботи." required></textarea>
+						</div>
+						<p class="required"><span>* — необхідно написати</span></p>
+						<input type="hidden" name="_language" value="uk" >
+						<input type="submit" class="send" value="Надіслати повідомлення">
+					</form>
 					</div>
 					<div class="intro">
 						<div class="intro__greeting">
@@ -517,6 +544,9 @@
 							<span>
 								На даний момент я відкритий до нових проектів 
 								і завжди готовий консультувати з приводу розробки веб-продуктів.
+								Якщо ви хочете створити сайт або просто поспілкуватися на цікаві
+								теми, тисність на кнопку:
+
 							</span>
 							</p>
 							<a href="#contacts" class="cooperation__btn">Почати співпрацю</a>
@@ -529,35 +559,35 @@
 			<section class="contacts" >
 				<div class="wrapper">
 					<h2 class="contacts-title" ><span>к</span><span>о</span><span>н</span><span>т</span><span>к</span><span>т</span><span>и</span></h2>
-
-					<form action="" class="feedback" id="contacts">
+					<form action="https://formspree.io/vadgalaiko@gmail.com" method="POST" class="feedback" id="contacts">
 						<div class="inputbox">
 							<div class="inputbox__name">
 								<label for="name"><span>ІМЯ *</span></label>
-								<input type="text" class="name" id="name" placeholder="Напишіть Ваше ім'я" required>
+								<input type="text" class="name" id="name" name="Ім'я" placeholder="Напишіть Ваше ім'я" required>
 							</div>
 							<div class="inputbox__email">
 								<label for="email"><span>EMAIL *</span></label>
-								<input type="email" class="email" id="email" placeholder="Напишіть Ваш email" required>
+								<input type="email" class="email" id="email" name="Email" placeholder="Напишіть Ваш email" required>
 							</div>
 							
 						</div>
 						<div class="textbox">
 							<label for="message"><span>ПОВІДОМЛЕННЯ *</span></label>
-							<textarea name="message" class="message" rows="10" id="message" placeholder="Розкажіть про Ваш проект, яким Ви його бачите, які задачі він має виконувати. Опишіть основні моменти, які мають бути присутні в проекті. А з деталями я обов'язково Вам допоможу розібратися в ході нашої роботи." required></textarea>
+							<textarea class="message" rows="10" name="Повідомлення" id="message" placeholder="Розкажіть про Ваш проект, яким Ви його бачите, які задачі він має виконувати. Опишіть основні моменти, які мають бути присутні в проекті. А з деталями я обов'язково Вам допоможу розібратися в ході нашої роботи." required></textarea>
 						</div>
 						<p class="required"><span>* — необхідно написати</span></p>
+						<input type="hidden" name="_language" value="uk" >
 						<input type="submit" class="send" value="Надіслати повідомлення">
 					</form>
 				</div>
 			</section>
 				<!-- FOOTER START -->
 			<footer  id="footer" class="footer">
-				
+					
 					<div class="logo">
 						<img src="img/logo-main.svg" alt="">
 					</div>
-					<h2 class="motto"><span>Пристрасть, жага до навчання та щоденний розвиток.</span></h2>
+					<h2 class="motto"><span>Пристрасть, поезія та насолода в щоденному розвитку.</span></h2>
 					<div class="author">
 						<div class="social">
 							<span class="cip-facebook"></span>
@@ -565,6 +595,9 @@
 							<span class="cip-linkedin"></span>
 							<span class="cip-gplus"></span>
 							<span class="cip-github-circled"></span>
+							<span class="cip-mail-alt"></span>
+							<span class="cip-vkontakte"></span>
+							<span class="cip-telegram"></span>
 						</div>
 						<div class="copyright"><h3>© 2018 Вадим Галайко. Зроблено з любов'ю.</h3></div>
 					</div>
@@ -660,12 +693,13 @@
 
 - змінити прелоадер --
 
-- додати обработчік для форми або використати спец. сервіс
-- спробувати сховати форму
+- додати обработчік для форми або використати спец. сервіс --
+
 - видалити анімації на айтемах портфоліо --
-- pure css зробити секцію на весь екран
-- додати в секція about якісь інші кольори, трохи розділити її
-- додати фіксовану кнопку менюшки
+- pure css зробити секцію на весь екран -- 
+- додати в секція about якісь інші кольори, трохи розділити її --
+- додати фіксовану кнопку менюшки X
+- додати адаптивність
 - оптимізувати айкон пак
 - наповнити контентом всі пункти
 - очистити html

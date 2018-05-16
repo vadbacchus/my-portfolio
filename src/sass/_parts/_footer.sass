@@ -1,11 +1,17 @@
 .footer
-	background: linear-gradient(to bo, #fff 85%, $accent 85.3%, #9D50BB)
+	
+
+	position: relative
+	
+
+
+
 
 
 .logo
 	+row-flex()
 	justify-content: center
-	margin: 50px 0 0 0
+	margin: 250px 0 0 0
 	
 
 	img
@@ -40,11 +46,11 @@
 		justify-content: center
 		padding: 12px 
 		margin: 0 20px
-		color: #fff
+		color: $accent
 		cursor: pointer
 		border-radius: 50%
-		background: $accent
-		box-shadow: 0 0 10px $accent
+		
+		border: 2px solid $accent
 		overflow: hidden
 
 		&::before
@@ -52,35 +58,45 @@
 			font-size: 34px
 
 		&:hover
-			color: #fff
+			color: $accent
+
 			
 
 		&:hover:nth-child(1)
-			background: #4867AA
+			border: 2px solid #4867AA
+			color:#4867AA
 		&:hover:nth-child(2)
-			background: #5DA9DD
+			border: 2px solid #5DA9DD
+			color:#5DA9DD
 		&:hover:nth-child(3)
-			background: #0077B5
+			border: 2px solid #0077B5
+			color:#0077B5
 		&:hover:nth-child(4)
-			background: #D43F34
+			border: 2px solid #D43F34
+			color:#D43F34
 		&:hover:nth-child(5)
-			background: #323131
+			border: 2px solid #323131
+			color:#323131
 
 .copyright
 	
-	background: $accent
+	
 	
 	h3
 		text-align: center
-		color: #fff
+		color: $color-text
+		font-weight: 700
 		padding: 15px 0
 		font-size: 18px
 
 
 .cip-facebook:hover::before,
+.cip-vkontakte:hover::before,
 .cip-twitter:hover::before,
 .cip-linkedin:hover::before,
 .cip-gplus:hover::before,
+.cip-mail-alt:hover::before,
+.cip-telegram:hover::before,
 .cip-github-circled:not(.no-anim):hover::before,
 
 	animation: slide-down .5s

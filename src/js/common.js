@@ -16,6 +16,7 @@ document.body.onload = () => {
 			preloader.classList.add('done');
 			intro.classList.add('anim');
 			service.classList.add('anim');
+
 		}
 	}, 1000);
 }
@@ -24,24 +25,33 @@ document.body.onload = () => {
 const SERVICE = document.querySelectorAll('.intro__text p'),
 	  TITLE = document.querySelector('.intro__title');
 
+
+
+
 for ( i=0; i<SERVICE.length; i++ ) {
 	SERVICE[i].onmouseover = () => {
-
-		TITLE.style.opacity = 0;
-
-		}
+				 
+			   TITLE.classList.add('invisible');
+			}
+		
 	SERVICE[i].onmouseout = () => {
-		TITLE.style.opacity = 1;
+		TITLE.classList.remove('invisible');
 	}
 
-}
+};
+
+
+
+
+
 
 
 
 
 const serviceList = document.querySelector('.intro__service'),
 	  headerBg  = document.querySelector('.bg-img'),
-	  superBtn  = document.querySelector('.intro__btn');
+	  superBtn  = document.querySelector('.intro__btn'),
+	  feedback  = document.querySelector('.header-feedback');
 
 serviceList.onmouseover = () => {
 	headerBg.style.filter = 'grayscale(100%)';
@@ -59,12 +69,17 @@ serviceList.onmouseout = () => {
 
 superBtn.onmouseover = () => {
 	headerBg.style.filter = 'grayscale(100%)';
-	TITLE.style.opacity = 0;
+	TITLE.classList.add('invisible');
 }
 
 superBtn.onmouseout = () => {
 	headerBg.style.filter = 'none';
-	TITLE.style.opacity = 1;
+	TITLE.classList.remove('invisible');
+}
+
+superBtn.onclick = () => {
+	feedback.style.display = 'flex';
+	feedback.style.opacity = 1;
 }
 
 const HOVER = document.querySelectorAll('.superhover');
@@ -82,7 +97,7 @@ for ( i=0; i < HOVER.length; i++ ) {
 
 
 const MENU = document.querySelector('.nav');
-const CLOSE_BTN = document.querySelectorAll('.nav__closebtn');
+const CLOSE_BTN = document.querySelectorAll('.closebtn');
 
 function fade(el) {
   let op = 1;
@@ -110,6 +125,8 @@ for (i=0; i < CLOSE_BTN.length ; i++) {
 	CLOSE_BTN[i].onclick = () => {
 
 		fade(MENU);
+		fade(feedback);
+
 
 		}	
 	}
