@@ -1,7 +1,7 @@
 
 
 AOS.init({
-      offset: 200,
+      offset: 400,
       duration: 1000,
       disable: window.innerWidth < 960,
     });
@@ -29,13 +29,46 @@ const SERVICE = document.querySelectorAll('.intro__text p'),
 
 
 for ( i=0; i<SERVICE.length; i++ ) {
-	SERVICE[i].onmouseover = () => {
-				 
-			   TITLE.classList.add('invisible');
+
+	SERVICE[i].onmouseover = function () {
+				
+		TITLE.classList.add('invisible');
+
+			if(this == SERVICE[0]) {
+				bgText2.classList.add('show');
 			}
+
+			if(this == SERVICE[1]) {
+				bgText3.classList.add('show');
+			}
+
+			if(this == SERVICE[2]) {
+				bgText4.classList.add('show');
+			}
+
+			if(this == SERVICE[3]) {
+				bgText5.classList.add('show');
+			}
+	}
 		
-	SERVICE[i].onmouseout = () => {
+	SERVICE[i].onmouseout = function () {
 		TITLE.classList.remove('invisible');
+
+		if(this == SERVICE[0]) {
+			   	bgText2.classList.remove('show');
+			   }
+
+			if(this == SERVICE[1]) {
+				bgText3.classList.remove('show');
+			}
+
+			if(this == SERVICE[2]) {
+				bgText4.classList.remove('show');
+			}
+
+			if(this == SERVICE[3]) {
+				bgText5.classList.remove('show');
+			}
 	}
 
 };
@@ -51,7 +84,13 @@ for ( i=0; i<SERVICE.length; i++ ) {
 const serviceList = document.querySelector('.intro__service'),
 	  headerBg  = document.querySelector('.bg-img'),
 	  superBtn  = document.querySelector('.intro__btn'),
-	  feedback  = document.querySelector('.header-feedback');
+	  feedback  = document.querySelector('.header-feedback'),
+	  bgText1    = document.querySelector('.bg-text-1 p'),
+	  bgText2    = document.querySelector('.bg-text-2 p:nth-child(1)'),
+	  bgText3    = document.querySelector('.bg-text-2 p:nth-child(2)'),
+	  bgText4   = document.querySelector('.bg-text-2 p:nth-child(3)'),
+	  bgText5   = document.querySelector('.bg-text-2 p:nth-child(4)');
+
 
 serviceList.onmouseover = () => {
 	headerBg.style.filter = 'grayscale(100%)';
@@ -68,11 +107,13 @@ serviceList.onmouseout = () => {
 }
 
 superBtn.onmouseover = () => {
+	bgText1.classList.add('show');
 	headerBg.style.filter = 'grayscale(100%)';
 	TITLE.classList.add('invisible');
 }
 
 superBtn.onmouseout = () => {
+	bgText1.classList.remove('show');
 	headerBg.style.filter = 'none';
 	TITLE.classList.remove('invisible');
 }
