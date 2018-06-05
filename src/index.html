@@ -81,6 +81,7 @@
 						</nav>
 					</div>
 					<div class="header-feedback">
+						
 						<button class="closebtn" >
 								<span></span>
 								<span></span>
@@ -89,22 +90,22 @@
 						
 						<div class="inputbox">
 							<div class="inputbox__name">
-								<label for="name"><span>ІМЯ *</span></label>
-								<input type="text" name="Ім'я" class="name" id="name" placeholder="Напишіть Ваше ім'я" required>
+								<label for="name" class="labels"><span>ІМЯ</span></label>
+								<input type="text" name="Ім'я" class="name inputs" id="name"  required> <!-- placeholder="Напишіть Ваше ім'я" -->
 							</div>
 							<div class="inputbox__email">
-								<label for="email"><span>EMAIL *</span></label>
-								<input type="email" name="Email" class="email" id="email" placeholder="Напишіть Ваш email" required>
+								<label for="email" class="labels"><span>EMAIL</span></label>
+								<input type="email" name="Email" class="email inputs" id="email"  required> <!-- placeholder="Напишіть Ваш email" -->
 							</div>
 							
 						</div>
 						<div class="textbox">
-							<label for="message"><span>ПОВІДОМЛЕННЯ *</span></label>
-							<textarea name="Повідомлення" class="message" rows="8" id="message" placeholder="Розкажіть про Ваш проект, яким Ви його бачите, які задачі він має виконувати. Опишіть основні моменти, які мають бути присутні в проекті. А з деталями я обов'язково Вам допоможу розібратися в ході нашої роботи." required></textarea>
+							<label for="message" class="labels labels--m"><span>ПОВІДОМЛЕННЯ</span></label>
+							<textarea name="Повідомлення" class="message inputs"  id="message"  required></textarea> <!-- placeholder="Розкажіть про Ваш проект, яким Ви його бачите, які задачі він має виконувати. Опишіть основні моменти, які мають бути присутні в проекті. А з деталями я обов'язково Вам допоможу розібратися в ході нашої роботи." -->
 						</div>
-						<p class="required"><span>* — необхідно написати</span></p>
+						<!-- <p class="required"><span>* — необхідно написати</span></p> -->
 						<input type="hidden" name="_language" value="uk" >
-						<input type="submit" class="send" value="Надіслати повідомлення">
+						<input type="submit" class="send" value="Надіслати">
 					</form>
 					</div>
 					<div class="intro">
@@ -139,11 +140,11 @@
 				<!-- HEADER END -->
 
 				<!-- PORTFOLIO START -->
-			<section class="works">
+			<section class="works" id="works">
 				<div class="wrapper">
-					<h2 class="works-title" ><span >п</span><span>о</span><span>р</span><span>т</span><span>ф</span><span>о</span><span>л</span><span>і</span><span>о</span></h2>
+					<h2 class="works-title">портфоліо</h2>
 					<div class="portfolio">
-						<div class="portfolio__item " id="works">
+						<div class="portfolio__item "  data-aos="fade-down">
 							<div class="portfolio__glitch">
 								<div class="portfolio__img"></div>
 								<div class="portfolio__img"></div>
@@ -295,8 +296,59 @@
 				<!-- PORTFOLIO END -->
 			<section class="another-works" id="another-works">
 				<div class="wrapper" >
-					<h2 class="another-works-title" ><span>р</span><span>і</span><span>з</span><span>н</span><span>е</span></h2>
+					<h2 class="another-works-title" >різне</h2>
 					<div class="projects">
+												<div class="projects__item" data-aos="fade-down">
+						
+							<div class="tech">
+								<div class="tech__main tech__main--2" data-aos="fade-left">
+									<h3 data-aos="glitch-text"  class="projects__title projects__title--2">StartingHTML-Template
+										<span class="tech__title">Bootstrap </span> 
+										<span class="tech__title">4</span> 
+									</h3>
+									<div class="tech__overlay tech__overlay--2"><a href="#"><span class="cip-link"></span></a></div>
+								</div>
+								<!-- <div class="tech__webtech tech__webtech--2">
+									<span class="cip-html5"></span>
+									<span class="cip-css3"></span>
+									<span class="cip-javascript"></span>		
+								</div>
+								<div class="tech__horizontal tech__horizontal--2">		
+									<span class="cip-fontello"></span>
+									<span class="cip-sass"></span>
+									<span class="cip-gulp"></span>
+								</div> -->
+								
+							</div>
+							<div class="tech__text tech__text--2">
+								<!-- <p> Опис: </p> -->
+								<div class="tech__features">
+									<p>Особливості шаблону:</p>
+									<ul> 
+										<li>залишено і трішки переписано таск 'img', який був призначений
+											для стиснення картинок;
+										</li>
+										<li>в комплекті з шаблоном йде scss-бібліотека Font Awesome, яку
+											можна кастомізувати та підключити до проекту;
+										</li>
+										<li>також до проекту можна підключити зібрану мною за допомогою сервіса Fontello
+											і переписану під sass легку бібіотеку найбільш вживаних у вебі іконок - CIP (Custom Icon Pack);
+										</li>
+										<li>індексний файл вміщує додаткові корисні метаданні, які також відповідають за оформлення
+											панелі браузера на маленьких пристроях; </li>
+										<li>в шаблон включений конфіг manifest.json, який дозволяє зробити додаткові налаштування проекту і який
+											необхідний при розробці прогресивних веб-додатків.</li>
+									</ul>
+								</div>
+								<p> <strong>StartingHTML-Template (Bootstrap 4)</strong> - це стартовий шаблон для розробки сайтів,
+									який значною мірою базується на стартовому шаблоні OptimizedHTML-4 відомого 
+									фронт-енд розробника <a href="#">Олексія Кліманова</a>. Метою створення цього шаблону було 
+									додавання необхідного функціоналу, якого не було в в OptimizedHTML-4, що дозволив би
+									швидко і зручно розгортати проекти, в яких викорстовуються Bootstrap 4.
+								</p>
+							</div>
+
+						</div>
 						<div class="projects__item"  data-aos="fade-down">
 							<div class="tech">
 								<div class="tech__main" data-aos="fade-right">
@@ -341,71 +393,22 @@
 							</div>
 							
 						</div>
-						<div class="projects__item" data-aos="fade-down">
-						
-							<div class="tech">
-								<div class="tech__main tech__main--2" data-aos="fade-left">
-									<h3 data-aos="glitch-text"  class="projects__title projects__title--2">StartingHTML-Template
-										<span class="tech__title">Bootstrap </span> 
-										<span class="tech__title">4</span> 
-									</h3>
-									<div class="tech__overlay tech__overlay--2"><a href="#"><span class="cip-link"></span></a></div>
-								</div>
-								<!-- <div class="tech__webtech tech__webtech--2">
-									<span class="cip-html5"></span>
-									<span class="cip-css3"></span>
-									<span class="cip-javascript"></span>		
-								</div>
-								<div class="tech__horizontal tech__horizontal--2">		
-									<span class="cip-fontello"></span>
-									<span class="cip-sass"></span>
-									<span class="cip-gulp"></span>
-								</div> -->
-								
-							</div>
-							<div class="tech__text tech__text--2">
-								<!-- <p> Опис: </p> -->
-								<p> <strong>StartingHTML-Template (Bootstrap 4)</strong> - це стартовий шаблон для розробки сайтів,
-									який значною мірою базується на стартовому шаблоні OptimizedHTML-4 відомого 
-									фронт-енд розробника <a href="#">Олексія Кліманова</a>. Метою створення цього шаблону було 
-									додавання необхідного функціоналу, якого не було в в OptimizedHTML-4, що дозволив би
-									швидко і зручно розгортати проекти, в яких викорстовуються Bootstrap 4.
-								</p>
-								<p>Особливості шаблону:</p>
-									<ul> 
-										<li>залишено і трішки переписано таск 'img', який був призначений
-											для стиснення картинок;
-										</li>
-										<li>в комплекті з шаблоном йде scss-бібліотека Font Awesome, яку
-											можна кастомізувати та підключити до проекту;
-										</li>
-										<li>також до проекту можна підключити зібрану мною за допомогою сервіса Fontello
-											і переписану під sass легку бібіотеку найбільш вживаних у вебі іконок - CIP (Custom Icon Pack);
-										</li>
-										<li>індексний файл вміщує додаткові корисні метаданні, які також відповідають за оформлення
-											панелі браузера на маленьких пристроях; </li>
-										<li>в шаблон включений конфіг manifest.json, який дозволяє зробити додаткові налаштування проекту і який
-											необхідний при розробці прогресивних веб-додатків.</li>
-									</ul>
 
-							</div>
-
-						</div>
 						
 					</div>
 
 				</div>
 					<div class="css-art">
-							<div class="css-art__box">
-								<h3 class="projects__title projects__title--art"><span>Pure CSS</span><span>Drawing</span></h3>
+							
+								<h3 class="css-art__title" data-aos="fade-down"><span>Pure CSS</span><span>Drawing</span></h3>
 								
 							
 							
 							<div class="projects__artbox">
-								<div class="moon">
+								<div class="moon" data-aos="fade-down">
 									<div class="empty"></div>
 								</div>
-								<div class="cloud cloud--1">
+								<div class="cloud cloud--1" data-aos="fade-right">
 									<div class="circle c-1"></div>
 									<div class="circle c-2"></div>
 									<div class="circle c-3"></div>
@@ -413,7 +416,7 @@
 									<div class="circle c-5"></div>
 									<div class="circle c-6"></div>
 								</div>
-								<div class="cloud cloud--2">
+								<div class="cloud cloud--2" data-aos="fade-left">
 									<div class="circle c-1"></div>
 									<div class="circle c-2"></div>
 									<div class="circle c-3"></div>
@@ -422,7 +425,7 @@
 									<div class="circle c-6"></div>
 								</div>
 							</div>
-							</div>
+							
 							<div class="projects__text">
 									<p>	Оскільки добре малювати я ніколи не вмів, лише вдавалося добре перемальовувати картинки, а
 										тяга до того, щоб щось намалювати самому, завжди жевріла в потаємних куточках душі, то
@@ -443,30 +446,47 @@
 
 				<div class="wrapper">
 					
-					<div class="person">
-						<h2 class="about-title" ><span>п</span><span>р</span><span>о</span><span>ф</span><span>а</span><span>й</span><span>л</span></h2>
-						<div class="person__description">
+					<div class="person" >
+						<h2 class="about-title" >профайл</h2>
+						<div class="person__container" data-aos="fade-down">
+							<div class="person__description">
 
-							<h3>
-								Більшою мірою я фронт-енд розробник, хоча також розробляю дизайн та бек-енд.
-							</h3>
+								<h3>
+									Я фронт-енд розробник, який допомагає людям робити бізнес в мережі.
+								</h3>
 							
-							<p>
-								Моя пристрасть - це гарні, інтуїтивні вебсайти, які "оживлені" крутими UI ефектами, анімаціями.
-								Користувацький досвід, в першу чергу, має починатися з естетичного задоволення. </p>
-							<p>Коли я не пишу код, не малюю дизайн, ви можете мене знайти за написанням поезії, оповідань або
-								за переглядом фільмів жахів.
+								<p>
+									Моя пристрасть — це гарні, інтуїтивні вебсайти, що "оживлені" крутими UI ефектами та анімаціями.
+									Я вважаю, що користувацький досвід, в першу чергу, має починатися з естетичного задоволення. </p>
+									
+								<div class="person__grape"><span class="cip-bacchus-grape"></div>
+									
+								<p> Коли я не пишу код і не малюю дизайн, ви можете мене знайти за написанням поезії та оповідань
+									і за переглядом фільмів жахів.
 
-							</p>
-							
+								</p>
+								
+							</div>
+							<div class="person__photo">
+								<img src="img/about.jpg" alt="">
+							</div>
 						</div>
-						<div class="person__photo">
-							<img src="img/about.jpg" alt="">
-						</div>
+
 						<div class="offer">
 							<h3><span>Що я пропоную</span></h3>
 							<div class="myservices">
-								<div class="myservices__item">
+								
+								<div class="myservices__item" data-aos="fade-right">
+									<div class="myservices__icon"><span class="cip-pencil"></span></div>
+									<h4>UI/UX дизайн</h4>
+									<div class="myservices__text">
+										Викладатися на повну в будь-якій діяльності — це про мене.
+										Але найбільше сил я вкладаю в продукти, якими будуть
+										користуватися сотні-тисячі людей! Зручність використання
+										 — мій пріоритет №1 при проектувані інтерфейсів.
+									</div>	
+								</div>
+								<div class="myservices__item" data-aos="fade-down">
 									<div class="myservices__icon"><span class="cip-desktop"></span></div>
 									<h4>Розробка вебсайтів</h4>	
 									<div class="myservices__text">
@@ -478,17 +498,7 @@
 										сучасні інструменти та найсвіжіші тренди веб-дизайну.
 									</div>	
 								</div>
-								<div class="myservices__item">
-									<div class="myservices__icon"><span class="cip-pencil"></span></div>
-									<h4>UI/UX дизайн</h4>
-									<div class="myservices__text">
-										Викладатися на повну в будь-якій діяльності — це про мене.
-										Але найбільше сил я вкладаю в продукти, якими будуть
-										користуватися сотні-тисячі людей! Зручність використання
-										 — мій пріоритет №1 при проектувані інтерфейсів.
-									</div>	
-								</div>
-								<div class="myservices__item">
+								<div class="myservices__item" data-aos="fade-left">
 									<div class="myservices__icon"><span class="cip-handshake-o"></span></div>
 									<h4>Консалтинг</h4>
 									<div class="myservices__text">
@@ -564,28 +574,28 @@
 				</div>
 			</section>
 
-			<section class="contacts" >
+			<section class="contacts" id="contacts">
 				<div class="wrapper">
-					<h2 class="contacts-title" ><span>к</span><span>о</span><span>н</span><span>т</span><span>к</span><span>т</span><span>и</span></h2>
-					<form action="https://formspree.io/vadgalaiko@gmail.com" method="POST" class="feedback" id="contacts">
+					<h2 class="contacts-title" >контакти</h2>
+					<form action="https://formspree.io/vadgalaiko@gmail.com" method="POST" class="feedback"  data-aos="fade-down">
 						<div class="inputbox">
 							<div class="inputbox__name">
-								<label for="name"><span>ІМЯ *</span></label>
-								<input type="text" class="name" id="name" name="Ім'я" placeholder="Напишіть Ваше ім'я" required>
+								<label for="name" class="labels"><span>ІМЯ</span></label>
+								<input type="text" class="name inputs" id="name" name="Ім'я"  required> <!-- placeholder="Напишіть Ваше ім'я" -->
 							</div>
-							<div class="inputbox__email">
-								<label for="email"><span>EMAIL *</span></label>
-								<input type="email" class="email" id="email" name="Email" placeholder="Напишіть Ваш email" required>
+							<div class="inputbox__email" >
+								<label for="email" class="labels"><span>EMAIL</span></label>
+								<input type="email" class="email inputs" id="email" name="Email"  required> <!-- placeholder="Напишіть Ваш email" -->
 							</div>
 							
 						</div>
 						<div class="textbox">
-							<label for="message"><span>ПОВІДОМЛЕННЯ *</span></label>
-							<textarea class="message" rows="10" name="Повідомлення" id="message" placeholder="Розкажіть про Ваш проект, яким Ви його бачите, які задачі він має виконувати. Опишіть основні моменти, які мають бути присутні в проекті. А з деталями я обов'язково Вам допоможу розібратися в ході нашої роботи." required></textarea>
+							<label for="message" class="labels labels--m"><span>ПОВІДОМЛЕННЯ</span></label>
+							<textarea class="message inputs"  name="Повідомлення" id="message"  required></textarea> <!-- placeholder="Розкажіть про Ваш проект, яким Ви його бачите, які задачі він має виконувати. Опишіть основні моменти, які мають бути присутні в проекті. А з деталями я обов'язково Вам допоможу розібратися в ході нашої роботи." -->
 						</div>
-						<p class="required"><span>* — необхідно написати</span></p>
+						<!-- <p class="required"><span>* — необхідно написати</span></p> -->
 						<input type="hidden" name="_language" value="uk" >
-						<input type="submit" class="send" value="Надіслати повідомлення">
+						<input type="submit" class="send" value="Надіслати">
 					</form>
 				</div>
 			</section>
@@ -596,6 +606,8 @@
 						<img src="img/logo-main.svg" alt="">
 					</div>
 					<h2 class="motto"><span>Пристрасть, поезія та насолода в щоденному розвитку.</span></h2>
+					<div class="triangle-footer">
+					</div>
 					<div class="author">
 						<div class="social">
 							<span class="cip-facebook"></span>
@@ -724,4 +736,7 @@
 
 
 - відверстати 3 макети
+
+
+
  -->

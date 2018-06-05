@@ -1,37 +1,36 @@
 .contacts
 	
-	
-
-
-
-
 .feedback
 	+row-flex()
 	justify-content: center
-	margin: 100px 0
+	margin: 100px 0 0
 	
 
 	label
 		font-size: 20px
 		font-weight: 700
 		margin: 30px 0
-		cursor: pointer
+		
 
 	span
 		color: $accent
 		
 
-	input:not(.send), textarea
-		padding: 15px 0 15px 10px
+	input:not(.send)
+		padding: 25px 0 15px 10px
 		font-size: 18px
 		border: none
 		border-bottom: 2px solid $accent
 		border-radius: 5px
-		
+		background: none
+		position: relative
+		z-index: 1
 
 
-		&:focus::placeholder
-			opacity: 0
+
+
+		&:focus
+			border-color: #7F00FF
 
 	
 .inputbox
@@ -39,12 +38,19 @@
 	+size(12)
 	justify-content: center
 
+
 	&__name,
 	&__email
 		+col()
 		+size(4)
+		+size-sm(6)
+		+size-xs(12)
+
 		display: flex
 		flex-flow: column nowrap
+		position: relative
+		
+		
 
 .textbox
 	+row-flex()
@@ -52,6 +58,7 @@
 	flex-direction: column
 	justify-content: center
 	align-items: center
+	position: relative
 	
 	label
 		+col()
@@ -62,39 +69,87 @@
 	+col()
 	+size(8)
 	
+	+size-sm(12)
+	font-size: 18px
+	padding: 0 0 150px 0
+	border: none
+	border-bottom: 2px solid $accent
+	border-radius: 5px
+	background: none
+	position: relative
+	z-index: 1
 	
 	resize: none
 
-.required
-	+size(12)
-	margin: 20px 0
 
-
-	span
-		text-align: center
-		display: block
-		color: $color-text
 
 .send
 	+size(3)
-
-	margin: 0 0 30px 0
-	color: $accent
-	background: none
+	
+	
+	+sm(margin, 50px 0 0)
+	
+	min-width: 250px
+	margin: 60px 0 0 
+	color: #fff
+	background: #7F00FF
 	border: none
 	outline: none
-	border-top: 2px solid $accent
-	border-bottom: 2px solid $accent
+	//border-top: 10px solid $accent
+	//border-bottom: 10px solid $accent
 	border-radius: 5px
 	font-size: 18px
 	padding: 15px
 	cursor: pointer
-	transition: transform .3s ease
+	transition: all .3s ease
 	font-weight: 700
+	
+	text-transform: uppercase
 
 	&:hover
-		transform: scaleY(.9)
+		
+		transform: scale(1.1)
 
 	&:focus
-		transform: scaleX(1.1)
+		transform: scale(1)
 		
+	
+.labels
+	position: relative
+	
+	
+	z-index: 0
+	
+	transition: all .5s
+	display: flex
+	justify-content: center
+	align-items: center
+	
+	
+		
+	&.opacity
+		opacity: .3
+
+	span
+		font-size: 75px
+		color: #7F00FF
+		letter-spacing: 10px
+		margin-bottom: -90px
+		text-shadow: 0 0 2px #7F00FF
+
+		+xs(letter-spacing, 0)
+		+md(font-size, 50px)
+		+sm(font-size, 40px)
+		+xs(font-size, 30px)
+
+
+	&--m span
+		margin-bottom: -200px
+	&--m.hide
+		opacity: 0
+		transform: translateY(50px)
+		
+
+	&.hide:not(.labels--m)
+		opacity: 0
+		transform: translateY(-50px)

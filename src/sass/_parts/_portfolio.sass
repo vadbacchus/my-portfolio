@@ -18,24 +18,31 @@
 	justify-content: center
 	color: #fff
 	background: #272B33
+	letter-spacing: 100px
+
+
+	+sm(font-size, 22px)
+	+sm(background, transparent)
+	+sm(color, #272B33)
 	
-	background-position: 60% 70%
+	
+	
 
 
 	
-	span
-		
-		cursor: vertical-text
-		margin: 0
-		padding: 0 10px
-		
+	//span
+		//cursor: vertical-text
+		//margin: 0
+		//padding: 0 10px
 		
 
 
 	
 	
 	&.fixed
-		
+		writing-mode: vertical-lr
+		letter-spacing: 5px
+		z-index: -1
 		position: fixed
 		top: 0
 		left: 0
@@ -108,7 +115,7 @@
 
 	&__item:nth-child(odd) &__glitch
 
-		+md(order, 2)
+		+lg(order, 2)
 
 	&__item:nth-child(even) &__title
 		right: -200px
@@ -117,27 +124,26 @@
 		
 		
 
-		+lg(font-size, 52px)
-		+lg(right, -210px)
+		
+
 		+xs(font-size, 40px)
 		+md(box-shadow, none)
 
-		@media screen and (max-width: 1245px)
-			font-size: 60px
-			right: -230px
+		//@media screen and (max-width: 1245px)
+			//font-size: 60px
+			//right: -230px
 
 	&__item:nth-child(odd) &__title
 		top: 50px
 		left: -150px
 		
-		+lg(font-size, 52px)
-		+lg(left, -200px)
+		
 		+xs(font-size, 40px)
 		+md(box-shadow, none)
 
-		@media screen and (max-width: 1245px)
-			font-size: 60px
-			left: -220px
+		//@media screen and (max-width: 1245px)
+			//font-size: 60px
+			//left: -220px
 
 	
 
@@ -147,8 +153,8 @@
 
 
 
-		+lg(margin-top, 250px)
-		+md(margin, 20px auto)
+		
+		+lg(margin, 20px auto)
 
 	/* &__item:nth-child(3) &__text
 		margin-top: 330px */
@@ -158,7 +164,7 @@
 
 		+col()
 		+size(5)
-		+size-lg(5)
+		+size-lg(12)
 		+size-md(11)
 		+md(margin, 0 auto)
 		
@@ -168,7 +174,7 @@
 		max-height: calc(510px * 1.25)
 		height: $glitch-height
 
-		+md(height, calc(50vmax * 1.25))
+		+lg(height, calc(50vmax * 1.25))
 
 		
 		/* 	HOVERS */
@@ -273,7 +279,7 @@
 	&__info
 		+col()
 		+size(6)
-		+size-md(12)
+		+size-lg(12)
 		+md(margin, 10px auto)
 		
 		position: relative
@@ -285,15 +291,22 @@
 		
 		font-size: 100px
 		
-		padding: 0 20px
+		//padding: 0 20px
 		text-align: center
 		
 		color: $red
 		transition: .5s all
+
+
+		@media screen and (max-width: 1245px)
+			font-size: 90px
+			
 		
-		
-		+md(position, static)
-		+md(text-align, center)
+		+lg(font-size, 64px)
+		+lg(position, static)
+		+lg(text-align, center)
+
+
 		
 		
 
@@ -302,13 +315,14 @@
 		font-family: $title-font
 		opacity: 0
 		font-size: 20px
-		margin: 265px 0 0 50px
-		
+		margin: 265px auto 0 //50px
+		max-width: 550px
 		transition: .5s all
 		width: 80%		
 		
-		+lg(margin-top, 250px)
-		+md(margin, 20px auto)
+		
+		+lg(margin, 20px auto)
+		+lg(width, 100%)
 		+md(opacity, 1)
 		+xs(width, 95%)
 
@@ -338,9 +352,9 @@
 
 
 		& .next-item
-			+lg(margin-top, 10px)
+			
 
-			+md(display, none)
+			+lg(display, none)
 
 		& .next-item__arrow
 			margin-top: 5px
@@ -355,22 +369,3 @@
 
 
 
-	/* media queries */
-
-/* 	&__img:nth-child(1)
-		+md(background-color, $blend-color-1)
-	&__img:nth-child(2)
-		+md(background-color, $blend-color-2)
-		+md(transform, translate3d($gap-vertical, 0, 0 ))
-		+md(animation, glitch-anim-1-horizontal $time-anim infinite ease-in alternate)
-	&__img:nth-child(3)
-		+md(background-color, $blend-color-3)
-		+md(transform, translate3d( calc(-1 * #{$gap-vertical}), 0, 0 ))
-		+md(animation, glitch-anim-2-horizontal $time-anim infinite ease-in alternate)
-	&__img:nth-child(4)
-		+md(background-color, $blend-color-4)
-		+md(transform, translate3d(0, calc( -1 * #{$gap-vertical} ), 0 ) scale3d(-1, -1, 1) )
-		+md(animation, glitch-anim-3-horizontal $time-anim infinite ease-in alternate)
-	&__img:nth-child(5)
-		+md(background-color, $blend-color-5)
-		+md(animation, glitch-anim-flash 0.5s steps(1,end) infinite) */

@@ -24,6 +24,7 @@
 ::-webkit-scrollbar
 	width: 10px
 
+
 ::-webkit-scrollbar-track
 	background: #fff
 
@@ -33,10 +34,15 @@
 
 ::-webkit-scrollbar-thumb:hover
 	background: $red
+	
+
+
+	
 
 
 html, body
 	height: 100%
+	cursor: url(../img/my-cursor.svg) 1 1, default
 	// scroll-behavior: smooth
 
 body
@@ -55,10 +61,10 @@ body
 	input, textarea
 			border: #666 1px solid
 			outline: none
-			&:focus:required:invalid
-				border-color: $red
-			&:required:valid
-				border-color: green
+			//&:focus:required:invalid
+				//border-color: $red
+			//&:required:valid
+				//border-color: green
 
 .wrapper
 	+wrapper()

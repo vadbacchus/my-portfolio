@@ -3,12 +3,17 @@
 	overflow: hidden
 	position: relative
 
+	//+lg(background-image, linear-gradient(to bottom, #8241b8,  #6c33a3 ))
+	+lg(background, linear-gradient(to right, #290136,  #E40067 ))
+	//+lg(background, url('../img/12341.jpg'))
+	//+lg(background-size, cover)
+	//+lg(background-position, 1000px 850px)
 
 	
 
 .menu
 	+row-flex()
-	position: relative
+	
 
 	&__btn
 		+col()
@@ -26,9 +31,7 @@
 		outline: none
 		transition: all .5s 
 
-		.cip-bacchus-grape
-			font-size: 60px
-
+		
 
 		
 		
@@ -42,6 +45,11 @@
 				transition: all .5s 
 			&:hover::before
 				color: #BC0152
+
+				+lg(color, #fff)
+
+			+lg(color, #fff)
+			+lg(font-size, 60px)
 
 		&:hover
 			
@@ -86,6 +94,11 @@
 		&:hover
 			background-color: #323131
 
+			+lg(background, #fff)
+
+		+lg(background, #fff)
+		+lg(color, $accent)
+
 
 	&__github
 		font-size: 40px
@@ -96,16 +109,9 @@
 		&:hover
 			color: $accent
 
-	&__svg
-		+xs(width, 55px)
-		+xs(height, 55px)
-		
+			+lg(color, #fff)
 
-
-
-/* class of grape svg btn */
-.cls-1
-	transition: .5s all
+		+lg(color, #fff)
 
 
 
@@ -118,13 +124,16 @@
 
 	justify-content: center
 	min-height: 75vh
+
+
+
 	
 	
 	&__greeting
 		+col()
 		+size(6)
-		+size-lg(10)
-		+size-md(12)
+		+size-lg(12)
+		//+size-md(12)
 		
 
 		display: flex
@@ -145,16 +154,23 @@
 	&__title
 
 		+lg(text-align, center)
-		+xs(font-size, 20px)
+		+lg(color, #fff)
+		+lg(font-weight, 700)
+		+md(font-size, 30px)
+		+xs(font-size, 25px)
+
 
 		
 		font-family: $title-font
 		font-size: 40px
 		margin-top: 10vh
-		color:  $accent
+		color: $accent
 		text-align: right
 		margin-right: 10px
 		transition: opacity .5s 
+
+
+
 
 		@media screen and (max-width: 1250px)
 			font-size: 30px
@@ -193,8 +209,8 @@
 		border-radius: 4px	
 		overflow: hidden
 		position: relative
-		align-self: center
-		margin: 80px
+		max-width: 300px
+		margin: auto auto 50px 
 		transition: box-shadow 1s ease, background 1s ease, color .5s ease
 		
 
@@ -250,7 +266,7 @@
 	&__service
 		+col()
 		+size(6)
-		+size-lg(8)
+		+size-lg(10)
 		+size-md(9)
 		+size-sm(12)
 
@@ -268,7 +284,14 @@
 		.intro__btn--lg
 			display: none
 			margin: 50px auto
+			box-shadow: 0 0 0 1px #fff
+			color: #fff
 			+lg(display, block)
+
+			&:hover
+				background: none
+
+
 
 		
 
@@ -278,7 +301,7 @@
 		& > p
 			
 			font-family: $title-font
-			font-size: 35px
+			font-size: 33px
 			text-shadow: 0 0 10px #000
 			background: rgba(0,0,0,.2)
 			transition: all .5s 
@@ -290,15 +313,24 @@
 
 			
 
-			+lg(background, $accent)
+			//@media screen and (max-width: 1245px)
+				//font-size: 
+
+
+			+lg(font-size, 30px)
+			+lg(background, none)
 			+lg(text-shadow, none)
-			+xs(font-size, 18px)
+			+xs(font-size, 19px)
+			
 			
 			
 		
 			&:hover
 				background: #FF008B
 				transform: scale(1.1)
+				color: #fff
+
+				+lg(background, none)
 
 
 			&:nth-of-type(even)
@@ -386,10 +418,12 @@
 
 .next-item
 	+row-flex()
-	+lg(margin-top, 40px)
+	+lg(margin, 0 0 50px)
 
 
 
+	position: relative
+	z-index: 1
 	align-items: center
 	flex-direction: column
 
@@ -398,8 +432,8 @@
 	&__text
 		+col()
 		+size(4)
-		+size-sm(9)
-
+		+size-sm(12)
+		+lg(color, #fff)
 		
 		text-align: center
 		color: $accent
@@ -431,18 +465,23 @@
 		transition: .5s all
 
 
+		+lg(color, #fff)
+
+
 .header-feedback
 	display: none
 	justify-content: center
 	align-items: center
-	
+	flex-wrap: wrap
 	position: fixed
 	top: 0
 	left: 0
+	
+
 	width: 100%
-	min-height: 100vh
+	height: 100%
 	background: #fff
-	margin: 0
+	
 	overflow: hidden
 	transition: .6s
 	z-index: 11
@@ -451,5 +490,31 @@
 
 	.feedback
 		margin: 0
+		animation: slide-up 1s 
+
+
+		.inputbox__name,
+		.inputbox__email,
+		.message
+			+size-xs(12)
+
+		.message
+			+xs(padding-bottom, 50px)
+
+		.labels
+
+			&--m span
+				+xs(margin-bottom, -120px)
+		
+		& span
+			+xs(font-size, 20px)
+			
+
+			
+
+		.inputs
+			+xs(padding, 5px 0)
+
+		
 
 

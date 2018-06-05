@@ -31,9 +31,9 @@
 		
 
 	&__link
-		+md(padding, 20px)
-		+md(font-size, 30px)
-		+xs(font-size, 25px)
+		
+		+lg(font-size, 50px)
+		+xs(font-size, 40px)
 		+xs(padding, 20px 10px)
 
 
@@ -90,8 +90,11 @@
 	
 	+lg(font-size, 54px)
 	+lg(right, 10px)
-	+xs(font-size, 40px)
-	+xs(top, 0)
+	+lg(top, 0)
+	+md(width, 50px)
+	+md(height, 50px)
+	
+	
 	
 	
 	border: none
@@ -104,34 +107,9 @@
 	z-index: 201
 	top: 20px
 	right: 150px
+	transition: all .45s
 	outline: none
 	
-	
-
-	&:hover span:first-child
-		transform: rotate(-45deg) 
-
-		+lg(transform, none)
-		
-
-	&:hover span:last-child
-		transform: rotate(45deg) 
-		
-		+lg(transform, none)
-	
-	&:focus span:first-child
-		transform: rotate(-45deg) scale(20)
-
-		+lg(transform, none)
-		
-		
-	&:focus span:last-child
-		
-		transform: rotate(45deg) scale(20)
-
-		+lg(transform, none)
-		
-
 	span
 		position: relative
 		
@@ -148,6 +126,36 @@
 
 		&:last-child
 			transform: rotate(-45deg)
+	&:hover
+		transform: rotate(-180deg)
+	&:focus
+		transform: rotate(-180deg) scale(20)
+
+	//&:hover span:first-child
+		//transform: rotate(-45deg) 
+
+		//+md(transform, rotate(45deg))
+		
+
+	//&:hover span:last-child
+		//transform: rotate(45deg) 
+		
+		//+md(transform, rotate(-45deg))
+	
+	//&:focus span:first-child
+		//transform: rotate(-45deg) scale(20)
+
+		//+md(transform, rotate(45deg))
+		
+		
+	//&:focus span:last-child
+		
+		//transform: rotate(45deg) scale(20)
+
+		//+md(transform, rotate(-45deg))
+		
+
+	
 
 		
 
