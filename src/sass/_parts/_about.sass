@@ -8,6 +8,8 @@
 	&__description
 		+col()
 		+size(7)
+		+size-md(12)
+		
 		
 
 		h3
@@ -15,17 +17,26 @@
 			font-size: 26px
 			margin: 100px 50px 0
 			font-weight: 700
+			max-width: 550px
+			+md(margin, 50px auto)
+			+xs(font-size, 19px)
 
 		p
 			color: $color-text
-
+			max-width: 550px
 			padding: 0 20px
 			margin: 25px 50px
 			border-radius: 5px
 			font-size: 20px
 
+			+md(margin, 0 auto)
+			+xs(font-size, 16px)
+
 		p:last-child
 			margin: 25px 50px 100px
+
+			+md(margin, 0 auto 50px)
+			+xs(font-size, 16px)
 
 	&__container
 		margin: -50px 0 0 0
@@ -33,6 +44,9 @@
 		+row-flex()
 		+size(12)
 		box-shadow: -1px 1px 5px #9A9A9A
+
+		+md(margin, 0)
+		+md(box-shadow, none)
 
 	&__grape
 		display: flex
@@ -53,11 +67,18 @@
 		padding-bottom: 50%
 		align-self: center
 
+		+md(display, none)
+
 	&__photo
 		+col()
 		+size(5)
+		+size-md(10)
+		+size-sm(12)
 		display: flex
 		align-items: center
+		justify-content: center
+
+		+md(margin, 0 auto 50px)
 
 
 
@@ -65,13 +86,19 @@
 	&__features
 		+col()
 		+size(12)
-		display: flex
+		+row-flex()
 		justify-content: center
 		margin: 50px 0 0 0
+
+		+md(margin, 0)
 
 	&__tech, &__skills
 		+col()
 		+size(5)
+		+size-md(12)
+
+		
+		
 		text-align: center
 		color: $color-text
 
@@ -86,6 +113,10 @@
 			padding: 15px
 			color: #fff
 			background: $accent
+			white-space: nowrap
+			
+
+
 
 
 
@@ -133,12 +164,16 @@
 		margin: 50px 0 
 		text-align: center
 
+
+
 		span
 			
 			font-size: 54px
 			color: $accent
 			
 			font-weight: 700	
+
+			+xs(font-size, 40px)
 
 
 .myservices
@@ -147,11 +182,16 @@
 	text-align: center
 	margin: 0 auto
 	color: #fff
+	justify-content: center
 
 
 	&__item
 		+col()
 		+size(4)
+		+size-lg(10)
+		+size-sm(12)
+
+		+lg(margin-bottom, 50px)
 
 		background: $accent
 		border-radius: 5px
@@ -204,6 +244,11 @@
 		text-align: left
 		padding: 0 30px 30px
 		font-size: 20px
+		max-width: 550px
+		margin: 0 auto
+
+		+xs(font-size, 16px)
+		+xs(padding, 0 10px 10px)
 
 
 .perspective
@@ -224,7 +269,7 @@
 		
 			font-size: 54px
 			color: $accent
-			
+			+xs(font-size, 40px)
 			font-weight: 700	
 
 	p
@@ -249,6 +294,11 @@
 	&__img
 		+col()
 		+size(3)
+		+size-lg(4)
+		+size-sm(7)
+		+size-xs(10)
+
+		+sm(margin-bottom, 50px)
 
 		border: 9px solid rgba(0,0,0,.1)
 		border-radius: 30px
@@ -270,7 +320,10 @@
 		
 
 	&__img:nth-child(5) img
+
 		width: 100%
+
+		+sm(padding, 15% 0)
 
 
 
@@ -281,7 +334,11 @@
 	width: 100%
 	height: 0
 	padding-bottom: 10%
-	background: linear-gradient(to right bottom, #fff 50%, #6c33a3 50.4%)
+	background: linear-gradient(to right bottom, #fff 50%, #6c33a3 50.5%)
+	
+	+md(background, linear-gradient(to right bottom, #fff 50% , #6c33a3 51% ))
+	+sm(background, linear-gradient(to right bottom, #fff 50% , #6c33a3 51.5% ))
+	
 	
 
 .cooperation
@@ -304,6 +361,9 @@
 		
 			
 		font-weight: 700	
+
+		+lg(text-align, center)
+		+xs(font-size, 45px)
 
 		
 			
@@ -342,11 +402,14 @@
 
 .triangle
 	width: 100%
-	background: linear-gradient(to right bottom, #8241b8 50%, #fff 50.4%)
+	background: linear-gradient(to right bottom, #8241b8 50%, #fff 50.5%)
 	
 	height: 0
 
 	padding-bottom: 10%
+
+	+md(background, linear-gradient(to right bottom, #8241b8  50% , #fff 51% ))
+	+sm(background, linear-gradient(to right bottom, #8241b8  50% , #fff 51.5% ))
 
 		
 

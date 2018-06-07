@@ -2,7 +2,7 @@
 .another-works-title,
 .about-title,
 .contacts-title
-	font-family: $title-font
+	
 	font-size: 35px
 	text-align: center	
 	opacity: 0
@@ -16,14 +16,14 @@
 	height: 100%
 	z-index: -1
 	justify-content: center
-	color: #fff
-	background: #272B33
+	color: $accent// #fff
+	background: transparent //#272B33
 	letter-spacing: 100px
 
 
 	+sm(font-size, 22px)
-	+sm(background, transparent)
-	+sm(color, #272B33)
+	//+sm(background, transparent)
+	//+sm(color, #272B33)
 	
 	
 	
@@ -126,7 +126,7 @@
 
 		
 
-		+xs(font-size, 40px)
+		+xs(font-size, 35px)
 		+md(box-shadow, none)
 
 		//@media screen and (max-width: 1245px)
@@ -138,7 +138,7 @@
 		left: -150px
 		
 		
-		+xs(font-size, 40px)
+		+xs(font-size, 35px)
 		+md(box-shadow, none)
 
 		//@media screen and (max-width: 1245px)
@@ -307,6 +307,7 @@
 		+lg(text-align, center)
 
 
+
 		
 		
 
@@ -325,6 +326,9 @@
 		+lg(width, 100%)
 		+md(opacity, 1)
 		+xs(width, 95%)
+		+xs(font-size, 16px)
+
+
 
 		p::selection
 			color: #fff

@@ -125,9 +125,15 @@
 			transform: rotate(45deg)
 
 		&:last-child
+
 			transform: rotate(-45deg)
 	&:hover
+		top: 25px
 		transform: rotate(-180deg)
+
+		+lg(top, 5px)
+
+
 	&:focus
 		transform: rotate(-180deg) scale(20)
 
