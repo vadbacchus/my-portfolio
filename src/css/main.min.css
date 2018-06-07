@@ -4708,10 +4708,26 @@ body textarea {
 }
 
 .social span:hover:nth-child(4) {
-  color: #D43F34;
+  color: #DD5347;
 }
 
 .social span:hover:nth-child(5) {
+  color: #5181B8;
+}
+
+.social span:hover:nth-child(6) {
+  color: #2CA5E0;
+}
+
+.social span:hover:nth-child(7) {
+  color: #D43F34;
+}
+
+.social span:hover:nth-child(8) {
+  color: #000;
+}
+
+.social span:hover:nth-child(9) {
   color: #323131;
 }
 
@@ -4733,6 +4749,7 @@ body textarea {
 .cip-gplus:hover::before,
 .cip-mail-alt:hover::before,
 .cip-telegram:hover::before,
+.cip-codepen:hover::before,
 .cip-github-circled:not(.no-anim):hover::before {
   -webkit-animation: slide-down .5s;
           animation: slide-down .5s;
@@ -6202,8 +6219,22 @@ body textarea {
     width: calc(83.33333% - 30px);
   }
 
+  .triangle-first {
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(50%, #fff), color-stop(52%, #6c33a3));
+    background: -webkit-linear-gradient(left top, #fff 50%, #6c33a3 52%);
+    background: -o-linear-gradient(left top, #fff 50%, #6c33a3 52%);
+    background: linear-gradient(to right bottom, #fff 50%, #6c33a3 52%);
+  }
+
   .cooperation__title {
     font-size: 45px;
+  }
+
+  .triangle {
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(50%, #8241b8), color-stop(52%, #fff));
+    background: -webkit-linear-gradient(left top, #8241b8 50%, #fff 52%);
+    background: -o-linear-gradient(left top, #8241b8 50%, #fff 52%);
+    background: linear-gradient(to right bottom, #8241b8 50%, #fff 52%);
   }
 
   .inputbox__name,
@@ -6227,5 +6258,12 @@ body textarea {
 
   .motto span {
     font-size: 20px;
+  }
+
+  .triangle-footer {
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(50%, #6c33a3), color-stop(52%, #fff));
+    background: -webkit-linear-gradient(left bottom, #6c33a3 50%, #fff 52%);
+    background: -o-linear-gradient(left bottom, #6c33a3 50%, #fff 52%);
+    background: linear-gradient(to right top, #6c33a3 50%, #fff 52%);
   }
 }
