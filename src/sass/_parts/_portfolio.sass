@@ -9,7 +9,7 @@
 	position: fixed
 	font-weight: 300
 	
-	transform: translateY(-100%)
+	//transform: translateY(-100%)
 	transition: all 1s 
 	display: flex
 	flex-direction: column
@@ -19,9 +19,11 @@
 	color: $accent// #fff
 	background: transparent //#272B33
 	letter-spacing: 100px
-
+	cursor: vertical-text
 
 	+sm(font-size, 22px)
+	+md(transform, none)
+	+md(letter-spacing, normal)
 	//+sm(background, transparent)
 	//+sm(color, #272B33)
 	
@@ -31,7 +33,7 @@
 
 	
 	//span
-		//cursor: vertical-text
+		//
 		//margin: 0
 		//padding: 0 10px
 		
@@ -50,6 +52,8 @@
 		animation: slide-down 1.5s 
 		animation-fill-mode: both
 		z-index: 9
+		+md(letter-spacing, normal)
+		+md(animation, none)
 		
 		
 .works-title
@@ -288,7 +292,7 @@
 		font-family: $title-font
 		font-weight: 700
 		position: absolute
-		
+		z-index: 1	
 		font-size: 100px
 		
 		//padding: 0 20px
@@ -328,6 +332,8 @@
 		+xs(width, 95%)
 		+xs(font-size, 16px)
 
+		
+
 
 
 		p::selection
@@ -356,7 +362,7 @@
 
 
 		& .next-item
-			
+			display: none
 
 			+lg(display, none)
 
@@ -372,4 +378,11 @@
 				opacity: 1
 
 
-
+@supports not (clip-path: polygon(0 10%, 100% 10%, 100% 9%, 0 9%))
+	.portfolio__glitch:hover .portfolio__img:nth-child(1),
+	.portfolio__glitch:hover .portfolio__img:nth-child(2),
+	.portfolio__glitch:hover .portfolio__img:nth-child(3),
+	.portfolio__glitch:hover .portfolio__img:nth-child(4),
+	.portfolio__glitch:hover .portfolio__img:nth-child(5)
+		animation: none
+		transform: none

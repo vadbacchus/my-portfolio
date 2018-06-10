@@ -1,3 +1,5 @@
+
+
 @keyframes glitch-anim-1-horizontal 
 	0% 
 		clip-path: polygon(0 2%, 100% 2%, 100% 5%, 0 5%)
@@ -215,6 +217,14 @@
 		opacity: 1
 		background-position: 500px 0 
 
+//@keyframes fadeRight
+	//0%
+		//opacity: 0
+		//transform: translate(-100px)
+	//100%
+		//opacity: 1
+		//transform: translate(0)
+
 
 [data-aos="glitch-text"]
 	opacity: 0
@@ -223,6 +233,16 @@
 	&.aos-animate 
 		animation: glitch-anim-text 0.5s linear
 		opacity: 1
+
+@supports not (clip-path: polygon(0 10%, 100% 10%, 100% 9%, 0 9%))
+	[data-aos="glitch-text"]
+		opacity: 0
+		transition-property: animation, opacity
+	
+		&.aos-animate 
+			animation: none
+			opacity: 1
+
 
 
 

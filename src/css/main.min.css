@@ -2064,6 +2064,7 @@ html,
 body {
   height: 100%;
   cursor: url(../img/my-cursor.svg) 1 1, default;
+  width: 100vw;
 }
 
 body {
@@ -2595,7 +2596,7 @@ body textarea {
 }
 
 .intro__text > p:hover {
-  background: #FF008B;
+  background: rgba(0, 0, 0, 0.5);
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
           transform: scale(1.1);
@@ -2646,35 +2647,75 @@ body textarea {
 
 .bg-text-1 p,
 .bg-text-2 p {
-  position: absolute;
-  background: -webkit-gradient(linear, left top, right top, color-stop(20%, #3494E6), color-stop(60%, #EC6EAD));
-  background: -webkit-linear-gradient(left, #3494E6 20%, #EC6EAD 60%);
-  background: -o-linear-gradient(left, #3494E6 20%, #EC6EAD 60%);
-  background: linear-gradient(to right, #3494E6 20%, #EC6EAD 60%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   font-size: 200px;
   font-weight: 700;
   opacity: 0;
   -webkit-transform: translateX(-100px);
       -ms-transform: translateX(-100px);
           transform: translateX(-100px);
-  -webkit-transition: all .5s;
-  -o-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  position: absolute;
 }
 
 .bg-text-1 p.show,
 .bg-text-2 p.show {
   opacity: 1;
-  -webkit-transform: translateX(0);
-      -ms-transform: translateX(0);
-          transform: translateX(0);
+  -webkit-transform: translateX(0px);
+      -ms-transform: translateX(0px);
+          transform: translateX(0px);
+}
+
+.bg-text-1 p {
+  background: -webkit-gradient(linear, left top, right top, color-stop(20%, #3494E6), color-stop(60%, #EC6EAD));
+  background: -webkit-linear-gradient(left, #3494E6 20%, #EC6EAD 60%);
+  background: -o-linear-gradient(left, #3494E6 20%, #EC6EAD 60%);
+  background: linear-gradient(to right, #3494E6 20%, #EC6EAD 60%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-text-2 p:first-child {
+  background: -webkit-gradient(linear, right top, left top, from(#96deda), to(#50c9c3));
+  background: -webkit-linear-gradient(right, #96deda, #50c9c3);
+  background: -o-linear-gradient(right, #96deda, #50c9c3);
+  background: linear-gradient(to left, #96deda, #50c9c3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-text-2 p:nth-child(2) {
+  background: -webkit-gradient(linear, left top, right top, from(#884EB1), to(#a044ff));
+  background: -webkit-linear-gradient(left, #884EB1, #a044ff);
+  background: -o-linear-gradient(left, #884EB1, #a044ff);
+  background: linear-gradient(to right, #884EB1, #a044ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-text-2 p:nth-child(3) {
+  background: -webkit-gradient(linear, left top, right top, from(#5B86E5), to(#36D1DC));
+  background: -webkit-linear-gradient(left, #5B86E5, #36D1DC);
+  background: -o-linear-gradient(left, #5B86E5, #36D1DC);
+  background: linear-gradient(to right, #5B86E5, #36D1DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-text-2 p:last-child {
+  background: -webkit-gradient(linear, left top, right top, from(#ff758c), to(#ff7eb3));
+  background: -webkit-linear-gradient(left, #ff758c, #ff7eb3);
+  background: -o-linear-gradient(left, #ff758c, #ff7eb3);
+  background: linear-gradient(to right, #ff758c, #ff7eb3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .bg-img {
   width: 70%;
   position: absolute;
+  width: 949px;
   right: -100px;
   bottom: -230px;
   z-index: -2;
@@ -2798,9 +2839,6 @@ body textarea {
   opacity: 0;
   position: fixed;
   font-weight: 300;
-  -webkit-transform: translateY(-100%);
-      -ms-transform: translateY(-100%);
-          transform: translateY(-100%);
   -webkit-transition: all 1s;
   -o-transition: all 1s;
   transition: all 1s;
@@ -2822,6 +2860,7 @@ body textarea {
   color: #7E5FA6;
   background: transparent;
   letter-spacing: 100px;
+  cursor: vertical-text;
 }
 
 .works-title.fixed,
@@ -3085,6 +3124,7 @@ body textarea {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   position: absolute;
+  z-index: 1;
   font-size: 100px;
   text-align: center;
   color: #A9111C;
@@ -3135,6 +3175,10 @@ body textarea {
   color: #A9111C;
 }
 
+.portfolio__text .next-item {
+  display: none;
+}
+
 .portfolio__text .next-item__arrow {
   margin-top: 5px;
   font-size: 30px;
@@ -3144,6 +3188,20 @@ body textarea {
 
 .portfolio__text .next-item__arrow:hover {
   opacity: 1;
+}
+
+@supports not ((-webkit-clip-path: polygon(0 10%, 100% 10%, 100% 9%, 0 9%)) or (clip-path: polygon(0 10%, 100% 10%, 100% 9%, 0 9%))) {
+  .portfolio__glitch:hover .portfolio__img:nth-child(1),
+  .portfolio__glitch:hover .portfolio__img:nth-child(2),
+  .portfolio__glitch:hover .portfolio__img:nth-child(3),
+  .portfolio__glitch:hover .portfolio__img:nth-child(4),
+  .portfolio__glitch:hover .portfolio__img:nth-child(5) {
+    -webkit-animation: none;
+            animation: none;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+  }
 }
 
 .another-works .wrapper {
@@ -3479,11 +3537,9 @@ body textarea {
   -o-transition: all .5s;
   transition: all .5s;
   cursor: pointer;
-  background-image: url("../img/sg-5.jpg");
-  background-color: #6D1FC3;
+  background-image: url("../img/bootstrap4.jpg");
   -webkit-background-size: cover;
           background-size: cover;
-  background-blend-mode: multiply;
   margin: 100px 0 0 auto;
 }
 
@@ -3551,11 +3607,9 @@ body textarea {
 
 .tech__main--2 {
   margin: 100px 0 0 0;
-  background: url("../img/sg-4.jpg");
-  background-color: #6D1FC3;
+  background: url("../img/sg.jpg");
   -webkit-background-size: cover;
           background-size: cover;
-  background-blend-mode: multiply;
 }
 
 .tech__webtech {
@@ -4559,10 +4613,10 @@ body textarea {
 
 .labels span {
   font-size: 75px;
-  color: #7F00FF;
+  color: #a044ff;
   letter-spacing: 10px;
   margin-bottom: -90px;
-  text-shadow: 0 0 2px #7F00FF;
+  text-shadow: 0 0 2px #a044ff;
 }
 
 .labels--m span {
@@ -5446,6 +5500,29 @@ body textarea {
   opacity: 1;
 }
 
+@supports not ((-webkit-clip-path: polygon(0 10%, 100% 10%, 100% 9%, 0 9%)) or (clip-path: polygon(0 10%, 100% 10%, 100% 9%, 0 9%))) {
+  [data-aos="glitch-text"] {
+    opacity: 0;
+    -webkit-transition-property: opacity, -webkit-animation;
+    transition-property: opacity, -webkit-animation;
+    -o-transition-property: animation, opacity;
+    transition-property: animation, opacity;
+    transition-property: animation, opacity, -webkit-animation;
+  }
+
+  [data-aos="glitch-text"].aos-animate {
+    -webkit-animation: none;
+            animation: none;
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .bg-img {
+    bottom: 0;
+  }
+}
+
 @media screen and (max-width: 1300px) {
   .bg-text-1 p,
   .bg-text-2 p {
@@ -5735,6 +5812,37 @@ body textarea {
     width: calc(75% - 30px);
   }
 
+  .works-title,
+  .another-works-title,
+  .about-title,
+  .contacts-title {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+  }
+
+  .works-title,
+  .another-works-title,
+  .about-title,
+  .contacts-title {
+    letter-spacing: normal;
+  }
+
+  .works-title.fixed,
+  .another-works-title.fixed,
+  .about-title.fixed,
+  .contacts-title.fixed {
+    letter-spacing: normal;
+  }
+
+  .works-title.fixed,
+  .another-works-title.fixed,
+  .about-title.fixed,
+  .contacts-title.fixed {
+    -webkit-animation: none;
+            animation: none;
+  }
+
   .portfolio__item {
     margin: 10vh 0 10vh;
   }
@@ -5863,7 +5971,7 @@ body textarea {
   }
 
   .tech__features {
-    width: 85%;
+    width: 95%;
   }
 
   .tech__features {
@@ -6199,7 +6307,11 @@ body textarea {
   }
 
   .offer h3 span {
-    font-size: 40px;
+    font-size: 35px;
+  }
+
+  .myservices {
+    width: 100%;
   }
 
   .myservices__text {
@@ -6211,7 +6323,7 @@ body textarea {
   }
 
   .perspective h3 span {
-    font-size: 40px;
+    font-size: 35px;
   }
 
   .perspective__img {
@@ -6227,7 +6339,11 @@ body textarea {
   }
 
   .cooperation__title {
-    font-size: 45px;
+    font-size: 35px;
+  }
+
+  .cooperation__text span {
+    font-size: 16px;
   }
 
   .triangle {
@@ -6265,5 +6381,9 @@ body textarea {
     background: -webkit-linear-gradient(left bottom, #6c33a3 50%, #fff 52%);
     background: -o-linear-gradient(left bottom, #6c33a3 50%, #fff 52%);
     background: linear-gradient(to right top, #6c33a3 50%, #fff 52%);
+  }
+
+  .copyright h3 {
+    font-size: 14px;
   }
 }

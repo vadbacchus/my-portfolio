@@ -31,6 +31,10 @@
 		outline: none
 		transition: all .5s 
 
+
+
+
+
 		
 
 		
@@ -43,6 +47,7 @@
 
 			&::before
 				transition: all .5s 
+
 			&:hover::before
 				color: #BC0152
 
@@ -326,7 +331,8 @@
 			
 		
 			&:hover
-				background: #FF008B
+				//background: #FF008B
+				background: rgba(0,0,0,.5)
 				transform: scale(1.1)
 				color: #fff
 
@@ -355,6 +361,10 @@
 			+lg(animation, none)
 
 
+			
+				
+
+
 .bg-text-1, .bg-text-2
 	position: absolute
 	top: 0
@@ -367,41 +377,89 @@
 	
 	width: 100%
 	height: 100%
-
+	
 	+lg(display, none)
 
 	p
-		position: absolute
+		//position: absolute
 		
-		background: linear-gradient(to right, #3494E6 20%, #EC6EAD 60%)
-		-webkit-background-clip: text
-		-webkit-text-fill-color: transparent
+		
 		font-size: 200px
 		font-weight: 700
 		opacity: 0
-		transform: translateX(-100px)
-		transition: all .5s
+		transform: translateX(-100px) 
+		transition: all 0.5s
+		position: absolute
+
+		//top: 0
+		//left: -1px
+		//bottom: 0
+		//right: 0
+	
+
+		
+
 
 		@media screen and (max-width: 1300px)
 			font-size: 150px
 
+		//&.fix
+			//opacity: 0
+			//transform: translateX(-99px)
+
+
 
 		&.show
+			//left: 0
+			
 			opacity: 1
-			transform: translateX(0)
-		
+			transform: translateX(0px)
 
+
+.bg-text-1 p
+	background: linear-gradient(to right, #3494E6 20%, #EC6EAD 60%)
+	-webkit-background-clip: text
+	-webkit-text-fill-color: transparent		
+
+
+.bg-text-2 p
+
+	&:first-child
+		background: linear-gradient(to left, #96deda, #50c9c3)
+		
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+
+	&:nth-child(2)
+		background: linear-gradient(to right, #884EB1, #a044ff)
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+
+	&:nth-child(3)
+		background: linear-gradient(to right, #5B86E5, #36D1DC)
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+
+	&:last-child
+		background: linear-gradient(to right, #ff758c, #ff7eb3)
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
 
 
 
 .bg-img
 	width: 70%
 	position: absolute
+	width: 949px
 	
 	right: -100px
 	bottom: -230px
 	z-index: -2
 	transition: filter .5s
+	
+
+	@media screen and (min-width: 1600px)
+		bottom: 0
 
 	+lg(display, none)
 

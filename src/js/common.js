@@ -16,6 +16,7 @@ document.body.onload = () => {
 			preloader.classList.add('done');
 			intro.classList.add('anim');
 			service.classList.add('anim');
+			//bgText1.classList.add('fix');
 
 		}
 	}, 1000);
@@ -145,7 +146,7 @@ for ( i=0; i < HOVER.length; i++ ) {
 
 
 const MENU = document.querySelector('.nav');
-const CLOSE_BTN = document.querySelectorAll('.closebtn');
+const CLOSE_BTN = document.querySelectorAll('.closebtn, .nav__closebtn');
 
 function fade(el) {
   let op = 1;
@@ -178,6 +179,8 @@ for (i=0; i < CLOSE_BTN.length ; i++) {
 
 		}	
 	}
+
+
 
   
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -272,6 +275,23 @@ inputName[i].onmouseout = function() {
 
 }	
 
+/*function removeAttributes() {
+
+	const glitchText = document.querySelectorAll('.portfolio__text', '.projects__title' );
+	let result       = CSS.supports("clip-path", "polygon(0 10%, 100% 10%, 100% 9%, 0 9%)");
+
+	if (! result) {
+		for(i=0; i<glitchText.length;i++) {
+			glitchText[i].removeAttribute('data-aos');
+			glitchText[i].removeAttribute('data-aos-offset');
+			glitchText[i].classList.remove('aos-init');
+			glitchText[i].classList.remove('aos-animate');
+		}
+		
+	}
+}
+
+removeAttributes();*/
 
 
 
