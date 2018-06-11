@@ -2622,6 +2622,13 @@ body textarea {
           animation: glitch-anim-text 2s ease-in-out;
 }
 
+@supports not ((-webkit-clip-path: polygon(0 10%, 100% 10%, 100% 9%, 0 9%)) or (clip-path: polygon(0 10%, 100% 10%, 100% 9%, 0 9%))) {
+  .intro__text.anim {
+    -webkit-animation: none;
+            animation: none;
+  }
+}
+
 .bg-text-1,
 .bg-text-2 {
   position: absolute;
@@ -4613,10 +4620,14 @@ body textarea {
 
 .labels span {
   font-size: 75px;
-  color: #a044ff;
   letter-spacing: 10px;
   margin-bottom: -90px;
-  text-shadow: 0 0 2px #a044ff;
+  background: -webkit-gradient(linear, left bottom, right top, from(#884EB1), to(#7F00FF));
+  background: -webkit-linear-gradient(left bottom, #884EB1, #7F00FF);
+  background: -o-linear-gradient(left bottom, #884EB1, #7F00FF);
+  background: linear-gradient(to right top, #884EB1, #7F00FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .labels--m span {
