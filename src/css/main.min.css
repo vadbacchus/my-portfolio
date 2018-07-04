@@ -1864,14 +1864,14 @@ body[data-aos-easing="ease"] [data-aos],
   font-family: "Montserrat";
   font-weight: normal;
   font-style: normal;
-  src: url("../fonts/MontserratRegular/MontserratRegular.woff") format("woff"), url("../fonts/MontserratRegular/MontserratRegular.ttf") format("truetype");
+  src: url("../fonts/MontserratRegular/MontserratRegular.woff2") format("woff2"), url("../fonts/MontserratRegular/MontserratRegular.woff") format("woff"), url("../fonts/MontserratRegular/MontserratRegular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Montserrat";
   font-weight: bold;
   font-style: normal;
-  src: url("../fonts/MontserratBold/MontserratBold.woff") format("woff"), url("../fonts/MontserratBold/MontserratBold.ttf") format("truetype");
+  src: url("../fonts/MontserratBold/MontserratBold.woff2") format("woff2"), url("../fonts/MontserratBold/MontserratBold.woff") format("woff"), url("../fonts/MontserratBold/MontserratBold.ttf") format("truetype");
 }
 
 body,
@@ -2085,6 +2085,11 @@ body input,
 body textarea {
   border: #666 1px solid;
   outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: #A9111C;
 }
 
 .wrapper {
@@ -2966,7 +2971,7 @@ body textarea {
 
 .portfolio__item:nth-child(odd) .portfolio__title {
   top: 50px;
-  left: -150px;
+  left: -210px;
 }
 
 .portfolio__item:nth-child(even) .portfolio__text {
@@ -3002,14 +3007,14 @@ body textarea {
   cursor: pointer;
 }
 
-.portfolio__glitch:hover > .portfolio__img:nth-child(1) {
+.portfolio__glitch:hover .portfolio__img:nth-child(1) {
   background-color: transparent;
   -webkit-transition: .5s all;
   -o-transition: .5s all;
   transition: .5s all;
 }
 
-.portfolio__glitch:hover > .portfolio__img:nth-child(2) {
+.portfolio__glitch:hover .portfolio__img:nth-child(2) {
   -webkit-transform: translate3d(2px, 0, 0);
           transform: translate3d(2px, 0, 0);
   -webkit-animation: glitch-anim-1-horizontal 2.25s infinite ease-in alternate;
@@ -3020,7 +3025,7 @@ body textarea {
   transition: .5s all;
 }
 
-.portfolio__glitch:hover > .portfolio__img:nth-child(3) {
+.portfolio__glitch:hover .portfolio__img:nth-child(3) {
   -webkit-transform: translate3d(-webkit-calc(-1 * 2px), 0, 0);
           transform: translate3d(calc(-1 * 2px), 0, 0);
   -webkit-animation: glitch-anim-2-horizontal 2.25s infinite ease-in alternate;
@@ -3031,7 +3036,7 @@ body textarea {
   transition: .5s all;
 }
 
-.portfolio__glitch:hover > .portfolio__img:nth-child(4) {
+.portfolio__glitch:hover .portfolio__img:nth-child(4) {
   -webkit-transform: translate3d(0, -webkit-calc( -1 * 2px), 0) scale3d(-1, -1, 1);
           transform: translate3d(0, calc( -1 * 2px), 0) scale3d(-1, -1, 1);
   -webkit-animation: glitch-anim-3-horizontal 2.25s infinite ease-out alternate;
@@ -3042,7 +3047,7 @@ body textarea {
   transition: .5s all;
 }
 
-.portfolio__glitch:hover > .portfolio__img:nth-child(5) {
+.portfolio__glitch:hover .portfolio__img:nth-child(5) {
   -webkit-animation: glitch-anim-flash 1s steps(1, end) infinite;
           animation: glitch-anim-flash 1s steps(1, end) infinite;
   background-color: transparent;
@@ -3061,7 +3066,7 @@ body textarea {
   height: calc(100% + 2px * 2);
   width: -webkit-calc(100% + 10px * 2);
   width: calc(100% + 10px * 2);
-  background: url(../img/11.jpg) no-repeat 50% 100%;
+  background: url(../img/111.jpg) no-repeat 50% 100%;
   -webkit-background-size: cover;
           background-size: cover;
   background-blend-mode: luminosity;
@@ -3170,7 +3175,7 @@ body textarea {
 .portfolio__text p:first-letter {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  padding: 0 10px;
+  padding: 0 8px;
   margin-right: 5px;
   background: #A9111C;
   font-size: 30px;
