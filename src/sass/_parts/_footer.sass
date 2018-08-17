@@ -1,25 +1,18 @@
 .footer
-	
-
 	position: relative
 	
-
-
-
-
-
 .logo
 	+row-flex()
 	justify-content: center
 	padding: 250px 0 0 0
 	
 
-	img
-		cursor: pointer
+	&__img
 		+size(3)
 		+size-md(5)
 		+size-xs(7)
 
+		cursor: pointer
 		min-width: 250px
 
 .motto
@@ -27,7 +20,7 @@
 	justify-content: center
 	padding: 20px 0 0
 
-	span
+	&__text
 		width: 40%
 		text-align: center
 		color: $red
@@ -35,9 +28,6 @@
 		font-size: 26px
 
 		+xs(font-size, 20px)
-
-		
-
 
 .triangle-footer
 	background-image: linear-gradient(to right top, #6c33a3 50% , #fff 50.5% )
@@ -49,8 +39,6 @@
 	+xs(background, linear-gradient(to right top, #6c33a3 50% , #fff 52% ))
 
 
-
-
 .author
 	background-image: linear-gradient(to bottom, #6c33a3 0%, #8241b8 74%)
 
@@ -58,14 +46,11 @@
 	display: flex
 	justify-content: center
 	flex-wrap: wrap
-	
 	padding: 50px 0
 
 	+sm(justify-content, space-between)
 
-	span
-		
-
+	&__icon
 		display: flex
 		align-items: center
 		justify-content: center
@@ -74,7 +59,6 @@
 		color: #fff
 		cursor: pointer
 		border-radius: 50%
-		
 		border: 2px solid #fff
 		overflow: hidden
 
@@ -84,62 +68,49 @@
 			width: 34px
 			font-size: 34px
 
-			//+md(width, 30px)
-			//+md(font-size, 30px)
-
 		&:hover
 			color: $accent
 			background: #fff
 			
+.cip-facebook:hover
+	color:#4867AA
 
-		&:hover:nth-child(1)
-			//border: 2px solid #4867AA
-			color:#4867AA
-		&:hover:nth-child(2)
-			//border: 2px solid #5DA9DD
-			color:#5DA9DD
-		&:hover:nth-child(3)
-			//border: 2px solid #0077B5
-			color:#0077B5
-		&:hover:nth-child(4)
-			//border: 2px solid #D43F34
-			color: #DD5347
-		&:hover:nth-child(5)
-			//border: 2px solid #323131
-			color: #5181B8
-		&:hover:nth-child(6)
-			//border: 2px solid #323131
-			color: #2CA5E0
-		&:hover:nth-child(7)
-			//border: 2px solid #323131
-			color: #D43F34
-		&:hover:nth-child(8)
-			//border: 2px solid #323131
-			color: #000
+.cip-twitter:hover
+	color:#5DA9DD
 
-		&:hover:nth-child(9)
-			//border: 2px solid #323131
-			color:#323131
+.cip-linkedin:hover
+	color:#0077B5
+
+.cip-mail-alt:hover
+	color: #DD5347
+
+.cip-vkontakte:hover
+	color: #5181B8
+
+.cip-telegram:hover
+	color: #2CA5E0
+
+.cip-gplus:hover
+	color: #D43F34
+
+.cip-codepen:hover
+	color: #000
+
+.cip-github-circled:not(.no-anim):hover
+	color:#323131
 
 .copyright
 	
-	
-	
-	h3
+	&__title
 		text-align: center
 		color: #fff
-		
 		padding: 15px 10px
 		font-size: 18px
 
 		+xs(font-size, 14px)
 
-		span
-			
-			font-weight: 700
-
-		//+xs(font-size, 16px)
-
+	&__accent
+		font-weight: 700
 
 .cip-facebook:hover::before,
 .cip-vkontakte:hover::before,
@@ -150,7 +121,6 @@
 .cip-telegram:hover::before,
 .cip-codepen:hover::before,
 .cip-github-circled:not(.no-anim):hover::before,
-
 	animation: slide-down .5s
 
 

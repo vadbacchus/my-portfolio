@@ -3,185 +3,97 @@
 	+row-flex()
 	
 	justify-content: center
+
+
+	&__container
+		+row-flex()
+		+size(12)
+
+		margin: -50px 0 0 0
+		background: #fff
+		box-shadow: -1px 1px 5px #9A9A9A
+
+		+md-block()
+			margin: 0
+			box-shadow: none
 	
 
 	&__description
 		+col()
 		+size(7)
 		+size-md(12)
-		
-		
 
-		h3
-			color: $color-text
-			font-size: 26px
-			margin: 100px 50px 0
-			font-weight: 700
-			max-width: 550px
-			+md(margin, 50px auto)
-			+xs(font-size, 19px)
+	&__title
+		color: $color-text
+		font-size: 26px
+		margin: 100px 50px 0
+		font-weight: 700
+		max-width: 550px
 
-		p
-			color: $color-text
-			max-width: 550px
-			padding: 0 20px
-			margin: 25px 50px
-			border-radius: 5px
-			font-size: 20px
+		+md(margin, 50px auto)
+		+xs(font-size, 19px)
 
-			+md(margin, 0 auto)
-			+xs(font-size, 16px)
+	&__text
+		color: $color-text
+		max-width: 550px
+		padding: 0 20px
+		margin: 25px 50px
+		border-radius: 5px
+		font-size: 20px
 
-		p:last-child
+		+md(margin, 0 auto)
+		+xs(font-size, 16px)
+
+		&--last
 			margin: 25px 50px 100px
 
 			+md(margin, 0 auto 50px)
 			+xs(font-size, 16px)
 
-	&__container
-		margin: -50px 0 0 0
-		background: #fff
-		+row-flex()
-		+size(12)
-		box-shadow: -1px 1px 5px #9A9A9A
-
-		+md(margin, 0)
-		+md(box-shadow, none)
+	
 
 	&__grape
 		display: flex
 		justify-content: center
 		font-size: 70px
 		color: $accent
-		
 
-		
-
-	&__line--v
-		+col()
-		
-		border: none
-		background: $accent
-		width: 3px
-		border-radius: 5px
-		padding-bottom: 50%
-		align-self: center
-
-		+md(display, none)
+	
 
 	&__photo
 		+col()
 		+size(5)
 		+size-md(10)
 		+size-sm(12)
+
 		display: flex
 		align-items: center
 		justify-content: center
 
 		+md(margin, 0 auto 50px)
 
-
-
-
-	&__features
-		+col()
-		+size(12)
-		+row-flex()
-		justify-content: center
-		margin: 50px 0 0 0
-
-		+md(margin, 0)
-
-	&__tech, &__skills
-		+col()
-		+size(5)
-		+size-md(12)
-
-		
-		
-		text-align: center
-		color: $color-text
-
-
-		h3
-			margin: 50px 0
-
-			
-
-		span
-			font-size: 24px
-			padding: 15px
-			color: #fff
-			background: $accent
-			white-space: nowrap
-			
-
-
-
-
-
-		
-			
-		li
-			margin: 10px 0 
-			font-size: 18px
-			cursor: pointer
-			padding: 10px 0
-			overflow: hidden
-
-
-			
-			&:hover
-				background: $accent
-				color: #fff
-
-
-			
-
-.pro:hover::before
-	opacity: 1
-
-.pro::before
-	content: 'PRO'
-	margin-left: -100px
-	margin-right: 20px
-	background: #fff
-	color: #000
-	font-weight: 700
-	padding: 10% 10px
-	opacity: 0
-	transition: opacity 1s
-
-
 .offer
 	+row-flex()
 	+size(12)
 	justify-content: center
 
-	
-	
-
-	h3
-
+	&__title
 		+size(12)
+
 		margin: 50px 0 
 		text-align: center
 
+	&__titleText
+		font-size: 54px
+		color: $accent
+		font-weight: 700	
 
+		+xs(font-size, 35px)
 
-		span
-			
-			font-size: 54px
-			color: $accent
-			
-			font-weight: 700	
-
-			+xs(font-size, 35px)
-
-
-.myservices
+.myServices
 	+row-flex()
 	+size(12)
+
 	text-align: center
 	margin: 0 auto
 	color: #fff
@@ -190,7 +102,6 @@
 	+xs(width, 100%)
 	
 
-
 	&__item
 		+col()
 		+size(4)
@@ -198,7 +109,6 @@
 		+size-sm(12)
 
 		+lg(margin-bottom, 50px)
-
 
 		background: $accent
 		border-radius: 5px
@@ -212,36 +122,7 @@
 	&__item:last-child
 		background-image: linear-gradient(to right, #8241b8 0%,  #6c33a3 74%)
 
-		
-
-	&__icon
-		
-
-		span
-			
-			cursor: pointer
-			margin: 50px 0
-			display: flex
-			align-items: center
-			justify-content: center
-
-			&::before
-				width: 100px
-				font-size: 50px
-				padding: 25px 0
-				border: 5px solid #fff
-				border-radius: 50%
-				background: #fff
-				color: $accent
-				box-shadow: 0 0 10px #fff
-				transition: box-shadow .5s
-
-
-			&:hover::before
-				box-shadow: 0 0 0 15px rgba(255,255,255,.5)
-
-
-	h4
+	&__title
 		margin: 0 0 50px 0
 		text-transform: uppercase
 		font-size: 26px
@@ -258,47 +139,132 @@
 		+xs(padding, 0 10px 10px)
 
 
+.myServices__icon
+	cursor: pointer
+	margin: 50px 0
+	display: flex
+	align-items: center
+	justify-content: center
+
+	&::before
+		width: 100px
+		font-size: 50px
+		padding: 25px 0
+		border: 5px solid #fff
+		border-radius: 50%
+		background: #fff
+		color: $accent
+		box-shadow: 0 0 10px #fff
+		transition: box-shadow .5s
+
+	&:hover::before
+		box-shadow: 0 0 0 15px rgba(255,255,255,.5)
+
+
+
+.features
+	+col()
+	+size(12)
+	+row-flex()
+	justify-content: center
+	margin: 50px 0 0 0
+
+	+md(margin, 0)
+
+	&__tech, &__skills
+		+col()
+		+size(5)
+		+size-md(12)
+
+		text-align: center
+		color: $color-text
+
+
+	&__title
+		margin: 50px 0
+
+	&__titleText
+		font-size: 24px
+		padding: 15px
+		color: #fff
+		background: $accent
+		white-space: nowrap
+			
+			
+	&__listItem
+		margin: 10px 0 
+		font-size: 18px
+		cursor: pointer
+		padding: 10px 0
+		overflow: hidden
+
+		&:hover
+			background: $accent
+			color: #fff
+
+	&__line--v
+		+col()
+		
+		border: none
+		background: $accent
+		width: 3px
+		border-radius: 5px
+		padding-bottom: 50%
+		align-self: center
+
+		+md(display, none)
+
+.pro:hover::before
+	opacity: 1
+
+.pro::before
+	content: 'PRO'
+	margin-left: -100px
+	margin-right: 20px
+	background: #fff
+	color: #000
+	font-weight: 700
+	padding: 10% 10px
+	opacity: 0
+	transition: opacity 1s
+
+
+
 .perspective
 	+row-flex()
 	justify-content: center
 	margin: 50px 0
 
 
-	h3
+	&__title
 		+col()
 		+size(12)
 		
 		text-align: center
 
 
-		span
-	
-		
-			font-size: 54px
-			color: $accent
-			+xs(font-size, 35px)
-			font-weight: 700	
+	&__titleText
+		font-size: 54px
+		color: $accent
+		font-weight: 700	
 
-	p
+		+xs(font-size, 35px)
+
+	&__textBox
 		+col()
 		+size(12)
 		margin: 50px 0
 		
 		
-		span
-			text-align: center
-			display: block
-			max-width: 550px
-			margin: 0 auto
-			color: $color-text
-			font-size: 20px
+	&__text
+		text-align: center
+		display: block
+		max-width: 550px
+		margin: 0 auto
+		color: $color-text
+		font-size: 20px
 
-
-
-
-	
-
-	&__img
+	&__imgBox
 		+col()
 		+size(3)
 		+size-lg(4)
@@ -316,24 +282,17 @@
 		overflow: hidden
 		cursor: pointer
 
+	&__img
+		width: 50%
+		transition: transform .5s ease-in-out
 
-		img
-			width: 50%
-			transition: transform .5s ease-in-out
+		&:hover
+			transform: scale(1.1)
 
-			&:hover
-				transform: scale(1.1)
+		&--wgl
+			width: 100%
 
-		
-
-	&__img:nth-child(5) img
-
-		width: 100%
-
-		+sm(padding, 15% 0)
-
-
-
+			+sm(padding, 15% 0)
 
 
 .triangle-first
@@ -347,49 +306,35 @@
 	+sm(background, linear-gradient(to right bottom, #fff 50% , #6c33a3 51.5% ))
 	+xs(background, linear-gradient(to right bottom, #fff 50% , #6c33a3 52% ))
 	
-	
-
 .cooperation
 	display: flex
 	flex-wrap: wrap
 	justify-content: center
-
 	background-image: linear-gradient(to bottom, #6c33a3 0%, #8241b8 74%)
 
-	
-	
 	&__title
-		
-		
 		margin: 100px auto 0
-		
-	
 		color: rgba(255,255,255,.9)
-		font-size: 54px
-		
-			
+		font-size: 54px	
 		font-weight: 700	
 
 		+lg(text-align, center)
 		+xs(font-size, 35px)
 
-		
-			
-
-	&__text
+	&__textBox
 		+size(12)
 		text-align: center
 		margin: 50px 0
 
-		span
-			text-align: center
-			display: block
-			max-width: 600px
-			margin: 0 auto
-			color: #fff
-			font-size: 20px
+	&__text
+		text-align: center
+		display: block
+		max-width: 600px
+		margin: 0 auto
+		color: #fff
+		font-size: 20px
 
-			+xs(font-size, 16px)
+		+xs(font-size, 16px)
 
 	&__btn
 		+size(3)
@@ -421,7 +366,3 @@
 	+md(background, linear-gradient(to right bottom, #8241b8  50% , #fff 51% ))
 	+sm(background, linear-gradient(to right bottom, #8241b8  50% , #fff 51.5% ))
 	+xs(background, linear-gradient(to right bottom, #8241b8  50% , #fff 52% ))
-
-		
-
-

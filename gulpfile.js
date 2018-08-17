@@ -13,6 +13,7 @@ var gulp          = require('gulp'),
 		smartgrid     = require('smart-grid'),
 		gcmq          = require('gulp-group-css-media-queries'),
 		wait          = require('gulp-wait');
+		babel         = require('gulp-babel');
 
 gulp.task('browser-sync', function() {
 	browsersync({
@@ -78,23 +79,33 @@ gulp.task('sass', function() {
 	.pipe(sass({ outputStyle: 'expanded' }).on("error", notify.onError()))
 	.pipe(rename({ suffix: '.min', prefix : '' }))
 	.pipe(gcmq())
-	.pipe(autoprefixer(['last 15 versions']))
-	/*.pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Opt., comment out when debugging*/
+	.pipe(autoprefixer())
+	.pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Opt., comment out when debugging*/
 	.pipe(gulp.dest('src/css'))
 	.pipe(browsersync.reload( {stream: true} ))
 });
 
 gulp.task('js', function() {
 	return gulp.src([
-		/*'src/libs/jquery/dist/jquery.slim.min.js',*/
 		'src/libs/aos-master/dist/aos.js',
 		'src/js/common.js', // Always at the end 
 		])
 	.pipe(concat('scripts.min.js'))
-	/*.pipe(uglify()) // Mifify js (opt.)*/
+	
+	.pipe(uglify()) // Mifify js (opt.)*/
 	.pipe(gulp.dest('src/js'))
 	.pipe(browsersync.reload({ stream: true }))
 });
+
+gulp.task('compile', function(){ 
+	return gulp.src([
+		'src/js/common.js'
+	])
+	.pipe(babel({
+            presets: ['env']
+    }))
+    .pipe(gulp.dest('src/js'))
+})
 
 gulp.task ('img', function() {
 	return gulp.src('src/img/**/*')

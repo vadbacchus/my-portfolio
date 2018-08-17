@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="Сайт-портфоліо фронт-енд розробника, верстальника, UI/UX дизайнера та письменника Вадима Галайка aka Bacchus (Бахус)">
+
+		<title>Вадим Галайко — фронт-енд разработчик | верстальщик | UI/UX дизайнер | поэт</title>
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+			<!-- Open Graph Protocol -->
+		<meta property="og:title" content="Вадим Галайко — фронт-енд разработчик | верстальщик | UI/UX дизайнер | поэт">
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="">
+		<meta property="og:image" content="../img/portrait.jpg">
+			
+			<!-- Favicons and Manifest config -->
+		<link rel="shortcut icon" href="../img/favicon/favicon.ico" type="image/x-icon">
+		<link rel="apple-touch-icon" href="../img/favicon/apple-touch-icon-180x180.png">
+
+
+			<!-- Chrome, Firefox OS and Opera -->
+		<meta name="theme-color" content="#7E5FA6">
+			<!-- Windows Phone -->
+		<meta name="msapplication-navbutton-color" content="#7E5FA6">
+			<!-- iOS Safari -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="#7E5FA6">
+
+		<link rel="stylesheet" href="../css/main.min.css">
+	</head>
+	<body>
+		<div class="preloader">
+			<div class="preloader__icon"><span class="cip-bacchus-grape myBrand"></span></div>
+		</div>
+		<main id="main" class="main">
+				<!-- HEADER START -->
+			<header id="header" class="header">
+				<a href="http://www.freepik.com"><img src="../img/header-bg.jpg" title="Designed by Freepik" alt="Абстракція за авторства команди Freepik" class="header-bg"></a>
+				<div class="bgTextBox">
+					<p class="bgTextBox__text bgText-ru bgTextBox__text--taste"><span>на ваш вкус</span></p>
+				</div>
+				<div class="bgTextBox">						
+					<p class="bgTextBox__text bgText-ru bgTextBox__text--interface">удобство</p>
+					<p class="bgTextBox__text bgText-ru bgTextBox__text--corporative">солидность</p>
+					<p class="bgTextBox__text bgText-ru bgTextBox__text--wordpress">стабильность</p>
+					<p class="bgTextBox__text bgText-ru bgTextBox__text--landing">конверсия</p>			
+				</div>
+				<div class="wrapper">
+					<div class="menu">
+						<div class="icons">
+							<a href="https://github.com/vadbacchus" class="icons__github"><span class="cip-github-circled no-anim"></span></a>
+							<a href="../index.html" class="icons__lang-ru">УКР</a>
+						</div>	
+						<button class="menu__btn"><span class="cip-bacchus-grape myBrandHeader"></span></button>
+						<nav class="nav"> <!-- hidden -->
+							<button class="closebtn">
+								<span class="closebtn__line l-1"></span>
+								<span class="closebtn__line l-2"></span>
+							</button>
+							<ul class="nav__list">
+								<li class="nav__item "><a href="#works" class="nav__link nav__closebtn superhover"><span>Портфолио</span></a></li>
+								<li class="nav__item "><a href="#another-works" class="nav__link nav__closebtn superhover"><span>Разное</span></a></li>
+								<li class="nav__item "><a href="#about" class="nav__link nav__closebtn superhover"><span>Профайл</span></a></li>
+								<li class="nav__item "><a href="#contacts" class="nav__link nav__closebtn superhover"><span>Контакты</span></a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="header-feedback">
+						<button class="closebtn">
+							<span class="closebtn__line l-1"></span>
+							<span class="closebtn__line l-2"></span>
+						</button>
+					<form action="https://formspree.io/vadgalaiko@gmail.com" method="POST" class="feedback formHeader">						
+						<div class="inputbox">
+							<div class="inputbox__name formHeader__name">
+								<label for="name" class="labels"><span class="labels__text formHeader__label">имя</span></label>
+								<input type="text" name="Имя" class="name inputs formHeader__inputs" id="name"  required> <!-- placeholder="Напишіть Ваше ім'я" -->
+							</div>
+							<div class="inputbox__email formHeader__email">
+								<label for="email" class="labels"><span class="labels__text formHeader__label">email</span></label>
+								<input type="email" name="Email" class="email inputs formHeader__inputs" id="email"  required> <!-- placeholder="Напишіть Ваш email" -->
+							</div>
+							
+						</div>
+						<div class="textbox">
+							<label for="message" class="labels labels--m"><span class="labels__text labels__text--m formHeader__label--m">сообщение</span></label>
+							<textarea name="Сообщение" class="message inputs formHeader__inputs formHeader__message"  id="message"  required></textarea> <!-- placeholder="Розкажіть про Ваш проект, яким Ви його бачите, які задачі він має виконувати. Опишіть основні моменти, які мають бути присутні в проекті. А з деталями я обов'язково Вам допоможу розібратися в ході нашої роботи." -->
+						</div>
+						<input type="hidden" name="_language" value="uk" >
+						<input type="submit" class="send" value="Отправить">
+					</form>
+					</div>
+					<div class="intro">
+						<div class="intro__greeting">
+							<h1 class="intro__title intro__title--ru">Приветствую! <span class="part">Меня зовут Вадим.</span> <span class="part ">Я создаю функционал и дизайн</span></h1>
+							<button class="intro__btn superhover"><span>Заказать сайт</span></button>	
+						</div>
+						<div class="intro__service">
+							<div class="intro__text">
+								<p class="intro__p intro__p--ru"><span>пользовательских интерфейсов</span></p>
+								<p class="intro__p intro__p--ru"><span>корпоративних вебсайтов</span></p>
+								<p class="intro__p intro__p--ru"><span>сайтов на CMS WordPress</span></p>
+								<p class="intro__p intro__p--ru"><span>landing page</span></p>
+							</div>
+							<button class="intro__btn intro__btn--lg superhover"><span>Заказать сайт</span></button> <!-- for small devices -->
+						</div>
+					</div>
+					<div class="next-sec">
+						<a href='#works' class="next-sec__text scrollto">Посмотреть мои работы
+							<span class="cip-down-open-big next-sec__arrow"></span>
+						</a>
+					</div>
+				</div>
+			</header>
+				<!-- HEADER END -->
+
+				<!-- PORTFOLIO START -->
+			<section class="works" id="works">
+				<div class="wrapper">
+					<h2 class="works-title sectionTitles">портфолио</h2>
+					<div class="portfolio">
+						<div class="portfolio__item "  data-aos="fade-down">
+							<div class="portfolio__glitch">
+								<a href="https://vadbacchus.github.io/Print-N-Pattern/" target="_blank">
+								<div class="portfolio__img pi-1"></div>
+								<div class="portfolio__img pi-2"></div>
+								<div class="portfolio__img pi-3"></div>
+								<div class="portfolio__img pi-4"></div>
+								<div class="portfolio__img pi-5"></div>
+								</a>
+							</div>
+							<div class="portfolio__info">
+								<h3 class="portfolio__title" data-aos="fade-left"><a href="https://vadbacchus.github.io/Print-N-Pattern/" target="_blank">Print & Pattern</a></h3>
+								<div class="portfolio__text" data-aos="glitch-text" data-aos-offset="300">
+									<p>Прекрасный черно-белый вебсайт с чистым, элегантным дизайном, что хорошо
+										подходит для таких e-commerce сфер как фэшенебельные товары, одежда,
+										еда, строительные материалы. Верстая этот макет, я особенно научился писать
+										слайдеры на чистом JavaScript и улучшил знания Smart Grid.
+									<a href="https://vadbacchus.github.io/Print-N-Pattern/"><span class="cip-link link2site"></span></a>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="portfolio__item">
+							<div class="portfolio__glitch portfolio__glitch--2">
+								<a href="https://vadbacchus.github.io/Travel-Blog/" target="_blank">
+									<div class="portfolio__img pi-1"></div>
+									<div class="portfolio__img pi-2"></div>
+									<div class="portfolio__img pi-3"></div>
+									<div class="portfolio__img pi-4"></div>
+									<div class="portfolio__img pi-5"></div>
+								</a>
+							</div>
+							<div class="portfolio__info">
+								<h3 class="portfolio__title" data-aos="fade-right"><a href="https://vadbacchus.github.io/Travel-Blog/" target="_blank">Travel Blog</a></h3>
+								<div class="portfolio__text" data-aos="glitch-text" data-aos-offset="300">
+									<p>	<a href="https://www.behance.net/jhanemilan">Hannah Milan</a> создала крутой и пока бесплатный шаблон для
+										блога путешественника, который я с радостью сверстал и добавил в него "жизнь" в виде анимации.
+										Особенность этого шаблона именно в том, что используются блоки с картинкой
+										для каждого поста, что складываются в хорошие плитки. Путешественникам, которые делают
+										много фото во время путешествия, такой вебсайт - это то, что вам необходимо. Наслаждайтесь!
+										<a href="https://vadbacchus.github.io/Travel-Blog/"><span class="cip-link link2site"></span></a>
+									</p>
+								 </div>
+
+							</div>
+						</div>
+
+						<div class="portfolio__item">
+							<div class="portfolio__glitch portfolio__glitch--3">
+								<a href="https://vadbacchus.github.io/Musica/" target="_blank">
+									<div class="portfolio__img pi-1"></div>
+									<div class="portfolio__img pi-2"></div>
+									<div class="portfolio__img pi-3"></div>
+									<div class="portfolio__img pi-4"></div>
+									<div class="portfolio__img pi-5"></div>
+								</a>
+							</div>
+							<div class="portfolio__info">
+								<h3 class="portfolio__title" data-aos="fade-left"><a href="https://vadbacchus.github.io/Musica/" target="_blank">Música</a></h3>
+								<div class="portfolio__text" data-aos="glitch-text" data-aos-offset="300">
+									<p>	Música — это свободный eCommerce шаблон, который подходит для
+										интернет-магазинов, связанных с музыкой. Он имеет современный и
+										элегантный дизайн в сочетании с приятной цветовой схемой.
+										В нем я научился реализовывать мелкие элементы дизайна на
+										чистом CSS, без использования JS и SVG.
+										<a href="https://vadbacchus.github.io/Musica/"><span class="cip-link link2site"></span></a>
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="portfolio__item">
+							<div class="portfolio__glitch portfolio__glitch--4">
+								<a href="https://vadbacchus.github.io/Voynich/" target="_blank">
+									<div class="portfolio__img pi-1"></div>
+									<div class="portfolio__img pi-2"></div>
+									<div class="portfolio__img pi-3"></div>
+									<div class="portfolio__img pi-4"></div>
+									<div class="portfolio__img pi-5"></div>
+								</a>
+							</div>
+							<div class="portfolio__info">
+								<h3 class="portfolio__title" data-aos="fade-right"><a href="https://vadbacchus.github.io/Voynich/" target="_blank">Voynich</a></h3>
+								<div class="portfolio__text" data-aos="glitch-text" data-aos-offset="300">
+									<p>Cупер чистый и современный элегантный корпоративный landing page. Он имеет стандартный layout,
+										что означает, что его легко реализовать через Bootstrap или Smart Grid. Он является прекрасным выбором,
+										когда информация о компании надо представить в интернете быстро.
+										<a href="https://vadbacchus.github.io/Voynich/"><span class="cip-link link2site"></span></a>
+									</p>
+
+								 </div>
+							</div>
+						</div>
+
+						<div class="portfolio__item">
+							<div class="portfolio__glitch portfolio__glitch--5">
+								<a href="https://vadbacchus.github.io/portfolio-for-photograph/index.html" target="_blank">
+									<div class="portfolio__img pi-1"></div>
+									<div class="portfolio__img pi-2"></div>
+									<div class="portfolio__img pi-3"></div>
+									<div class="portfolio__img pi-4"></div>
+									<div class="portfolio__img pi-5"></div>
+								</a>
+							</div>
+							<div class="portfolio__info">
+								<h3 class="portfolio__title" data-aos="fade-left"><a href="https://vadbacchus.github.io/portfolio-for-photograph/index.html" target="_blank">Photography</a></h3>
+								<div class="portfolio__text" data-aos="glitch-text" data-aos-offset="300">
+									<p>	Начните формировать свое портфолио фотографа, используя
+										данный шаблон вебсайта, который был создан с помощью Photoshop.
+										По дефолту cайт работает в темной теме, но дизайн сайта гибкий, поэтому
+										его можно изменить в любой момент.
+										<a href="https://vadbacchus.github.io/portfolio-for-photograph/index.html"><span class="cip-link link2site"></span></a>
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+				<!-- PORTFOLIO END -->
+				
+				<!-- ANOTHER-WORKS START -->
+			<section class="another-works" id="another-works">
+				<div class="wrapper wrapper-aw" >
+					<h2 class="another-works-title sectionTitles" >разное</h2>
+					<div class="projects">
+						<div class="project project--1" data-aos="fade-down">
+							<div class="project__titleBox " data-aos="fade-left">
+								<h3 data-aos="glitch-text"  class="project__title">StartingHTML-Template
+									<span class="project__newLine">Bootstrap </span> 
+									<span class="project__newLine">4</span> 
+								</h3>
+								<div class="project__overlay"><a href="https://github.com/vadbacchus/StartingHTML-Template--Bootstrap-4-" class="project__link" target="_blank"><span class="cip-link project__linkIcon"></span></a></div>
+							</div>
+							<div class="project__textBox project__textBox--b4">
+								<div class="project__features">
+									<p class="project__text project__text--first">Особенности шаблона:</p>
+									<ul class="project__list"> 
+										<li class="project__listItem">оставлен и немного переписан таск "img", который был назначен
+											для сжатия картинок;
+										</li>
+										<li class="project__listItem">в комплекте с шаблоном идет scss-библиотека Font Awesome, которую
+											можно кастомизировать и подключить к проекту;
+										</li>
+										<li class="project__listItem">также к проекту можно подключить собранную мной с помощью сервиса Fontello
+											и переписанную под sass легкую бибиотеку наиболее используемых в интернете иконок - CIP (Custom Icon Pack)
+										</li>
+										<li class="project__listItem">индексный файл содержит дополнительные полезные метаданные, которые также отвечают за оформление
+											панели браузера на маленьких устройствах. </li>
+									</ul>
+								</div>
+								<p class="project__text project__text--lastB4"> <strong class="project__accent">StartingHTML-Template (Bootstrap 4)</strong> - это стартовый шаблон для разработки сайтов, который
+									в значительной степени базируется на стартовом шаблоне OptimizedHTML-4 известного
+									фронт-энд разработчика Алексея<a href="https://webdesign-master.ru/" target="_blank" class="project__textLink">Климанова</a>. Целью создания этого шаблона было
+									добавления необходимого функционала, которого не было в OptimizedHTML-4, который позволил бы
+									быстро и удобно разворачивать проекты, в которых используется Bootstrap 4.
+								</p>
+							</div>
+						</div>
+						<div class="project project--2"  data-aos="fade-down">
+							<div class="project__titleBox project__titleBox--2" data-aos="fade-right">
+								<h3 data-aos="glitch-text"  class="project__title project__title--2">StartingHTML-Template
+									<span class="project__newLine">SMART</span> 
+									<span class="project__newLine">GRID</span> 
+								</h3>
+								<div class="project__overlay  project__overlay--2"><a href="https://github.com/vadbacchus/StartingHTML-Template-Smart-Grid-" class="project__link" target="_blank"><span class="cip-link project__linkIcon"></span></a></div>
+							</div>
+							<div class="project__textBox">
+								<p class="project__text">Мой подход к разработке на этом шаблоне состоит в том, что в проекте должен быть
+									только код, который непосредственно используется в проекте. Например случаи, когда подключена
+									jQuery, с которой используется только процентов 10, являются неприемлемыми. Поэтому я рекомендую
+									использовать только те сss и js-библиотеки, которые являются легкими
+									и которые будут максимально задействованы в проекте, а также не забывать о написании популярных фишек
+									на чистом js. Я ни в коем случае не навязываю свой подход к разработке, пользователь шаблона может
+									делать с ним, что угодно. В исходном коде шаблона также лежит scss библиотека Bootstrap 4,
+									scss библиотека иконок Font Awesome, которые можно в любой момент подключить.
+								<p class="project__text project__text--last"> <strong class="project__accent">StartingHTML-Template (Smart Grid)</strong> - это стартовый шаблон для разработки сайтов,
+									отличающийся тем, что включает в себя Smart Grid -
+									одну из самых удобных технологий для быстрого создания адаптивных лэйаутов,
+									которую создал программист Дмитрий<a href="https://dmitrylavrik.ru/" target="_blank" class="project__textLink">Лаврик</a>. Верстка с помощью этой технологии позволяет
+									создать чистый и понятный код, который неперегруженный тонной классов в html и который очень легко
+									поддерживать в дальнейшем. В шаблоне Smart Grid уже настроен в gulpfile.js и сгенерирована
+									sass библиотека, которая подключена к проекту. Другие мелкие особенности шаблона перекочевали
+									напрямую с StartingHTML-Template (Bootstrap 4). 
+								</p> 
+							</div>
+						</div>
+					</div>
+					<div class="cssArt">
+						<h3 class="cssArt__title" data-aos="fade-down"><span >Pure CSS</span><span class="cssArt__newLine">Drawing</span></h3>
+						<div class="cssArt__artbox">
+							<div class="moon" data-aos="fade-down">
+								<div class="empty"></div>
+							</div>
+							<div class="cloud cloud--1" data-aos="fade-right">
+								<div class="circle c-1"></div>
+								<div class="circle c-2"></div>
+								<div class="circle c-3"></div>
+								<div class="circle c-4"></div>
+								<div class="circle c-5"></div>
+								<div class="circle c-6"></div>
+							</div>
+							<div class="cloud cloud--2" data-aos="fade-left">
+								<div class="circle c-1"></div>
+								<div class="circle c-2"></div>
+								<div class="circle c-3"></div>
+								<div class="circle c-4"></div>
+								<div class="circle c-5"></div>
+								<div class="circle c-6"></div>
+							</div>
+						</div>
+						<div class="cssArt__textBox">
+							<p class="cssArt__text">Хорошо рисовать я никогда не умел, только удавалось хорошо перерисовывать картинки. Однако
+								тяга к тому, чтобы что-то нарисовать самому всегда теплилась в потаенных уголках моей души. Поэтому
+								лучшим выходом стала возможность поручить все трудности рисования браузера.
+								Строго не судите, так как это мои первые попытки нарисовать что-то с помощью чистого CSS.
+							</p>
+						</div>
+						<a href="https://codepen.io/vadbacchus/" target="_blank" class="cssArt__codepen">Посмотреть на CodePen <span class="cip-codepen"></span></a>
+					</div>
+				</div>
+			</section>
+				<!-- ANOTHER-WORKS END -->
+
+				<!-- ABOUT START -->
+			<section class="about" id="about">
+				<div class="wrapper">
+					<div class="person" >
+						<h2 class="about-title sectionTitles" >профайл</h2>
+						<div class="person__container" data-aos="fade-down">
+							<div class="person__description">
+								<h3 class="person__title">
+									Я фронт-энд разработчик, который помогает людям делать бизнес в сети.
+								</h3>
+								<p class="person__text">
+									Моя страсть - это хорошие, интуитивные вебсайты, что "оживленные" крутыми UI эффектами и анимациями.
+									Я считаю, что пользовательский опыт, в первую очередь, должен начинаться с эстетического удовольствия. </p>
+								<div class="person__grape"><span class="cip-bacchus-grape"></div>
+								<p class="person__text person__text--last"> Когда я не пишу код и не рисую дизайн,
+									вы можете меня найти за написанием поэзии и рассказов,
+									за душевными посиделками с друзьями у костра, за изучением психологии или
+									за просмотром фильмов ужасов :)
+								</p>
+							</div>
+							<div class="person__photo">
+								<img src="../img/portrait.jpg" alt="Фото веб-розробника Вадима Галайка">
+							</div>
+						</div>
+						<div class="offer">
+							<h3 class="offer__title"><span class="offer__titleText">Что я предлагаю</span></h3>
+							<div class="myServices">
+								<div class="myServices__item" data-aos="fade-right">
+									<div class="myServices__box"><span class="cip-pencil myServices__icon" ></span></div>
+									<h4 class="myServices__title">UI/UX дизайн</h4>
+									<div class="myServices__text">
+										Выкладываться на полную в любой деятельности - это про меня.
+										Ответственность и осознанность при разработке - две основы,
+										помогающие мне создавать надежные продукты, которыми будут
+										пользоваться сотни-тысячи людей! Удобство использования
+										- мой приоритет №1 при проектировании интерфейсов.
+									</div>	
+								</div>
+								<div class="myServices__item" data-aos="fade-down">
+									<div class="myServices__box"><span class="cip-desktop myServices__icon"></span></div>
+									<h4 class="myServices__title">Разработка веб-сайтов</h4>	
+									<div class="myServices__text">
+										Я выполняю полный цикл разработки сайтов: от дизайна до
+										посадки на систему управления контентом (CMS). И в каждой
+										работе присутствует особая изюминка, которая позволяет сайту
+										быть привлекательным и таким, на который захочется зайти снова.
+										Лучшие практики frontend-разработки,
+										современные инструменты и свежие тренды веб-дизайна является
+										постоянными составляющими моих проектов.
+									</div>	
+								</div>
+								<div class="myServices__item" data-aos="fade-left">
+									<div class="myServices__box"><span class="cip-handshake-o myServices__icon"></span></div>
+									<h4 class="myServices__title">Консалтинг</h4>
+									<div class="myServices__text">
+										Людям, которые не работают
+										в сфере веб-разработки, бывает сложно определиться с тем,
+										каким должен быть сайт. Поэтому я охотно дам ориентир.
+										Каждый мой клиент может рассчитывать на поддержку и
+										постоянную связь, которая особенно необходима при
+										дистанционной работе.
+									</div>	
+								</div>
+							</div>
+						</div>
+						<div class="features">
+							<div class="features__tech" data-aos="fade-right">
+								<h3 class="features__title"><span class="features__titleText">Мои инструменты</span></h3>
+								<ul class="features__list">
+									<li class="pro features__listItem">HTML/CSS</li>
+									<li class="features__listItem">JavaScript (ES 5, ES 6)</li>
+									<li class="pro features__listItem">SASS/SCSS/Less/Stylus</li>
+									<li class="features__listItem">Gulp</li>
+									<li class="features__listItem">jQuery</li>
+									<li class="pro features__listItem">Smart Grid</li>
+									<li class="pro features__listItem">Bootstrap 3, 4</li>
+									<li class="features__listItem">PHP</li>
+									<li class="features__listItem">MySQL</li>
+									<li class="features__listItem">Wordpress</li>
+									<li class="pro features__listItem">БЕМ</li>
+									<li class="features__listItem">Photoshop</li>
+									<li class="features__listItem">Inkscape</li>
+								</ul>
+							</div>
+							<div class="features__line features__line--v" data-aos="fade-down"></div>
+							<div class="features__skills" data-aos="fade-left">
+								<h3 class="features__title"><span class="features__titleText">Навыки и умения</span></h3>
+								<ul class="features__list">
+									<li class="pro features__listItem">Способность быстро учиться</li>
+									<li class="features__listItem">Умение приходить к общему пониманию идеи</li>
+									<li class="features__listItem">Гибкое сознание</li>
+									<li class="pro features__listItem">Неограниченная фантазия</li>
+									<li class="features__listItem">Ориентирование в экосистеме веб-технологий</li>
+									<li class="features__listItem">Скрупулезность при работе с кодом</li>
+									<li  class="features__listItem">Работа в команде</li>
+									<li  class="features__listItem">Знание английского языка</li>
+									<li class="pro features__listItem">Чаепитие</li>
+								</ul>
+							</div>	
+						</div>
+						<div class="perspective">
+							<h3 class="perspective__title"><span class="perspective__titleText">В перспективе</span></h3>
+							<p class="perspective__textBox"><span class="perspective__text">Для реализации крутых идей мне необходимо освоить следующие технологии. И начну я с Vue.js!</span></p>
+							<div class="perspective__imgBox"><img class="perspective__img" src="../img/react.svg" alt="Лого технології React"></div>
+							<div class="perspective__imgBox"><img class="perspective__img" src="../img/vue.svg" alt="Лого технології Vue"></div>	
+							<div class="perspective__imgBox"><img class="perspective__img perspective__img--wgl" src="../img/webgl.svg" alt="Лого технології WebGl"></div>		
+						</div>
+					</div>
+				</div>
+				<div class="triangle-first"></div>
+				<div class="cooperation">
+					<h3 class="cooperation__title"><span>Заинтересованы в совместной работе?</span></h3>
+					<p class="cooperation__textBox">	
+						<span class="cooperation__text">
+							На данный момент я открыт к новым проектам
+							и всегда готов консультировать по поводу разработки веб-продуктов.
+							Если вы хотите создать сайт или просто пообщаться на интересные
+							темы, нажимайте на кнопку:
+						</span>
+					</p>
+					<a href="#contacts" class="cooperation__btn">Начать сотрудничество</a>
+				</div>
+				<div class="triangle"></div>
+			</section>
+				<!-- ABOUT END -->
+
+				<!-- CONTACTS START -->
+			<section class="contacts" id="contacts">
+				<div class="wrapper">
+					<h2 class="contacts-title sectionTitles">контакты</h2>
+					<form action="https://formspree.io/vadgalaiko@gmail.com" method="POST" class="feedback"  data-aos="fade-down">
+						<div class="inputbox">
+							<div class="inputbox__name">
+								<label for="name" class="labels"><span class="labels__text">имя</span></label>
+								<input type="text" class="name inputs" id="name" name="Ім'я"  required> <!-- placeholder="Напишіть Ваше ім'я" -->
+							</div>
+							<div class="inputbox__email" >
+								<label for="email" class="labels"><span class="labels__text">email</span></label>
+								<input type="email" class="email inputs" id="email" name="Email"  required> <!-- placeholder="Напишіть Ваш email" -->
+							</div>
+						</div>
+						<div class="textbox">
+							<label for="message" class="labels labels--m"><span class="labels__text labels__text--m">сообщение</span></label>
+							<textarea class="message inputs"  name="Повідомлення" id="message"  required></textarea> <!-- placeholder="Розкажіть про Ваш проект, яким Ви його бачите, які задачі він має виконувати. Опишіть основні моменти, які мають бути присутні в проекті. А з деталями я обов'язково Вам допоможу розібратися в ході нашої роботи." -->
+						</div>
+						<input type="hidden" name="_language" value="uk" >
+						<input type="submit" class="send" value="Отправить">
+					</form>
+				</div>
+			</section>
+				<!-- CONTACTS START -->
+
+				<!-- FOOTER START -->
+			<footer  id="footer" class="footer">
+				<div class="logo">
+					<img src="../img/myLogo.svg" class="logo__img" alt="Моє лого. Лого веб-розробника Вадима Галайка. Лого бренду Bacchus. ">
+				</div>
+				<h2 class="motto"><span class="motto__text">Страсть, поэзия и наслаждение в ежедневном развитии.</span></h2>
+				<div class="triangle-footer"></div>
+				<div class="author">
+					<div class="social">
+						<a href="https://www.facebook.com/vadymhalaiko" target="_blank"><span class="cip-facebook social__icon"></span></a>
+						<a href="https://twitter.com/vadbacchus?lang=ru" target="_blank"><span class="cip-twitter social__icon"></span></a>
+						<a href="https://linkedin.com/in/vadym-halaiko-19b44a169" target="_blank"><span class="cip-linkedin social__icon"></span></a>
+						<a href="mailto: vadgalaiko@gmail.com"><span class="cip-mail-alt social__icon"></span></a>
+						<a href="https://vk.com/id214905969" target="_blank"><span class="cip-vkontakte social__icon"></span></a>
+						<a href="https://t.me/vadbacchus" target="_blank"><span class="cip-telegram social__icon"></span></a>
+						<a href="https://plus.google.com/116639966498565319100" target="_blank"><span class="cip-gplus social__icon"></span></a>
+						<a href="https://codepen.io/vadbacchus/" target="_blank"><span class="cip-codepen social__icon"></span></a>
+						<a href="https://github.com/vadbacchus" target="_blank"><span class="cip-github-circled social__icon"></span></a>
+					</div>
+					<div class="copyright"><h3 class="copyright__title"> <strong class="copyright__accent">Вадим Галайко</strong> | Сделано с любовью | Все права защищены © 2018</h3></div>
+				</div>
+			</footer>
+				<!-- FOOTER END -->
+
+		</main>
+		<script src="../js/scripts.min.js"></script>
+	</body>
+</html>

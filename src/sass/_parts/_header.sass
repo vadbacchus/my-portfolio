@@ -1,15 +1,73 @@
 .header
 	min-height: 100vh
-	overflow: hidden
-	position: relative
-	
-	//+lg(background-image, linear-gradient(to bottom, #8241b8,  #6c33a3 ))
-	+lg(background, linear-gradient(to right, #290136,  #E40067 ))
-	//+lg(background, url('../img/12341.jpg'))
-	//+lg(background-size, cover)
-	//+lg(background-position, 1000px 850px)
 
+	+lg(background, linear-gradient(to right, #290136,  #E40067 ))
+
+.header-bg
+	width: 70%
+	position: absolute
+	width: 949px
+	right: -100px
+	bottom: -230px
+	z-index: -1
+	transition: filter .5s
+
+	+lg(display, none)
+
+.bgTextBox
+	position: absolute
+	top: 0
+	left: 0
+	z-index: -1
+	display: flex
+	align-items: flex-start
+	justify-content: center
+	white-space: nowrap	
+	width: 100%
+	height: 100%
 	
+	+lg(display, none)
+
+	&__text
+		font-size: 200px
+		font-weight: 700
+		opacity: 0
+		transform: translateX(-100px) 
+		transition: all 0.5s
+		position: absolute
+
+		@media screen and (max-width: 1300px)
+			font-size: 150px
+
+		&.show
+			opacity: 1
+			transform: translateX(0px)
+
+
+		&--taste
+			background: linear-gradient(to right, #3494E6 20%, #EC6EAD 60%)
+			-webkit-background-clip: text
+			-webkit-text-fill-color: transparent		
+
+		&--interface
+			background: linear-gradient(to left, #96deda, #50c9c3)
+			-webkit-background-clip: text
+			-webkit-text-fill-color: transparent
+
+		&--corporative
+			background: linear-gradient(to right, #884EB1, #a044ff)
+			-webkit-background-clip: text
+			-webkit-text-fill-color: transparent
+
+		&--wordpress
+			background: linear-gradient(to right, #5B86E5, #36D1DC)
+			-webkit-background-clip: text
+			-webkit-text-fill-color: transparent
+
+		&--landing
+			background: linear-gradient(to right, #ff758c, #ff7eb3)
+			-webkit-background-clip: text
+			-webkit-text-fill-color: transparent	
 
 .menu
 	+row-flex()
@@ -21,74 +79,46 @@
 		+size-md(2)
 		+size-xs(3)
 
-
-		
-		
 		margin-left: auto
 		border: none
 		background-color: transparent
 		cursor: pointer
 		outline: none
-		transition: all .5s 
-
-
-
-
-
-		
-
-		
-		
-
-		.cip-bacchus-grape
-			font-size: 70px
-			color: $accent
-			
-
-			&::before
-				transition: all .5s 
-
-			&:hover::before
-				color: #BC0152
-
-				+lg(color, #fff)
-
-			+lg(color, #fff)
-			+lg(font-size, 60px)
+		transition: transform .5s 
 
 		&:hover
 			
 			transform: scale(1.2)
 			outline: none
 
+.myBrandHeader
+	font-size: 70px
+	color: $accent
 
-		&:focus
-			transform: scale(.1)
-				
+	+lg-block()
+		color: #fff
+		font-size: 60px
 			
-				
-		
-			
+	&::before
+		transition: color .5s 
+
+	&:hover::before
+		color: #BC0152
 
 
+.icons
+	+col()
+	+size(2)
 	
-		
-
-	&__icons
-		+col()
-		+size(2)
-
-		
-		margin-right: auto
-		display: flex
-		align-items: center
+	margin-right: auto
+	display: flex
+	align-items: center
 
 	&__lang-ru
 		
 
 		text-decoration: none
 		background-color: $accent
-		font-family: $title-font
 		text-align: center
 		font-size: 20px
 		padding: 0 6px
@@ -101,8 +131,9 @@
 
 			+lg(background, #fff)
 
-		+lg(background, #fff)
-		+lg(color, $accent)
+		+lg-block()
+			background: #fff
+			color: $accent
 
 
 	&__github
@@ -123,6 +154,45 @@
 
 @import "header__nav"
 
+.header-feedback
+	display: none
+	justify-content: center
+	align-items: center
+	flex-wrap: wrap
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background: #fff
+	overflow: hidden
+	transition: .6s
+	z-index: 11
+	opacity: 1
+	animation: fadeIn 1s
+
+.formHeader
+	margin: 0
+	animation: slide-up 1s 
+
+	&__name,
+	&__email
+		+size-xs(12)
+
+	&__message
+		+size-xs(12)
+		+xs(padding-bottom, 50px)
+
+	&__label--m
+		+xs(margin-bottom, -120px)
+		
+	&__label
+		+xs(font-size, 20px)
+			
+	&__inputs
+		+xs(padding, 5px 0)
+
+
 .intro
 	+row-flex()
 	+lg(justify-content, center)
@@ -131,42 +201,21 @@
 	min-height: 75vh
 
 
-
-	
-	
 	&__greeting
 		+col()
 		+size(6)
 		+size-lg(12)
-		//+size-md(12)
-		
 
 		display: flex
 		flex-direction: column
 
 		&.anim
-			animation-name: fadeInLeft 
-			animation-duration: 1s
-
+			animation: fadeInLeft 1s
+			
 			+lg(animation, none)
 
-		
-
-
-
-		
 
 	&__title
-
-		+lg(text-align, center)
-		+lg(color, #fff)
-		+lg(font-weight, 700)
-		+md(font-size, 30px)
-		+xs(font-size, 25px)
-
-
-		
-		font-family: $title-font
 		font-size: 40px
 		margin-top: 10vh
 		color: $accent
@@ -174,20 +223,20 @@
 		margin-right: 10px
 		transition: opacity .5s 
 
-
-
-
 		@media screen and (max-width: 1250px)
 			font-size: 30px
+
+		+lg-block()
+			text-align: center
+			color: #fff
+			font-weight: 700
+		+md(font-size, 30px)
+		+xs(font-size, 25px)
 
 		&.invisible
 			opacity: 0
 
 			+lg(opacity, 1)
-
-
-		
-		
 
 
 		@media screen and (max-width: 1166px)
@@ -197,15 +246,11 @@
 		.part
 			display: block
 
-		/* .accent
-			color: $red */
 
 	&__btn
-		+lg(display, none)
-
+		font-family: $default-font
 		border: none
 		box-shadow: 0 0 0 1px $accent
-		font-family: $title-font
 		font-size: 25px
 		color: $accent
 		background: transparent
@@ -217,16 +262,14 @@
 		max-width: 300px
 		margin: auto auto 50px 
 		transition: box-shadow 1s ease, background 1s ease, color .5s ease
+
+		+lg(display, none)
 		
 
 		&:hover
 			background: #3494E6 //#6e8efb
 			color: #fff
 			box-shadow: none
-
-		
-		
-		
 
 		span
 			position: relative
@@ -246,27 +289,6 @@
 
 		&:hover::before
 			--size: 600px
-	
-	&__background
-		+col()
-		
-		display: flex
-		justify-content: center
-		
-		
-		font-size: 60px
-		font-weight: 700
-		opacity: .4
-		transition: all .5s
-
-		span
-			
-			background: linear-gradient(to right, #3494E6 10%, #EC6EAD 90%)
-			-webkit-background-clip: text
-			-webkit-text-fill-color: transparent
-			
-	
-		
 
 	&__service
 		+col()
@@ -275,246 +297,91 @@
 		+size-md(9)
 		+size-sm(12)
 
+		align-self: flex-end
+
 		
 		+lg(margin, 50px 0 0 0)
 
-
-		
-		
-		align-self: flex-end
-				
-
-		
-
-		.intro__btn--lg
-			display: none
-			margin: 50px auto
-			box-shadow: 0 0 0 1px #fff
-			color: #fff
-			+lg(display, block)
-
-			&:hover
-				background: none
-
-
-
-		
-
-
 	&__text
 
-		& > p
-			
-			font-family: $title-font
-			font-size: 33px
-			text-shadow: 0 0 10px #000
-			background: rgba(0,0,0,.2)
-			transition: all .5s 
-			padding: 0
-			border-radius: 10px
-			cursor: pointer
-			text-align: center
-			color: #fff
-
-			
-
-			//@media screen and (max-width: 1245px)
-				//font-size: 
-
-
-			+lg(font-size, 30px)
-			+lg(background, none)
-			+lg(text-shadow, none)
-			+xs(font-size, 19px)
-			
-			
-			
-		
-			&:hover
-				//background: #FF008B
-				background: rgba(0,0,0,.5)
-				transform: scale(1.1)
-				color: #fff
-
-				+lg(background, none)
-
-
-			&:nth-of-type(even)
-				margin: 10px 0
-
-
-
-			&:hover:nth-of-type(1) ~ .bg-text .interface,
-			&:hover:nth-of-type(2) ~ .bg-text .wordpress,
-			&:hover:nth-of-type(3) ~ .bg-text .corporative,
-			&:hover:nth-of-type(4) ~ .bg-text .landing
-				opacity: 1
-				transform: translateX(0)
-
-
-		
-				
-
 		&.anim
-			animation: glitch-anim-text 2s ease-in-out
+			animation: fadeInDown 1s ease-in-out
 
 			+lg(animation, none)
 
-			@supports not (clip-path: polygon(0 10%, 100% 10%, 100% 9%, 0 9%))
-				animation: none
 
+	&__p
+		font-size: 33px
+		text-shadow: 0 0 10px #000
+		background: rgba(0,0,0,.2)
+		transition: all .5s 
+		padding: 0
+		border-radius: 10px
+		cursor: pointer
+		text-align: center
+		color: #fff
 
-			
-				
+		+lg-block()
+			font-size: 30px
+			background: none
+			text-shadow: none
+		+xs(font-size, 19px)
 
+		&:nth-of-type(even)
+			margin: 10px 0
 
-.bg-text-1, .bg-text-2
-	position: absolute
-	top: 0
-	left: 0
-	z-index: -1
-	display: flex
-	align-items: flex-start
-	justify-content: center
-	white-space: nowrap
-	
-	width: 100%
-	height: 100%
-	
-	+lg(display, none)
+		&:hover
+			background: rgba(0,0,0,.5)
+			transform: scale(1.1)
+			color: #fff
 
-	p
-		//position: absolute
-		
-		
-		font-size: 200px
-		font-weight: 700
-		opacity: 0
-		transform: translateX(-100px) 
-		transition: all 0.5s
-		position: absolute
-
-		//top: 0
-		//left: -1px
-		//bottom: 0
-		//right: 0
-	
+			+lg(background, none)
 
 		
 
+.intro__btn--lg
+	display: none
+	margin: 50px auto
+	box-shadow: 0 0 0 1px #fff
+	color: #fff
 
-		@media screen and (max-width: 1300px)
-			font-size: 150px
+	+lg(display, block)
 
-		//&.fix
-			//opacity: 0
-			//transform: translateX(-99px)
-
-
-
-		&.show
-			//left: 0
-			
-			opacity: 1
-			transform: translateX(0px)
+	&:hover
+		background: none			
 
 
-.bg-text-1 p
-	background: linear-gradient(to right, #3494E6 20%, #EC6EAD 60%)
-	-webkit-background-clip: text
-	-webkit-text-fill-color: transparent		
-
-
-.bg-text-2 p
-
-	&:first-child
-		background: linear-gradient(to left, #96deda, #50c9c3)
-		
-		-webkit-background-clip: text
-		-webkit-text-fill-color: transparent
-
-	&:nth-child(2)
-		background: linear-gradient(to right, #884EB1, #a044ff)
-		-webkit-background-clip: text
-		-webkit-text-fill-color: transparent
-
-	&:nth-child(3)
-		background: linear-gradient(to right, #5B86E5, #36D1DC)
-		-webkit-background-clip: text
-		-webkit-text-fill-color: transparent
-
-	&:last-child
-		background: linear-gradient(to right, #ff758c, #ff7eb3)
-		-webkit-background-clip: text
-		-webkit-text-fill-color: transparent
-
-
-
-.bg-img
-	width: 70%
-	position: absolute
-	width: 949px
-	
-	right: -100px
-	bottom: -230px
-	z-index: -2
-	transition: filter .5s
-	
-
-	@media screen and (min-width: 1600px)
-		bottom: 0
-
-	+lg(display, none)
-
-	
-
-
-
-
-	
-
-
-
-
-
-.next-item
+.next-sec
 	+row-flex()
-	+lg(margin, 0 0 50px)
-
-
 
 	position: relative
 	z-index: 1
 	align-items: center
 	flex-direction: column
 
+	+lg(margin, 0 0 50px)
 
 
 	&__text
 		+col()
 		+size(4)
 		+size-sm(12)
-		+lg(color, #fff)
-		
+
 		text-align: center
 		color: $accent
 		text-decoration: none
-		font-family: $title-font
-		
 		opacity: .8
-		transition: .5s all
+		transition: opacity .5s
+
+		+lg(color, #fff)
 
 		&:hover
 			opacity: 1
 
-		&:hover > .next-item__arrow
+		&:hover > .next-sec__arrow
 			transform: scale(1.3)
 
 
-
-
-
-	
 	&__arrow
 		+col()
 		display: block
@@ -523,59 +390,11 @@
 		color: $accent
 		font-size: 20px
 		cursor: pointer
-		transition: .5s all
+		transition: transform .5s
 
 
 		+lg(color, #fff)
 
 
-.header-feedback
-	display: none
-	justify-content: center
-	align-items: center
-	flex-wrap: wrap
-	position: fixed
-	top: 0
-	left: 0
-	
-
-	width: 100%
-	height: 100%
-	background: #fff
-	
-	overflow: hidden
-	transition: .6s
-	z-index: 11
-	opacity: 1
-	animation: fadeIn 1s
-
-	.feedback
-		margin: 0
-		animation: slide-up 1s 
-
-
-		.inputbox__name,
-		.inputbox__email,
-		.message
-			+size-xs(12)
-
-		.message
-			+xs(padding-bottom, 50px)
-
-		.labels
-
-			&--m span
-				+xs(margin-bottom, -120px)
-		
-		& span
-			+xs(font-size, 20px)
-			
-
-			
-
-		.inputs
-			+xs(padding, 5px 0)
-
-		
 
 
