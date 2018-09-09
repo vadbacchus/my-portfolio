@@ -43,20 +43,17 @@
 html, body
 	height: 100%
 	cursor: url(../img/my-cursor.svg) 1 1, default
-	width: 100vw
 
 body
 	font-size: 16px
 	min-width: 320px
 	min-height: 100vh
-	
-	max-width: 1440px
-	margin: 0 auto
+	width: 100%
+	overflow-x: hidden
 	position: relative
 	line-height: 1.65
 	font-family: $default-font
 	font-weight: 400
-	overflow-x: hidden
 	-webkit-font-smoothing: antialiased
 	-moz-osx-font-smoothing: grayscale
 	
@@ -67,6 +64,10 @@ body
 a
 	text-decoration: none
 	color: $red
+
+.main
+	width: 100%
+	overflow: hidden
 
 .wrapper
 	+wrapper()
